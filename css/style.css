@@ -65,9 +65,10 @@ p{
 	line-height: 1.625em;
 	letter-spacing: .15em;
 	text-transform: uppercase;
+	color: #1D3129;
 }
 
-span.highlight{
+.copy-container p,span.highlight{
 	color: #ee5b5b;
 }
 
@@ -83,6 +84,8 @@ span.highlight{
 		display: none;
 	}
 	br.clear{clear:both;}
+	.left{float: left;}
+	.right{float: right;}
 
 
 
@@ -104,17 +107,51 @@ article.image, header{
 	height: 708px;
 	background: #e3e2db;
 	color: #1D3129;
+	position: relative;
 }
 article.break{
 	height: 500px;
 	background: #1D3129;
 	color: #e3e2db;
+	position: relative;
+	z-index: 1;
+}
+
+div.container{
+	width: 92%;
+	max-width: 989px;
+	height: 748px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	z-index: 2;
+	left: 0; right:0;
+}
+	article.image div.container{margin-top: -18px; z-index: 2;}
+
+div.image-container{
+	width: 92%;
+	max-width: 989px;
+	margin: 0 auto;
+}
+div.image-content{
+	height: 648px;
+	border-left: 1px solid #ee5b5b;
+	border-right: 1px solid #ee5b5b;
+}
+
+.border{
+	background-image: url(../img/top_border.svg) no-repeat center top,
+	url(../img/bottom_border.svg) no-repeat center bottom;
+	/*border: 1px solid #ee5b5b;*/
 }
 
 div.title{
 	height: 150px;
 	color: #1d3129;
 	display: inline-block;
+	position: absolute;
+	z-index: 3;
 }
 	div.title h2{
 		height: 94px;
@@ -125,25 +162,49 @@ div.title{
 		float:right;
 		fill: #1D3129;
 	}
-	div.title p{
+	div.title a{
 		height: 34px;
 		width:128px;
 		padding: 5px;
 		float:right;
 		text-align: center;
+		display: block;
 		background: #ee5b5b;
 	}
 
-div.copy-container{
-	width:630px; 
-	height:150px;
-	padding: 20px 20px 0 20px;
+.break-text{
+	width:630px;
 	margin: auto;
+}
+div.copy-container{
+	padding: 20px;
 	text-align: center;
-	border: 1px solid #ee5b5b;
-	background:  url(../img/cut-corners_630x150.svg) no-repeat;
+	border-left: 1px solid #ee5b5b;
+	border-right: 1px solid #ee5b5b;
+	background:  
+	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
+	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
+	url(../img/topleft-bottomright-corner.svg) no-repeat right bottom,
+	url(../img/topright-bottomleft-corner.svg) no-repeat left bottom;
+}
+div.top-border{
+	height:47px;
+	background:url(../img/top_border.svg) no-repeat center top;
+	position: relative;
+	z-index: 2;}
+div.bottom-border{
+	height:47px;
+	background:url(../img/bottom_border.svg) no-repeat center bottom;
+	position: relative;
+	z-index: 2;
 }
 
+
+/* Mobile Global Warming */
+@media screen and (max-width: 899px){
+	div.break-text{width:85%;}
+}
+	
 
 /* Nav
 -------------------------------------------------------------------------------*/
@@ -153,6 +214,7 @@ nav {
   right: 0;
   text-align: center;
   text-transform: uppercase;
+  z-index: 99;
 }
 
 /* Menu */
@@ -255,6 +317,51 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 -------------------------------------------------------------------------------*/
 
 header{
-	background: url(../img/green-dot-pattern_10x65.png) repeat-x center, #e3e2db;
+	background: url(../img/green-dot-pattern_10x65.png) repeat-x center 248px, #e3e2db;
 }
+
+header p.line1{
+	line-height: 1em;
+	padding: 5px 10px;
+	margin: 66px auto 36px ;
+	display: inline-block;
+	background: #1D3129;
+	color: #ee5b5b;
+}
+header p.line2{
+	font-size: 1.5em;
+	padding: 0 155px;
+	margin: 66px auto;
+}
+
+header div.container div.scroll_down{display: inline-block;}
+	header div.container div.scroll_down a p{margin-top: 20px;color: #ee5b5b;}
+	header div.container div.scroll_down a img{margin: 0 10px;}
+
+
+h1.deep{
+	font-family: "Century Gothic", sans-serif;
+	font-size: 170px;
+	line-height: 1em;
+	text-align: center;
+	color: #1D3129;
+	text-shadow: 0px 0px 0 #ee5b5b, -1px 1px 0 #ee5b5b, -2px 2px 0 #ee5b5b, -3px 3px 0 #ee5b5b, -4px 4px 0 #ee5b5b, -5px 5px 0 #ee5b5b, -6px 6px 0 #ee5b5b, -7px 7px 0 #ee5b5b, -8px 8px 0 #ee5b5b, -9px 9px 0 #ee5b5b, -10px 10px 0 #ee5b5b, -11px 11px 0 #ee5b5b, -12px 12px 0 #ee5b5b, -13px 13px 0 #ee5b5b, -14px 14px 0 #ee5b5b, -15px 15px 0 #ee5b5b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
+}
+	
+
+/* Frontiers
+-------------------------------------------------------------------------------*/
+
+article#frontiers div.copy-container{
+	width: 630px;
+	margin: auto;
+	padding-top: 0;
+	border:1px solid #ee5b5b;
+}
+article#frontiers div.copy-container img{margin-bottom: 20px;}
+
+
+/* Footer
+-------------------------------------------------------------------------------*/
+
 
