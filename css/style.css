@@ -1,5 +1,11 @@
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 body {font: 1em 'raleway', sans-serif;}
+*{
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 
@@ -65,15 +71,15 @@ h2{
 
 p{
 	font-family: "raleway", sans-serif;
-	font-size: 1.0625em;
+	font-size: .875em;
 	font-weight: 700;
-	line-height: 1.625em;
+	line-height: 2em;
 	letter-spacing: .15em;
 	text-transform: uppercase;
 	color: #003b23;
 }
 
-.copy-container p,span.highlight{
+.copy-container > p,span.highlight{
 	color: #ff504b;
 }
 
@@ -92,6 +98,9 @@ p{
 	.left{float: left;}
 	.right{float: right;}
 
+	.coral-bg{background:#ff504b;color:#003b23;}
+	.green-bg{background:#003b23;color:#ff504b;}
+
 
 
 h1 a{
@@ -103,13 +112,13 @@ h1 a{
 	margin: 0 auto;
 }
 
-div#top{
+div.coral_bar{
 	height: 6px;
 	width: 100%;
 	background: #ff504b;
 }
 
-article.image, header{
+article.image, header,footer{
 	height: 708px;
 	background: #e3e2da;
 	color: #003b23;
@@ -123,6 +132,16 @@ article.break{
 	color: #e3e2da;
 	position: relative;
 	z-index: 1;
+}
+	article#break1{background:url(../img/bottom_border.svg) no-repeat center -1px,
+		url(../img/break-lines-bg.svg) repeat fixed center center, #003b23
+		;}
+
+div.center_line{
+	width:16px;
+	height: 114px; /* adjust in mobile and #frontiers*/
+	margin: 0 auto;
+	background: url(../img/center-line.svg) no-repeat center center;
 }
 
 div.container{
@@ -173,19 +192,25 @@ div.title{
 	div.title a{
 		height: 34px;
 		width:128px;
-		padding: 5px;
+		padding: 8px;
 		float:right;
 		text-align: center;
 		display: block;
 		background: #ff504b;
 	}
+		div.title a:hover{background: #003b23;}
+	div.title a p{
+		font-size: 1.25em;
+		line-height: 1em;
+		letter-spacing: .1em;}
+		div.title a:hover p{color: #ff504b;}
 
 .break-text{
 	width:630px;
 	margin: auto;
 }
 div.copy-container{
-	padding: 20px;
+	padding: 30px 30px;
 	text-align: center;
 	border-left: 1px solid #ff504b;
 	border-right: 1px solid #ff504b;
@@ -240,8 +265,10 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 
 	nav ul li.menu a.toggle{
 		display: block;
-		padding: 5px 15px;
+		padding: 4px 17px;
 		color: #003b23;
+		font-weight: 700;
+		letter-spacing: .1em;
 		text-align: left;
 		background: url(../img/menu-open.svg) no-repeat 90% center;
 		transition: 0.5s;
@@ -265,6 +292,8 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		color: #003b23;
 		border-top: 1px solid #003b23;
 		font-size: .75em;
+		font-weight: 700;
+		letter-spacing: .1em;
 		transition: 0.5s;
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
@@ -332,19 +361,31 @@ header p.line1{
 	line-height: 1em;
 	padding: 5px 10px;
 	margin: 80px auto 50px ;
+	font-size: 1.25em;
+	font-weight: 400;
 	display: inline-block;
-	background: #003b23;
-	color: #ff504b;
 }
 header p.line2{
+	width: 750px;
 	font-size: 1.5em;
-	padding: 0 155px;
+	font-weight: 400;
+	letter-spacing: .25em;
 	margin: 50px auto;
+	background: 
+		url(../img/header-line2-left.svg) no-repeat left center,
+		url(../img/header-line2-right.svg) no-repeat right center;
 }
 
 header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
+	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down a img{margin: 0 10px;}
+	header div.container div.scroll_down a:hover img{margin: 3px 10px;}
+
+header div.container div.center_line{
+	height: 47px;
+	background-position:center -708px;
+}
 
 
 h1.deep{
@@ -357,18 +398,61 @@ h1.deep{
 	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
 }
 	
+/* Hamlet
+-------------------------------------------------------------------------------*/
+
+article#hamlet{background: #bfbd7e;}
+
 
 /* Frontiers
 -------------------------------------------------------------------------------*/
+article#frontiers{
+	height: 772px;
+	background: url(../img/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;
+	padding: 16px;
+}
+
+article#frontiers div.center_line{
+	height: 135px;
+}
 
 article#frontiers div.copy-container{
 	width: 630px;
 	margin: auto;
 	padding-top: 0;
+	padding-bottom: 50px;
 	border:1px solid #ff504b;
 }
 article#frontiers div.copy-container img{margin-bottom: 20px;}
 
+article#frontiers a.frontiers_learn{
+	width:172px;
+	height: 68px;
+	margin: -34px auto 0;
+	display: block;
+	background: url(../img/center-line.svg) no-repeat center 50px;
+}
+
+	article#frontiers a.frontiers_learn svg{fill:#003b23;}
+	article#frontiers a.frontiers_learn p{
+		height: 32px;
+		width: 172px;
+		padding: 8px;
+		margin-top: -4px;
+		line-height: 1em;
+		font-size: 1em;
+		text-align: center;
+		background: #ff504b;
+		color: #003b23;
+
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+	}
+	/*article#frontiers a.frontiers_learn:hover svg{fill:#ff504b;}*/
+	article#frontiers a.frontiers_learn:hover p{
+		background:#003b23; color:#ff504b;}
 
 
 /* Tickets
@@ -377,22 +461,26 @@ article#frontiers div.copy-container img{margin-bottom: 20px;}
 article#tickets{
 	height: 708px;
 	background: 
-		url(../img/tickets-lines.svg) no-repeat top center,
-		url(../img/center-line.svg) repeat-y center 740px, 
-		url(../img/tickets-bg.svg) repeat fixed center center, 
+		url(../img/tickets-lines.svg) no-repeat top center, 
+		url(../img/tickets-bg.svg) repeat center center, 
 		#003b23;
 }
 
+
+article#tickets div.container p.line1{
+	width:200px;padding:4px;margin:150px auto 20px;}
 
 article#tickets div.container h1.deep{
 	color: #e3e2da;
 	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #16261f, -14px 16px 0 #16261f, -13px 17px 0 #16261f, -12px 18px 0 #16261f, -11px 19px 0 #16261f, -10px 20px 0 #16261f, -9px 21px 0 #16261f, -8px 22px 0 #16261f, -7px 23px 0 #16261f, -6px 24px 0 #16261f, -5px 25px 0 #16261f, -4px 26px 0 #16261f, -3px 27px 0 #16261f, -2px 28px 0 #16261f, -1px 29px 0 #16261f, 0px 30px 0 #16261f, 1px 31px 0 #16261f, 2px 32px 0 #16261f, 3px 33px 0 #16261f;
 }
 
+
 article#tickets div.container a#go_button{
 	height: 104px;
 	width: 104px;
 	padding:18px 0;
+	margin: 30px auto;
 	display: inline-block;
 	border-radius: 52px;
 	font-family: 'bebas-neue';
@@ -411,13 +499,71 @@ article#tickets div.container a#go_button:hover{
 	background: #ff504b;
 	color: #003b23;
 	font-size: 3em;
-	transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
 }
+
+article#tickets div.container p.line2{
+	width:340px;margin:10px auto;}
 
 /* Footer
 -------------------------------------------------------------------------------*/
 
+footer{
+	background: 
+		url(../img/festival_info-bg.svg) fixed,
+		url(../img/center-line.svg) no-repeat center -610px,
+		#e3e2da;
+	position: relative;
+}
 
+footer#festival_info div.container{
+	height: 100%;
+}
+footer#festival_info div.container > ul,
+footer#festival_info div.container > div{width: 50%;
+	padding: 0 5%;
+	margin-top: 200px;
+	float: left;
+}
+
+	footer#festival_info div.container ul li{
+		border-top: 2px solid #003b23;
+		padding: 20px 60px;
+	}
+	footer#festival_info div.container ul li a{
+		font-size: 1.5625em;
+		font-weight: 700;
+		color: #003b23;
+	}
+	footer#festival_info div.container ul li a:hover{background: #ff504b;}
+	footer#festival_info div.container ul li:first-child{border-top: none;}
+
+
+
+	footer#festival_info div.container > div p{
+		width:120px;
+		margin: 20px auto;
+	}
+	footer#festival_info div.container > div h2{
+		margin-bottom: 50px;
+	}
+
+
+footer#festival_info div#go-to-top{
+	height: 90px;
+	width: 18.036072%;
+	padding-top: 55px;
+	margin: 0px auto;
+	display: block;
+	background: url(../img/go-to-top-bg.svg) no-repeat center bottom;
+	background-size: contain;
+	text-align: center;
+	font-size: 1.3125em;
+	font-weight: 700;
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+footer#festival_info div#go-to-top a{color:#003b23;}
+footer#festival_info div#go-to-top a:hover{color:#e3e2da;}

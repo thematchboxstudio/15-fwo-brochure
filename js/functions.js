@@ -28,9 +28,13 @@
 	            return false;
 	        }
 	    }
+
+	    
+
 		}); // Ending Smooth Scrolling function
 	
-	
+		
+		
 	
 		// Functions relative to scroll position
 		$(window).scroll(function() {
