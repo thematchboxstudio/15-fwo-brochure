@@ -206,7 +206,8 @@ div.title{
 		div.title a:hover p{color: #ff504b;}
 
 .break-text{
-	width:630px;
+	width: 92%;
+	max-width:630px;
 	margin: auto;
 }
 div.copy-container{
@@ -233,9 +234,10 @@ div.bottom-border{
 }
 
 
+
 /* Mobile Global Warming */
 @media screen and (max-width: 899px){
-	div.break-text{width:85%;}
+	/*div.break-text{width:85%;}*/
 }
 	
 
@@ -347,8 +349,38 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		nav ul li a.opened { max-height: 9999px;}
 }
 
+/* Lightbox *reference: http://codepen.io/gschier/pen/HCoqh
+-------------------------------------------------------------------------------*/
 
+a.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
 
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+a.lightbox div {
+	/** Pad the lightbox image */
+	width: 92%;
+	height: 92%;
+	margin: 2% auto;
+	background: #e3e2da;
+	border: 6px solid #ff504b;
+}
+
+a.lightbox:target {
+
+	/** Unhide lightbox **/
+	display: block;
+}
 
 /* Header
 -------------------------------------------------------------------------------*/
@@ -380,16 +412,17 @@ header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
 	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down a img{margin: 0 10px;}
-	header div.container div.scroll_down a:hover img{margin: 3px 10px;}
+	header div.container div.scroll_down a:hover img{margin: 35px 10px;}
 
 header div.container div.center_line{
-	height: 47px;
+	height: 37px;
 	background-position:center -708px;
 }
 
 
 h1.deep{
 	font-family: "bebas-neue", sans-serif;
+	margin-left: .1875em; /* Center text */
 	letter-spacing: .125em;
 	font-size: 230px;
 	line-height: 1em;
@@ -398,32 +431,48 @@ h1.deep{
 	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
 }
 	
+/* Dog Days
+-------------------------------------------------------------------------------*/
+article#hamlet{
+	background: url(../img/) no-repeat center center;}
+
+/* La Traviata
+-------------------------------------------------------------------------------*/
+article#traviata{
+	background: url(../img/traviata-1094x708.jpg) no-repeat center center;
+	background-size:cover;
+}
+
 /* Hamlet
 -------------------------------------------------------------------------------*/
-
-article#hamlet{background: #bfbd7e;}
+article#hamlet{
+	background: url(../img/hamlet-1094x708.jpg) no-repeat center center;
+	background-size:cover;
+}
 
 
 /* Frontiers
 -------------------------------------------------------------------------------*/
 article#frontiers{
-	height: 772px;
+	height: 810px;
 	background: url(../img/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;
 	padding: 16px;
 }
 
 article#frontiers div.center_line{
-	height: 135px;
+	height: 126px;
 }
 
 article#frontiers div.copy-container{
-	width: 630px;
+	width:92%;
+	max-width: 500px;
 	margin: auto;
 	padding-top: 0;
 	padding-bottom: 50px;
 	border:1px solid #ff504b;
 }
 article#frontiers div.copy-container img{margin-bottom: 20px;}
+article#frontiers div.copy-container p{color: #003b23;}
 
 article#frontiers a.frontiers_learn{
 	width:172px;
@@ -450,7 +499,6 @@ article#frontiers a.frontiers_learn{
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
 	}
-	/*article#frontiers a.frontiers_learn:hover svg{fill:#ff504b;}*/
 	article#frontiers a.frontiers_learn:hover p{
 		background:#003b23; color:#ff504b;}
 
@@ -462,7 +510,7 @@ article#tickets{
 	height: 708px;
 	background: 
 		url(../img/tickets-lines.svg) no-repeat top center, 
-		url(../img/tickets-bg.svg) repeat center center, 
+		url(../img/tickets-bg.svg) repeat fixed center center, 
 		#003b23;
 }
 
