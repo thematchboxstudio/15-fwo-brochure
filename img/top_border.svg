@@ -3,8 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="989px" height="47px" viewBox="0 0 989 47" enable-background="new 0 0 989 47" xml:space="preserve">
-<line fill="none" stroke="#EE5B5B" stroke-miterlimit="10" x1="-0.999" y1="46.5" x2="989.999" y2="46.5"/>
-<polyline fill="none" stroke="#EE5B5B" stroke-miterlimit="10" points="446.999,48.492 494.5,0.991 542.002,48.493 "/>
-<polyline fill="none" stroke="#EE5B5B" stroke-miterlimit="10" points="471.541,48 494.5,25.041 517.46,48 "/>
-<line fill="none" stroke="#EE5B5B" stroke-miterlimit="10" x1="494.5" y1="53" x2="494.5" y2="-22.998"/>
+<line fill="none" stroke="#ff504b" stroke-miterlimit="10" x1="-0.999" y1="46.5" x2="989.999" y2="46.5"/>
+<polyline fill="none" stroke="#ff504b" stroke-miterlimit="10" points="446.999,48.492 494.5,0.991 542.002,48.493 "/>
+<polyline fill="none" stroke="#ff504b" stroke-miterlimit="10" points="471.541,48 494.5,25.041 517.46,48 "/>
+<line fill="none" stroke="#ff504b" stroke-miterlimit="10" x1="494.5" y1="53" x2="494.5" y2="-22.998"/>
 </svg>

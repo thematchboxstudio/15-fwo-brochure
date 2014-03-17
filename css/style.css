@@ -1,5 +1,5 @@
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 1em Helmet, Freesans, sans-serif;}
+body {font: 1em 'raleway', sans-serif;}
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 
@@ -24,15 +24,15 @@ input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
 /* Forest Green 
- * #1D3129	
+ * #003b23	
 */
 
 /* Coral 
- * #ee5b5b	
+ * #ff504b	
 */
 
 /* Beige Gray 
- * #e3e2db	
+ * #e3e2da	
 */
 
 /* Print styles
@@ -51,25 +51,30 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /* Typography
 -------------------------------------------------------------------------------*/
 
+h1{
+	font-size: 10.625em;
+}
+
 h2{
-	font-family: ;
+	font-family: "bebas-neue";
 	font-size: 4em;
 	line-height: 1em;
 	text-transform: uppercase;
+	letter-spacing: .1em;
 }
 
 p{
-	font-family: sans-serif;
+	font-family: "raleway", sans-serif;
 	font-size: 1.0625em;
-	font-weight: normal;
+	font-weight: 700;
 	line-height: 1.625em;
 	letter-spacing: .15em;
 	text-transform: uppercase;
-	color: #1D3129;
+	color: #003b23;
 }
 
 .copy-container p,span.highlight{
-	color: #ee5b5b;
+	color: #ff504b;
 }
 
 
@@ -90,29 +95,32 @@ p{
 
 
 h1 a{
-	height: 42px; width:42px;
+	height: 51px; width:51px;
 	display: block;
 	background: url(../img/fwopera_logo_42x42.svg) no-repeat;
+	background-size: contain;
 	text-indent: -9999px;
 	margin: 0 auto;
 }
 
 div#top{
-	height: 3px;
+	height: 6px;
 	width: 100%;
-	background: #ee5b5b;
+	background: #ff504b;
 }
 
 article.image, header{
 	height: 708px;
-	background: #e3e2db;
-	color: #1D3129;
+	background: #e3e2da;
+	color: #003b23;
 	position: relative;
 }
 article.break{
 	height: 500px;
-	background: #1D3129;
-	color: #e3e2db;
+	padding: 16px;
+	background: url(../img/break-lines-bg.svg) repeat center center, #003b23;
+	background-attachment: fixed;
+	color: #e3e2da;
 	position: relative;
 	z-index: 1;
 }
@@ -136,19 +144,19 @@ div.image-container{
 }
 div.image-content{
 	height: 648px;
-	border-left: 1px solid #ee5b5b;
-	border-right: 1px solid #ee5b5b;
+	border-left: 1px solid #ff504b;
+	border-right: 1px solid #ff504b;
 }
 
 .border{
 	background-image: url(../img/top_border.svg) no-repeat center top,
 	url(../img/bottom_border.svg) no-repeat center bottom;
-	/*border: 1px solid #ee5b5b;*/
+	/*border: 1px solid #ff504b;*/
 }
 
 div.title{
 	height: 150px;
-	color: #1d3129;
+	color: #003b23;
 	display: inline-block;
 	position: absolute;
 	z-index: 3;
@@ -156,11 +164,11 @@ div.title{
 	div.title h2{
 		height: 94px;
 		padding: 20px;
-		background: #ee5b5b;
+		background: #ff504b;
 	}
 	div.title svg{
 		float:right;
-		fill: #1D3129;
+		fill: #003b23;
 	}
 	div.title a{
 		height: 34px;
@@ -169,7 +177,7 @@ div.title{
 		float:right;
 		text-align: center;
 		display: block;
-		background: #ee5b5b;
+		background: #ff504b;
 	}
 
 .break-text{
@@ -179,8 +187,8 @@ div.title{
 div.copy-container{
 	padding: 20px;
 	text-align: center;
-	border-left: 1px solid #ee5b5b;
-	border-right: 1px solid #ee5b5b;
+	border-left: 1px solid #ff504b;
+	border-right: 1px solid #ff504b;
 	background:  
 	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
 	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
@@ -233,7 +241,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 	nav ul li.menu a.toggle{
 		display: block;
 		padding: 5px 15px;
-		color: #1D3129;
+		color: #003b23;
 		text-align: left;
 		background: url(../img/menu-open.svg) no-repeat 90% center;
 		transition: 0.5s;
@@ -241,7 +249,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
 	}
-	nav ul li.menu:hover a.toggle{color:#ee5b5b;background: url(../img/menu-open-hover.svg) no-repeat 90% center;}
+	nav ul li.menu:hover a.toggle{color:#ff504b;background: url(../img/menu-open-hover.svg) no-repeat 90% center;}
 	/* When Menu is expanded */
 	nav ul li.menu a.toggle.active{background: url(../img/menu-close.svg) no-repeat 90% center;}
 	nav ul li.menu:hover a.toggle.active{background: url(../img/menu-close-hover.svg) no-repeat 90% center;}
@@ -253,9 +261,9 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		height: 24px;
 		padding: 5px;
 		display: inline-block;
-		background: #ee5b5b;
-		color: #1D3129;
-		border-top: 1px solid #1D3129;
+		background: #ff504b;
+		color: #003b23;
+		border-top: 1px solid #003b23;
 		font-size: .75em;
 		transition: 0.5s;
 		-webkit-transition: 0.5s;
@@ -263,7 +271,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		-o-transition: 0.5s;
 	}
 		/* When hovering over listed Menu items */
-		nav ul li ul.nav-collapse li a:hover, nav ul li ul.nav-collapse li a.active{background: #1D3129;color: #ee5b5b;}
+		nav ul li ul.nav-collapse li a:hover, nav ul li ul.nav-collapse li a.active{background: #003b23;color: #ff504b;}
 
 
 /* Mobile Navigation */
@@ -278,18 +286,18 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 	  }
 		nav ul li.menu{
 			width: 100%;
-			background: #ee5b5b;
+			background: #ff504b;
 			text-indent: -9999px;
 			transition: 0.5s;
 			-webkit-transition: 0.5s;
 			-moz-transition: 0.5s;
 			-o-transition: 0.5s;
 		}
-		nav ul li.menu:hover{background: #1D3129;}
+		nav ul li.menu:hover{background: #003b23;}
 
 		/* FW Opera Logo */
 		nav ul li.menu h1 a{height: 30px;width: 33px;
-			background: url(../img/fwopera_logo_42x42.svg) no-repeat, #e3e2db;
+			background: url(../img/fwopera_logo_42x42.svg) no-repeat, #e3e2da;
 			background-size: contain;
 			float: left;
 		}
@@ -317,35 +325,36 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 -------------------------------------------------------------------------------*/
 
 header{
-	background: url(../img/green-dot-pattern_10x65.png) repeat-x center 248px, #e3e2db;
+	background: url(../img/green-dot-pattern_10x65.png) repeat-x center 300px, #e3e2da;
 }
 
 header p.line1{
 	line-height: 1em;
 	padding: 5px 10px;
-	margin: 66px auto 36px ;
+	margin: 80px auto 50px ;
 	display: inline-block;
-	background: #1D3129;
-	color: #ee5b5b;
+	background: #003b23;
+	color: #ff504b;
 }
 header p.line2{
 	font-size: 1.5em;
 	padding: 0 155px;
-	margin: 66px auto;
+	margin: 50px auto;
 }
 
 header div.container div.scroll_down{display: inline-block;}
-	header div.container div.scroll_down a p{margin-top: 20px;color: #ee5b5b;}
+	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
 	header div.container div.scroll_down a img{margin: 0 10px;}
 
 
 h1.deep{
-	font-family: "Century Gothic", sans-serif;
-	font-size: 170px;
+	font-family: "bebas-neue", sans-serif;
+	letter-spacing: .125em;
+	font-size: 230px;
 	line-height: 1em;
 	text-align: center;
-	color: #1D3129;
-	text-shadow: 0px 0px 0 #ee5b5b, -1px 1px 0 #ee5b5b, -2px 2px 0 #ee5b5b, -3px 3px 0 #ee5b5b, -4px 4px 0 #ee5b5b, -5px 5px 0 #ee5b5b, -6px 6px 0 #ee5b5b, -7px 7px 0 #ee5b5b, -8px 8px 0 #ee5b5b, -9px 9px 0 #ee5b5b, -10px 10px 0 #ee5b5b, -11px 11px 0 #ee5b5b, -12px 12px 0 #ee5b5b, -13px 13px 0 #ee5b5b, -14px 14px 0 #ee5b5b, -15px 15px 0 #ee5b5b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
+	color: #003b23;
+	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
 }
 	
 
@@ -356,10 +365,57 @@ article#frontiers div.copy-container{
 	width: 630px;
 	margin: auto;
 	padding-top: 0;
-	border:1px solid #ee5b5b;
+	border:1px solid #ff504b;
 }
 article#frontiers div.copy-container img{margin-bottom: 20px;}
 
+
+
+/* Tickets
+-------------------------------------------------------------------------------*/
+
+article#tickets{
+	height: 708px;
+	background: 
+		url(../img/tickets-lines.svg) no-repeat top center,
+		url(../img/center-line.svg) repeat-y center 740px, 
+		url(../img/tickets-bg.svg) repeat fixed center center, 
+		#003b23;
+}
+
+
+article#tickets div.container h1.deep{
+	color: #e3e2da;
+	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #16261f, -14px 16px 0 #16261f, -13px 17px 0 #16261f, -12px 18px 0 #16261f, -11px 19px 0 #16261f, -10px 20px 0 #16261f, -9px 21px 0 #16261f, -8px 22px 0 #16261f, -7px 23px 0 #16261f, -6px 24px 0 #16261f, -5px 25px 0 #16261f, -4px 26px 0 #16261f, -3px 27px 0 #16261f, -2px 28px 0 #16261f, -1px 29px 0 #16261f, 0px 30px 0 #16261f, 1px 31px 0 #16261f, 2px 32px 0 #16261f, 3px 33px 0 #16261f;
+}
+
+article#tickets div.container a#go_button{
+	height: 104px;
+	width: 104px;
+	padding:18px 0;
+	display: inline-block;
+	border-radius: 52px;
+	font-family: 'bebas-neue';
+	font-size: 3.75em;
+	background: #e3e2da;
+	color: #ff504b;
+
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+article#tickets div.container a#go_button:hover{
+	border: 13px solid #e3e2da;
+	padding: 12px 0;
+	background: #ff504b;
+	color: #003b23;
+	font-size: 3em;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
 
 /* Footer
 -------------------------------------------------------------------------------*/
