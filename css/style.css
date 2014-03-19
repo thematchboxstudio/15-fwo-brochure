@@ -189,7 +189,48 @@ div.title{
 		float:right;
 		fill: #003b23;
 	}
-	div.title a{
+
+	/* style 2 */
+	div.details{
+		float: right !important;
+		margin: 5px !important;
+		position: relative !important;
+
+		font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif !important;
+	}
+	div.details > a{
+		display: block !important;
+	}
+
+
+	div.details > a{
+		width: 150px !important;
+		height: 32px !important;
+		position: relative !important;
+		padding: 10px !important;
+		background: #003b23 !important;
+	}
+
+
+	div.details > a p{
+		position: absolute !important;
+		width: 150px !important;
+		height: 32px !important;
+		top: 10px !important;
+		left: 10px !important;
+		text-align: center !important;
+		line-height: 32px !important;
+		color: #ff504b !important;
+		font-size: 24px !important;
+	}
+	div.details > a:hover p{
+		background:#ff504b !important;
+		color: #003b23 !important;
+	}
+	
+	/*
+
+	div.title div.details > a{
 		height: 34px;
 		width:128px;
 		padding: 8px;
@@ -197,13 +238,115 @@ div.title{
 		text-align: center;
 		display: block;
 		background: #ff504b;
+		position: relative;
 	}
-		div.title a:hover{background: #003b23;}
-	div.title a p{
+		div.title div.details > a:hover{background: #003b23;}
+
+	div.title div.details > a p{
 		font-size: 1.25em;
 		line-height: 1em;
 		letter-spacing: .1em;}
-		div.title a:hover p{color: #ff504b;}
+		div.title a:hover p{color: #ff504b;} */
+
+	/* Lightbox 
+	-------------------------------------------------------------------------------*/
+	.lb-overlay{
+		width: 0px !important;
+		height: 0px !important;
+		position: fixed !important;
+		overflow: hidden !important;
+		left: 0px !important;
+		top: 0px !important;
+		padding: 0px !important;
+		z-index: 99 !important;
+		text-align: center !important;
+		background: rgba(0,0,0,.8) !important;
+	}
+	.lb-overlay > div{
+		position: relative !important;
+		border: 6px solid #ff504b !important;
+		background: #e3e2da !important;
+		color: #ff504b !important;
+		opacity: 0 !important;
+		filter: alpha(opacity=0) !important; /* internet explorer */
+	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)" !important; /*IE8*/
+
+
+		width: 92% !important;
+		height: 92% !important;
+		margin: 10px auto 0px auto !important;
+	}
+
+	.lb-overlay a.lb-close{
+		background: #ff504b !important;
+		z-index: 1001 !important;
+		color: #fff !important;
+		position: absolute !important;
+		top: 0 !important;
+		right: 0 !important;
+
+		font-size: 15px !important;
+		line-height: 26px !important;
+		text-align: center !important;
+		width: 50px !important;
+		height: 23px !important;
+		overflow: hidden !important;
+		margin-left: -25px !important;
+		opacity: 0 !important;
+		filter: alpha(opacity=0) !important; /* internet explorer */
+	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)" !important; /*IE8*/
+
+		-webkit-transition: opacity 0.3s linear 1.2s !important;
+		-moz-transition: opacity 0.3s linear 1.2s !important;
+		-o-transition: opacity 0.3s linear 1.2s !important;
+		-ms-transition: opacity 0.3s linear 1.2s !important;
+		transition: opacity 0.3s linear 1.2s !important;
+	}
+
+
+	.lb-overlay:target {
+		width: auto !important;
+		height: auto !important;
+		bottom: 0px !important;
+		right: 0px !important;
+		padding: 80px 100px 120px 100px !important;
+	}
+	.lb-overlay:target div {
+		-webkit-animation: translateRight 1.2s ease-in-out !important;
+		-moz-animation: translateRight 1.2s ease-in-out !important;
+		-o-animation: translateRight 1.2s ease-in-out !important;
+		-ms-animation: translateRight 1.2s ease-in-out !important;
+		animation: translateRight 1.2s ease-in-out !important;
+	}
+	.lb-overlay:target a.lb-close,
+	.lb-overlay:target > div{
+		opacity: 1 !important;
+		filter: alpha(opacity=99) !important; /* internet explorer */
+	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)" !important; /*IE8*/
+	}
+
+
+	@-webkit-keyframes translateRight {
+	  0% { -webkit-transform: translateX(-150%); opacity: 0; }
+	  100% { -webkit-transform: translateX(0px); opacity: 1; }
+	}
+	@-moz-keyframes translateRight {
+	  0% { -moz-transform: translateX(-150%); opacity: 0; }
+	  100% { -moz-transform: translateX(0px); opacity: 1; }
+	}
+	@-o-keyframes translateRight {
+	  0% { -o-transform: translateX(-150%); opacity: 0; }
+	  100% { -o-transform: translateX(0px); opacity: 1; }
+	}
+	@-ms-keyframes translateRight {
+	  0% { -ms-transform: translateX(-150%); opacity: 0; }
+	  100% { -ms-transform: translateX(0px); opacity: 1; }
+	}
+	@keyframes translateRight {
+	  0% { transform: translateX(-150%); opacity: 0; }
+	  100% { transform: translateX(0px); opacity: 1; }
+	}
+
 
 .break-text{
 	width: 92%;
@@ -349,38 +492,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		nav ul li a.opened { max-height: 9999px;}
 }
 
-/* Lightbox *reference: http://codepen.io/gschier/pen/HCoqh
--------------------------------------------------------------------------------*/
 
-a.lightbox {
-	/** Default lightbox to hidden */
-	display: none;
-
-	/** Position and style */
-	position: fixed;
-	z-index: 999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-}
-
-a.lightbox div {
-	/** Pad the lightbox image */
-	width: 92%;
-	height: 92%;
-	margin: 2% auto;
-	background: #e3e2da;
-	border: 6px solid #ff504b;
-}
-
-a.lightbox:target {
-
-	/** Unhide lightbox **/
-	display: block;
-}
 
 /* Header
 -------------------------------------------------------------------------------*/
