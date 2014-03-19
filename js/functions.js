@@ -45,7 +45,7 @@
 			    var scrolled = $(this).scrollTop(); // Detect position of scroll
 
 		    // Entering Header
-			    if (scrolled >= 0 && scrolled <= 710) { 
+			    if (scrolled >= 0 && scrolled <= 713) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
 
 			    } else {
@@ -53,7 +53,7 @@
 			    } 
 
 			// Entering #dogdays
-			    if (scrolled >= 711 && scrolled <= 1918) { 
+			    if (scrolled >= 714 && scrolled <= 1921) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
 
 			    } else {
@@ -61,7 +61,7 @@
 			    }
 
 			// Entering #traviata
-			    if (scrolled >= 1919 && scrolled <= 3126) { 
+			    if (scrolled >= 1922 && scrolled <= 3129) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
 
 			    } else {
@@ -69,19 +69,37 @@
 			    } 
 
 			// Entering #hamlet
-			    if (scrolled >= 3127 && scrolled <= 4334) { 
+			    if (scrolled >= 3130 && scrolled <= 4337) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
 
 			    } else {
 			    	$('nav ul li ul.nav-collapse li a.navlink4').removeClass("active");
 			    } 
 
+			// Entering #frontiers
+			    if (scrolled >= 4338 && scrolled <= 5147) { 
+			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').removeClass("active");
+			    }
+
 			// Entering #tickets
-			    if (scrolled >= 4335 && scrolled <= 9999) { 
+			    if (scrolled >= 5148 && scrolled <= 5855) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
 
 			    } else {
 			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+			    } 
+
+			// Entering #Festival_info
+			    if ($win.height() + $win.scrollTop()
+			        == $(document).height()){ 
+			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
+			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
 			    } 
 
 		 	
