@@ -15,7 +15,7 @@
 	$(document).ready(function (){
 	
 		// Smooth Scrolling
-		$('a[href*=#]:not([href=#])').click(function() {
+		$('.nav-collapse a[href*=#]:not([href=#]), #go-to-top a[href*=#]:not([href=#]), .scroll_down a[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
 	        || location.hostname == this.hostname) {
 
