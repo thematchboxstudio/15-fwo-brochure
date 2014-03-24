@@ -181,11 +181,6 @@ div.image-content{
 	border-right: 1px solid #ff504b;
 }
 
-/*.border{
-	background-image: url(../img/top_border.svg) no-repeat center top,
-	url(../img/bottom_border.svg) no-repeat center bottom;
-	
-}*/
 
 
 /* Play Titles */
@@ -233,12 +228,13 @@ div.title{
 		left: 0px;
 		top: 0px;
 		padding: 0px;
-		z-index: 99;
+		z-index: 10;
 		text-align: center;
 		background: rgba(0,0,0,.8);
 	}
-	.lb-overlay > div{
+	.lb-overlay > div.detail-container{
 		position: relative;
+		z-index: 11;
 		border: 6px solid #ff504b;
 		background: #e3e2da;
 		color: #ff504b;
@@ -247,10 +243,147 @@ div.title{
 	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
 
 
-		width: 92%;
-		height: 92%;
+		width: 980px;
+		height: 660px;
 		margin: 10px auto 0px auto;
 	}
+
+		.lb-overlay > div.detail-container div.detail-content{
+			padding: 20px 20px 0;
+			height: 566px;
+			width: 100%;
+			position: relative;
+			z-index: 12;
+		}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column{
+				padding: 20px 20px 0;
+				width: 50%;
+				float: left;
+				text-align: left;
+				position: relative;
+				z-index: 13;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column h4{
+				font-size: 1.3125em;
+				text-transform: uppercase;
+				letter-spacing: .1em;
+				border-bottom: 2px solid #003b23;
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ul li{
+				position: relative;
+				z-index: 15;
+				border-bottom: 1px solid #003b23;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ul li+li{border-bottom: 0px solid #003b23;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ul li a{
+				font-size: 1.125em;
+				font-weight: 700;
+				color:#003b23;
+				text-transform: uppercase;
+				position: relative;
+				z-index: 999;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column a:hover{background:#ff504b;}
+			
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.synopsis,
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.special{
+				font-size: .75em;
+				font-weight: 400;
+				text-transform: none;
+				letter-spacing: 0em;
+				margin-bottom: 20px;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.quote{
+				font-size: .875em;
+				font-weight: 400;
+				text-transform: none;
+				letter-spacing: -.01em;
+				margin-bottom: 20px;
+			}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column i{
+					border-bottom:1px solid #ff504b;
+					padding-bottom: 3px;
+				}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates{
+				font-size: .875em;
+				font-weight: 700;
+				text-transform: none;
+				letter-spacing: 0em;
+				padding-bottom: 20px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #003b23;
+			}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates span.month{color:#ff504b;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.viewer_discretion{
+				font-size: .75em;
+				font-weight: 400;
+				text-transform: none;
+				font-style: italic;
+				letter-spacing: 0em;
+				line-height: 1.5em;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.viewer_discretion em{color:#ff504b;}
+
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul{margin: 10px 0;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul li{
+				font-size: .875em;
+				padding: 0;
+				font-weight: 700;
+				color:#003b23;
+				border-bottom: 0px;
+			}
+
+			.lb-overlay > div.detail-container div.detail-content div.detail-column + div.detail-column h4 ~ h4 {
+				border-bottom: 0px;
+				border-top:2px solid #003b23;
+				padding-top: 10px;
+			}
+
+			.lb-overlay > div.detail-container div.detail-content div.detail-column a.learn-more{
+				display: block;
+				background:#cfcfc8;
+				color: #9b9c98;
+				text-transform: uppercase;
+				font-size: .6875em;
+				font-weight: 700;
+				letter-spacing: .2em;
+				padding: 3px 6px;
+				width: 105px;
+				margin: 10px 0 30px;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column a.learn-more:hover{
+				background: #ff504b;color:#003b23;
+			}
+			.lb-overlay > div.detail-container div.detail-content a.buy_tickets{
+				display: block;
+				height: 122px;
+				width: 244px;
+				padding-top:30px;
+				border-radius: 244px 244px 0 0;
+			    -moz-border-radius: 244px 244px 0 0;
+			    -webkit-border-radius: 244px 244px 0 0;
+			    background: #003b23;
+			    color: #ff504b;
+			    position: absolute;
+			    bottom: 12px;
+			    left: 50%;
+			    font-size: 2.5em;
+			    line-height: 1em;
+			    font-weight: 700;
+			    letter-spacing: .1em;
+
+			}
+			.lb-overlay > div.detail-container div.detail-content a.buy_tickets:hover{background:#ff504b;color:#003b23;}
+
+
+
+
+
+
 
 	.lb-overlay a.lb-close{
 		width: 75px;
@@ -259,7 +392,7 @@ div.title{
 			url(../img/lb-close.svg) no-repeat 15px 12px,
 			#ff504b;
 		text-indent: -9999px;
-		z-index: 1001;
+		z-index: 99;
 		color: #fff;
 		position: absolute;
 		top: 0;
@@ -276,6 +409,10 @@ div.title{
 		-ms-transition: opacity 0.3s linear 1.2s;
 		transition: opacity 0.3s linear 1.2s;
 	}
+	article#festival_trailers .lb-overlay a.lb-close{
+		background: url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+			#e3e2da;
+	}
 	.lb-overlay a.lb-close:hover{
 		background:
 			url(../img/lb-close-hover.svg) no-repeat 15px 12px,
@@ -288,7 +425,8 @@ div.title{
 		height: auto;
 		bottom: 0px;
 		right: 0px;
-		padding: 80px 100px 120px 100px;
+		padding-top: 2%;
+		overflow: scroll;
 	}
 	.lb-overlay:target div {
 		-webkit-animation: translateRight 1.2s ease-in-out;
@@ -303,6 +441,7 @@ div.title{
 		filter: alpha(opacity=99); /* internet explorer */
 	    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
 	}
+	.lb-overlay:target > div div.detail-content div.detail-column ul li a{z-index: 999;}
 
 
 	@-webkit-keyframes translateRight {
@@ -377,7 +516,7 @@ nav {
   right: 0;
   text-align: center;
   text-transform: uppercase;
-  z-index: 99;
+  z-index: 5;
 }
 
 /* Menu */
@@ -445,6 +584,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 	    position: fixed;
 	  }
 		nav ul li.menu{
+			height: 40px;
 			width: 100%;
 			background: #ff504b;
 			text-indent: -9999px;
@@ -456,13 +596,14 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		nav ul li.menu:hover{background: #003b23;}
 
 		/* FW Opera Logo */
-		nav ul li.menu h1 a{height: 30px;width: 33px;
+		nav ul li.menu h1 a{height: 40px;width: 43px;
 			background: url(../img/fwopera_logo_42x42.svg) no-repeat, #e3e2da;
 			background-size: contain;
 			float: left;
 		}
 
 		nav ul li.menu a.toggle{
+			height: 40px;
 			width:100%;
 			background-position: 98% center;
 		}
@@ -528,7 +669,55 @@ h1.deep{
 	line-height: 1em;
 	text-align: center;
 	color: #003b23;
-	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #c3c3b5, -14px 16px 0 #c3c3b5, -13px 17px 0 #c3c3b5, -12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5, -10px 20px 0 #c3c3b5, -9px 21px 0 #c3c3b5, -8px 22px 0 #c3c3b5, -7px 23px 0 #c3c3b5, -6px 24px 0 #c3c3b5, -5px 25px 0 #c3c3b5, -4px 26px 0 #c3c3b5, -3px 27px 0 #c3c3b5, -2px 28px 0 #c3c3b5, -1px 29px 0 #c3c3b5, 0px 30px 0 #c3c3b5, 1px 31px 0 #c3c3b5, 2px 32px 0 #c3c3b5, 3px 33px 0 #c3c3b5;
+	text-shadow: 
+	0px 0px 0 #ff504b,
+	 -1px 1px 0 #ff504b,
+	  -2px 2px 0 #ff504b,
+	   -3px 3px 0 #ff504b,
+	    -4px 4px 0 #ff504b,
+	     -5px 5px 0 #ff504b,
+	      -6px 6px 0 #ff504b,
+	       -7px 7px 0 #ff504b,
+	        -8px 8px 0 #ff504b,
+	         -9px 9px 0 #ff504b,
+	          -10px 10px 0 #ff504b,
+	           -11px 11px 0 #ff504b,
+	            -12px 12px 0 #ff504b,
+	             -13px 13px 0 #ff504b,
+	              -14px 14px 0 #ff504b,
+	               -15px 15px 0 #ff504b,
+
+	 -15px 15px 0 #c3c3b5,
+	  -14px 16px 0 #c3c3b5,
+	   -13px 17px 0 #c3c3b5,
+		-12px 18px 0 #c3c3b5,
+		 -11px 19px 0 #c3c3b5,
+		  -10px 20px 0 #c3c3b5,
+		   -9px 21px 0 #c3c3b5,
+		    -8px 22px 0 #c3c3b5,
+		     -7px 23px 0 #c3c3b5,
+		      -6px 24px 0 #c3c3b5,
+		      -5px 25px 0 #c3c3b5,
+		       -4px 26px 0 #c3c3b5,
+		        -3px 27px 0 #c3c3b5,
+		         -2px 28px 0 #c3c3b5,
+		          -1px 29px 0 #c3c3b5,
+		           0px 30px 0 #c3c3b5,
+		            1px 31px 0 #c3c3b5,
+		             2px 32px 0 #c3c3b5,
+		              3px 33px 0 #c3c3b5,
+		               4px 34px 0 #c3c3b5,
+		                5px 35px 0 #c3c3b5,
+		                 6px 36px 0 #c3c3b5,
+		                  7px 37px 0 #c3c3b5,
+		                   8px 38px 0 #c3c3b5,
+		                    9px 39px 0 #c3c3b5,
+		                     10px 40px 0 #c3c3b5,
+		                      11px 41px 0 #c3c3b5,
+		                       12px 42px 0 #c3c3b5,
+		                        13px 43px 0 #c3c3b5,
+		                         14px 44px 0 #c3c3b5,
+		                          15px 45px 0 #c3c3b5;
 }
 	
 /* Dog Days
@@ -779,6 +968,8 @@ footer#festival_info div.container > div{width: 50%;
 		width:120px;
 		margin: 20px auto;
 	}
+	footer#festival_info div.container > div a{color:#003b23;}
+	footer#festival_info div.container > div a:hover{color:#ff504b;}
 	footer#festival_info div.container > div h2{
 		margin-bottom: 50px;
 	}
@@ -866,10 +1057,52 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	h1.deep{
 		font-family: 'Knockout 48 A', 'Knockout 48 B';
-		margin-left: 0em; /* Center text */
-		font-size: 192px;
-		line-height: .875em;
+		margin-left: .03em; /* Center text */
+		font-size: 210px;
+		letter-spacing: .0675em;
+		line-height: .8em;
+		white-space:nowrap;
+		text-shadow: 
+	0px 0px 0 #ff504b,
+	 -1px 1px 0 #ff504b,
+	  -2px 2px 0 #ff504b,
+	   -3px 3px 0 #ff504b,
+	    -4px 4px 0 #ff504b,
+	     -5px 5px 0 #ff504b,
+	      -6px 6px 0 #ff504b,
+	       -7px 7px 0 #ff504b,
+	        -8px 8px 0 #ff504b,
+	         -9px 9px 0 #ff504b,
+	          -10px 10px 0 #ff504b,
+	           -11px 11px 0 #ff504b,
+	            -12px 12px 0 #ff504b,
+	             -13px 13px 0 #ff504b,
+	              -14px 14px 0 #ff504b,
+	               -15px 15px 0 #ff504b,
+
+	 -15px 15px 0 #c3c3b5,
+	  -14px 16px 0 #c3c3b5,
+	   -13px 17px 0 #c3c3b5,
+		-12px 18px 0 #c3c3b5,
+		 -11px 19px 0 #c3c3b5,
+		  -10px 20px 0 #c3c3b5,
+		   -9px 21px 0 #c3c3b5,
+		    -8px 22px 0 #c3c3b5,
+		     -7px 23px 0 #c3c3b5,
+		      -6px 24px 0 #c3c3b5,
+		      -5px 25px 0 #c3c3b5,
+		       -4px 26px 0 #c3c3b5,
+		        -3px 27px 0 #c3c3b5,
+		         -2px 28px 0 #c3c3b5,
+		          -1px 29px 0 #c3c3b5,
+		           0px 30px 0 #c3c3b5,
+		            1px 31px 0 #c3c3b5,
+		             2px 32px 0 #c3c3b5,
+		              3px 33px 0 #c3c3b5,
+		               4px 34px 0 #c3c3b5,
+		                5px 35px 0 #c3c3b5;
 	}
+	span#tracking{display:block;letter-spacing: .115em;}
 
 	/* Breaks */
 	div.copy-container{padding: 16px;}
@@ -917,8 +1150,33 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		width:160px;padding:4px;margin:35px auto 55px;}
 
 	article#tickets div.container h1.deep{
-		font-size: 120px;
+		font-size: 100px;
+		margin-left: .175em; 
 		letter-spacing: .075em;
+		text-shadow: 0px 0px 0 #ff504b,
+		 -1px 1px 0 #ff504b,
+		  -2px 2px 0 #ff504b,
+		   -3px 3px 0 #ff504b,
+		    -4px 4px 0 #ff504b,
+		     -5px 5px 0 #ff504b,
+		      -6px 6px 0 #ff504b,
+		       -7px 7px 0 #ff504b,
+		        -8px 8px 0 #ff504b,
+		         -9px 9px 0 #ff504b,
+		          -10px 10px 0 #16261f,
+		           -9px 11px 0 #16261f,
+		            -8px 12px 0 #16261f,
+		             -7px 13px 0 #16261f,
+		              -6px 14px 0 #16261f,
+		               -5px 15px 0 #16261f,
+		                -4px 16px 0 #16261f,
+		                 -3px 17px 0 #16261f,
+		                  -2px 18px 0 #16261f,
+		                   -1px 19px 0 #16261f,
+		                    0px 20px 0 #16261f,
+		                     1px 21px 0 #16261f,
+		                      2px 22px 0 #16261f,
+		                       3px 23px 0 #16261f;
 	}
 
 	article#tickets div.container a#go_button{
@@ -988,7 +1246,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 		footer#festival_info div.container > div{
-			margin-top: 80px;
+			margin-top: 60px;
 		}
 		footer#festival_info div.container > div h2{
 			font-size: 60px;
@@ -1003,6 +1261,15 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		padding-top: 75px;
 		font-size: .875em;
 	}
+
+
+
+
+
+
+	article,header,footer{
+		background-attachment: scroll;
+		background-position: center center}
 
 }
 

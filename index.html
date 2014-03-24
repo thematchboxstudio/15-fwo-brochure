@@ -37,7 +37,7 @@
 	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
 	-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 	<meta name="format-detection" content="telephone=no">
 
@@ -97,7 +97,7 @@
 		<nav>
 			<ul>
 				<li class="menu">
-					<h1><a class="mobile" href="/">Fort Worth Opera Season 2015</a></h1>
+					<h1><a class="mobile" href="http://fwopera.org">Fort Worth Opera</a></h1>
 					<a class="toggle" href="#">Menu</a>
 				</li>
 				<li>
@@ -120,11 +120,11 @@
 		<div class="container">
 
 
-			<h1 class="desktop"><a href="/">Fort Worth Opera Season 2015</a></h1>
+			<h1 class="desktop"><a  href="http://fwopera.org">Fort Worth Opera</a></h1>
 			
 			<p class="line1 green-bg">THE ART OF THE</p>
 
-				<h1 class="deep">FEST<span class="responsive-br"><br /></span>IVAL</h1>
+				<h1 class="deep">FEST<span id="tracking">IVAL</span></h1>
 
 			<p class="line2">FORT WORTH OPERA 2015</p>
 
@@ -176,10 +176,53 @@
 
 			<div class="lb-overlay" id="dogdays-info">
 				
-				<div>
+				<div class="detail-container">
 					<div class="lb-title">
 						<h2 class="left">DOG DAYS</h2>
 						<p><i>JON SMITH</i></p>
+					</div>
+
+					<div class="detail-content">
+						<div class="detail-column">
+							<p class="synopsis">
+								<strong>WHEN ALL IS LOST, ALL WE ARE ARE ANIMALS.</strong> Against a desolate landscape tattered by catastrophic war, 13-year-old Lisa befriends a man who has chosen to live as a dog, begging for scraps of food at a time when scraps is all anyone has. As seasons pass, rations diminish. For Lisa and her family, it seems all they have left is their humanity, but how long before that is also lost? <i>Based on the story Dog Days By Judith Budnitz.</i>
+							</p>
+							<p class="quote">
+								<strong>&ldquo;ONE OF THE MOST EXCITING NEW OPERAS IN RECENT YEARS.&rdquo;</strong><br />
+								- <i>The Wall Street Journal</i>
+							</p>
+							<h4>Dates</h4>
+							<p class="dates">
+								<span class="month">APR:</span> 24 / 7:30pm | 26 / 2:00pm | 28 / 7:30pm | 29 / 7:30pm<br />
+								<span class="month">MAY:</span> 1st / 7:30pm | 2nd / 2:00pm
+							</p>
+
+							<ul>
+								<li><a href="#">View Cast</a></li>
+								<li><a href="#">View Production Photos</a></li>
+							</ul>
+
+							<p class="viewer_discretion">
+								<em>&#42;</em> Contains some graphic and violent content that is not suitable for children.<br />
+								<em>&#42;</em> Sung in English.
+							</p>
+						</div>
+
+						<div class="detail-column">
+							<h4>How To Fest!</h4>
+							<ul class="how-to-fest">
+								<li>&ndash; GET BEHIND THE CURTAIN WITH BACKSTAGE TOURS</li>
+								<li>&ndash; OPERA PREVIEWS</li>
+								<li>&ndash; AFTER SHOW LOUNGE ACCESS</li>
+							</ul>
+							<a href="#" class="learn-more">Learn More</a>
+							<h4>EXPERIENCE THE OPERA FOR A LITTLE AS $25 FOR AN INDIVIDUAL TICKET</h4>
+							<p class="special">Get in the know. Sign up for our special offers and receive great deals throughout the year.</p>
+							<a href="#" class="learn-more">Learn More</a>
+						</div>
+
+
+						<a href="#" class="buy_tickets">BUY TICKETS</a>
 					</div>
 
 					<a href="#dogdays" class="lb-close">Close</a>
@@ -368,12 +411,22 @@
 	<article id="festival_trailers">
 
 		<div class="trailer" id="trailer-1">
-			<a href="#festival_trailers" class="play_video">
+			<a href="#trailer-1-preview" class="play_video">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewBox="0 0 30 29" enable-background="new 0 0 30 29" xml:space="preserve">
 					<path d="M0,28.2V0.8C0,0.3,0.6,0,1,0.2l28.6,13.7c0.5,0.2,0.5,1,0,1.2L1,28.8C0.6,29,0,28.7,0,28.2z"/>
 				</svg>
 			</a>
 		</div>
+
+		<div class="lb-overlay" id="trailer-1-preview">
+				
+				<div>
+					<a href="#festival_trailers" class="lb-close">Close</a>
+				</div>
+				
+		</div>
+
+
 
 		<div class="festival_trailers">
 			<svg height="18" width="40">
@@ -386,12 +439,23 @@
 		</div>
 
 		<div class="trailer" id="trailer-2">
-			<a href="#festival_trailers" class="play_video">
+			<a href="#trailer-2-preview" class="play_video">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewBox="0 0 30 29" enable-background="new 0 0 30 29" xml:space="preserve">
 					<path d="M0,28.2V0.8C0,0.3,0.6,0,1,0.2l28.6,13.7c0.5,0.2,0.5,1,0,1.2L1,28.8C0.6,29,0,28.7,0,28.2z"/>
 				</svg>
 			</a>
 		</div>
+
+		<div class="lb-overlay" id="trailer-2-preview">
+				
+				<div>
+					<a href="#festival_trailers" class="lb-close">Close</a>
+				</div>
+				
+		</div>
+
+
+
 
 	</article>
 
@@ -412,9 +476,9 @@ THE OPERA</a></li>
 
 			<div>
 				<p class="coral-bg">Online</p>
-				<h2>FWOPERA.ORG</h2>
+				<a href="http://fwopera.org"><h2>FWOPERA.ORG</h2></a>
 				<p class="coral-bg">Call</p>
-				<h2>877.396.7372</h2>
+				<a href="tel:+18773967372"><h2>877.396.7372</h2></a>
 			</div>
 
 		</div>
