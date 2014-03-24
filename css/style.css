@@ -59,11 +59,23 @@ h1{
 }
 
 h2{
-	font-family: "bebas-neue";
-	font-size: 4em;
+	font-family: 'Knockout 48 A', 'Knockout 48 B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4.5em;
 	line-height: 1em;
 	text-transform: uppercase;
-	letter-spacing: .1em;
+	letter-spacing: .05em;
+}
+
+h3{
+	font-family: 'Knockout 48 A', 'Knockout 48 B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+	line-height: 1em;
+	text-transform: uppercase;
+	letter-spacing: .05em;
 }
 
 p{
@@ -80,6 +92,12 @@ p{
 	color: #ff504b;
 }
 
+
+/* Knockout Featherweight no.48
+font-family: 'Knockout 48 A', 'Knockout 48 B';
+font-weight: 400;
+font-style: normal;
+*/
 
 /* Global Styles
 -------------------------------------------------------------------------------*/
@@ -180,7 +198,7 @@ div.title{
 }
 	div.title h2{
 		height: 94px;
-		padding: 20px;
+		padding: 10px 20px;
 		background: #ff504b;
 	}
 	div.title svg{
@@ -411,6 +429,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
 	}
+	nav ul li ul.nav-collapse li a.navlink7{height: 40px;}
 		/* When hovering over listed Menu items */
 		nav ul li ul.nav-collapse li a:hover, nav ul li ul.nav-collapse li a.active{background: #003b23;color: #ff504b;}
 
@@ -471,7 +490,7 @@ header{
 header p.line1{
 	line-height: 1em;
 	padding: 5px 10px;
-	margin: 80px auto 50px ;
+	margin: 80px auto 30px ;
 	font-size: 1.25em;
 	font-weight: 400;
 	display: inline-block;
@@ -491,7 +510,7 @@ header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
 	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down a img{margin: 0 10px;}
-	header div.container div.scroll_down a:hover img{margin: 35px 5px;}
+	header div.container div.scroll_down a:hover img{margin: 35px 10px;}
 
 header div.container div.center_line{
 	height: 37px;
@@ -500,10 +519,12 @@ header div.container div.center_line{
 
 
 h1.deep{
-	font-family: "bebas-neue", sans-serif;
+	font-family: 'Knockout 48 A', 'Knockout 48 B';
+	font-weight: 400;
+	font-style: normal;
 	margin-left: .1875em; /* Center text */
 	letter-spacing: .125em;
-	font-size: 230px;
+	font-size: 250px;
 	line-height: 1em;
 	text-align: center;
 	color: #003b23;
@@ -595,6 +616,9 @@ article#tickets{
 		#003b23;
 }
 
+article#tickets div.container{
+	height: 692px;
+}
 
 article#tickets div.container p.line1{
 	width:200px;padding:4px;margin:150px auto 20px;}
@@ -608,32 +632,115 @@ article#tickets div.container h1.deep{
 article#tickets div.container a#go_button{
 	height: 104px;
 	width: 104px;
-	padding:18px 0;
 	margin: 30px auto;
 	display: inline-block;
 	border-radius: 52px;
-	font-family: 'bebas-neue';
-	font-size: 3.75em;
 	background: #e3e2da;
-	color: #ff504b;
+}
+	article#tickets div.container a#go_button h3{
+		margin-top: 18px;
+		font-size: 3.75em;
+		color: #ff504b;
+	}
 
-	transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-}
+
+
 article#tickets div.container a#go_button:hover{
-	border: 13px solid #e3e2da;
-	padding: 12px 0;
+	border: 20px solid rgba(227, 226, 218, .5);
+	border-radius: 52px;
 	background: #ff504b;
-	color: #003b23;
-	font-size: 3em;
+	-moz-background-clip: content;     /* Firefox 3.6 */
+	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+	background-clip: content-box;
 }
+	article#tickets div.container a#go_button:hover h3{
+		margin-top: 12px;
+		font-size: 2.5em;
+		color: #003b23;
+	}
+
 
 article#tickets div.container p.line2{
 	width:340px;margin:10px auto;}
 
-/* Footer
+
+/* Festival Trailers
+-------------------------------------------------------------------------------*/
+
+article#festival_trailers{
+	width: 100%;
+	height: 250px;
+}
+
+article#festival_trailers div.trailer{
+	width: 50%;
+	height: 250px;
+	float: left;
+	border: 1px solid #ff504b;
+}
+
+article#festival_trailers div#trailer-1{
+	background: url(../img/trailer_1.jpg) no-repeat center center, #e3e2da;
+	background-size: cover;
+}
+article#festival_trailers div#trailer-2{
+	background: url(../img/trailer_2.jpg) no-repeat center center, #e3e2da;
+	background-size: cover;
+}
+
+article#festival_trailers div.trailer a.play_video{
+	height: 104px;
+	width: 104px;
+	display: block;
+	margin: 72px auto;
+	border: 20px solid rgba(227, 226, 218, .5);
+	border-radius: 52px;
+	background: #ff504b;
+	-moz-background-clip: content;     /* Firefox 3.6 */
+	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+	background-clip: content-box;
+}
+article#festival_trailers div.trailer a.play_video svg{
+	height: 29px;
+	width: 30px;
+	margin: 17px 0 0 20px;
+	fill:#003b23;
+}
+
+article#festival_trailers div.trailer a.play_video:hover{
+	border: 10px solid #e3e2da;
+}
+article#festival_trailers div.trailer a.play_video:hover svg{
+	height: 50px;
+	width: 50px;
+	margin: 17px 0 0 22px;
+	fill:#e3e2da;
+}
+
+
+article#festival_trailers div.festival_trailers{
+	width:220px;
+	height: 68px;
+	margin: 91px 0 0 -110px;
+	position: absolute;
+	left: 50%;
+}
+
+	article#festival_trailers div.festival_trailers svg{fill:#003b23;}
+	article#festival_trailers div.festival_trailers p{
+		height: 32px;
+		width: 220px;
+		padding: 8px;
+		margin-top: -4px;
+		line-height: 1em;
+		font-size: 1em;
+		text-align: center;
+		background: #ff504b;
+		color: #003b23;
+
+	}
+
+/* Footer - Festival Info
 -------------------------------------------------------------------------------*/
 
 footer{
@@ -679,7 +786,7 @@ footer#festival_info div.container > div{width: 50%;
 
 footer#festival_info div#go-to-top{
 	height: 90px;
-	width: 18.036072%;
+	width: 22%;
 	padding-top: 55px;
 	margin: 0px auto;
 	display: block;
@@ -707,7 +814,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 -------------------------------------------------------------------------------*/
 
 /* 320 x 480 */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 321px){
 
 	h2{	font-size: 2.125em;}
 	p{	font-size: .75em;}
@@ -731,7 +838,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 
 	header p.line1{
-		margin: 50px auto 30px ;
+		margin: 50px auto 10px ;
 		font-size: .875em;
 	}
 	header p.line2{
@@ -740,7 +847,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		font-size: 1.0625em;
 		font-weight: 500;
 		line-height: 1em;
-		margin: 24px auto 14px;
+		margin: 30px auto 14px;
 		background-size: 65px 3px;
 	}
 
@@ -758,9 +865,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 	h1.deep{
-		font-family: "bebas-neue", sans-serif;
+		font-family: 'Knockout 48 A', 'Knockout 48 B';
 		margin-left: 0em; /* Center text */
-		font-size: 185px;
+		font-size: 192px;
 		line-height: .875em;
 	}
 
@@ -771,16 +878,19 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	article#break1 div.center_line{height: 96px;}
 	article#break2 div.center_line{height: 120px;}
 	article#break3 div.center_line{height: 110px;}
+	article#frontiers div.center_line{height: 85px;}
+
+
 
 	/* Play divs*/
 	div.title{
-	height: 80px;
+	height: 78px;
 }
-	div.title h2{height:40px;padding:6px;}
+	div.title h2{height:40px;padding:3px 6px;}
 	div.title img{height:12px;width:70px;}
 	
 	div.title > a{
-		height: 22px;
+		height: 20px;
 		width:70px;
 		padding: 4px;
 		margin-top:-8px;
@@ -788,13 +898,111 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	div.title > a p{font-size: .75em;}
 
 
-	div.container{padding: 0;height: 322px;}
+	div.container{padding: 0;}
+	article.image div.container{height: 322px;}
 
 	div.image-container{
 		width: 90%;
 		margin: 0 auto;
 	}
 	div.image-content{height: 248px;}
+
+
+
+	/* Tickets */
+	article#tickets{height: 568px;}
+	article#tickets div.container{height: 550px;}
+
+	article#tickets div.container p.line1{
+		width:160px;padding:4px;margin:35px auto 55px;}
+
+	article#tickets div.container h1.deep{
+		font-size: 120px;
+		letter-spacing: .075em;
+	}
+
+	article#tickets div.container a#go_button{
+		margin: 70px auto 30px;
+	}
+
+	article#tickets div.container p.line2{
+		width:240px;margin:0px auto;}
+
+
+	/* Festival Trailers */
+	article#festival_trailers{
+		height: 500px;
+	}
+
+	article#festival_trailers div.trailer{
+		width: 100%;
+		height: 250px;
+		float: none;
+	}
+
+	article#festival_trailers div.festival_trailers{
+		margin: -34px 0 0 -110px;
+		position: absolute;
+		left: 50%;
+	}
+
+		article#festival_trailers div.festival_trailers svg{fill:#003b23;}
+		article#festival_trailers div.festival_trailers p{
+			height: 32px;
+			width: 220px;
+			padding: 8px;
+			margin-top: -4px;
+			line-height: 1em;
+			font-size: 1em;
+			text-align: center;
+			background: #ff504b;
+			color: #003b23;
+
+		}
+
+
+	/* Festival Info */
+	footer{
+	background: 
+		url(../img/festival_info-bg.svg) fixed,
+		#e3e2da;
+}
+	footer#festival_info div.container{
+		height: 100%;
+		padding-top: 80px;
+	}
+	footer#festival_info div.container > ul,
+	footer#festival_info div.container > div{
+		width: 100%;
+		margin-top: 0;
+		float: none;
+	}
+
+		footer#festival_info div.container ul li{
+			padding: 10px 30px;
+		}
+		footer#festival_info div.container ul li a{
+			font-size: 1.25em;
+		}
+
+
+
+		footer#festival_info div.container > div{
+			margin-top: 80px;
+		}
+		footer#festival_info div.container > div h2{
+			font-size: 60px;
+		}
+		footer#festival_info div.container > div h2:link{
+			color: #003b23;
+		}
+
+
+	footer#festival_info div#go-to-top{
+		width: 28%;
+		padding-top: 75px;
+		font-size: .875em;
+	}
 
 }
 

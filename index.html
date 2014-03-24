@@ -39,6 +39,8 @@
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta name="format-detection" content="telephone=no">
+
 	<!-- Iconifier might be helpful for generating favicons and touch icons: http://iconifier.net -->
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<!-- This is the traditional favicon.
@@ -56,7 +58,10 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/responsive-nav.css">
 
+	<!-- Typograpy.com Kit -->
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6916892/726004/css/fonts.css" />
 
+	<!-- Typekit -->
 	<script type="text/javascript" src="//use.typekit.net/ilc3aag.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -103,7 +108,8 @@
 						<li><a class="navlink4" href="#hamlet">Hamlet</a></li>
 						<li><a class="navlink5" href="#frontiers">Frontiers</a></li>
 						<li><a class="navlink6" href="#tickets">Tickets</a></li>
-						<li><a class="navlink7" href="#festival_info">Festival Info</a></li>
+						<li><a class="navlink7" href="#festival_trailers">Festival Trailers</a></li>
+						<li><a class="navlink8" href="#festival_info">Festival Info</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -337,6 +343,9 @@
 
 	</article>
 
+
+<!-- Tickets -->
+
 	<article class="break wide" id="tickets">
 
 		<div class="container">
@@ -345,7 +354,7 @@
 
 				<h1 class="deep">TICKETS</h1>
 
-			<a id="go_button" href="#">BUY</a>
+			<a id="go_button" href="#"><h3>BUY</h3></a>
 
 			<p class="line2 coral-bg">SINGLE TICKETS START AT $25</p>
 
@@ -354,7 +363,39 @@
 
 	</article>
 
-	<div class="coral_bar"></div>
+<!-- Festival Trailers -->
+
+	<article id="festival_trailers">
+
+		<div class="trailer" id="trailer-1">
+			<a href="#festival_trailers" class="play_video">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewBox="0 0 30 29" enable-background="new 0 0 30 29" xml:space="preserve">
+					<path d="M0,28.2V0.8C0,0.3,0.6,0,1,0.2l28.6,13.7c0.5,0.2,0.5,1,0,1.2L1,28.8C0.6,29,0,28.7,0,28.2z"/>
+				</svg>
+			</a>
+		</div>
+
+		<div class="festival_trailers">
+			<svg height="18" width="40">
+				<polygon points="40,0 40,18 0,18" />
+			</svg>
+			<p>Festival Trailers</p>
+			<svg class="right" height="18" width="40">
+				<polygon points="0,0 40,0 0,18" />
+			</svg>
+		</div>
+
+		<div class="trailer" id="trailer-2">
+			<a href="#festival_trailers" class="play_video">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewBox="0 0 30 29" enable-background="new 0 0 30 29" xml:space="preserve">
+					<path d="M0,28.2V0.8C0,0.3,0.6,0,1,0.2l28.6,13.7c0.5,0.2,0.5,1,0,1.2L1,28.8C0.6,29,0,28.7,0,28.2z"/>
+				</svg>
+			</a>
+		</div>
+
+	</article>
+
+
 	<footer id="festival_info" class="image">
 		<div class="title">
 			<h2>Festival Info.</h2>

@@ -23,7 +23,7 @@
 	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	           if (target.length) {
 	             $('html,body').animate({
-	                 scrollTop: target.offset().top - 84
+	                 scrollTop: target.offset().top
 	            }, 750);
 	            return false;
 	        }
@@ -92,14 +92,22 @@
 			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
 			    } 
 
-			// Entering #Festival_info
-			    if ($win.height() + $win.scrollTop()
-			        == $(document).height()){ 
+			// Entering #festival_trailers
+			    if (scrolled >= 5856 && scrolled <= 6105) { 
 			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
-			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
 
 			    } else {
 			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    } 
+
+			// Entering #festival_info
+			    if ($win.height() + $win.scrollTop()
+			        == $(document).height()){ 
+			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
 			    } 
 
 		 	
