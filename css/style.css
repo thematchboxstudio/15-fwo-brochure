@@ -218,7 +218,37 @@ div.title{
 		letter-spacing: .1em;}
 		div.title a:hover p{color: #ff504b;} 
 
-	/* Lightbox 
+
+.break-text{
+	width: 92%;
+	max-width:630px;
+	margin: auto;
+}
+div.copy-container{
+	padding: 30px 30px;
+	text-align: center;
+	border-left: 1px solid #ff504b;
+	border-right: 1px solid #ff504b;
+	background:  
+	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
+	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
+	url(../img/topleft-bottomright-corner.svg) no-repeat right bottom,
+	url(../img/topright-bottomleft-corner.svg) no-repeat left bottom;
+}
+div.top-border{
+	height:47px;
+	background:url(../img/top_border.svg) repeat-x center top;
+	position: relative;
+	z-index: 2;}
+div.bottom-border{
+	height:47px;
+	background:url(../img/bottom_border.svg) repeat-x center bottom;
+	position: relative;
+	z-index: 2;
+}
+
+
+/* Lightbox 
 	-------------------------------------------------------------------------------*/
 	.lb-overlay{
 		width: 0px;
@@ -265,12 +295,53 @@ div.title{
 			}
 			.lb-overlay > div.detail-container div.detail-content div.detail-column h4{
 				font-size: 1.3125em;
+				line-height: 1em;
 				text-transform: uppercase;
 				letter-spacing: .1em;
 				border-bottom: 2px solid #003b23;
 				padding-bottom: 5px;
 				margin-bottom: 5px;
 			}
+			
+			
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.synopsis,
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.special{
+				font-size: .75em;
+				font-weight: 400;
+				text-transform: none;
+				letter-spacing: 0em;
+				margin-bottom: 20px;
+			}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.callouts{
+				font-size: .875em;
+				font-weight: 400;
+				line-height: 1.25em;
+				text-transform: none;
+				letter-spacing: -.01em;
+				margin-bottom: 25px;
+			}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column i{
+					border-bottom:1px solid #ff504b;
+					padding-bottom: 3px;
+				}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column i.no-underline{
+					border-bottom:0px solid #ff504b;
+					padding-bottom: 0;
+				}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column em{font-style:normal;color:#ff504b;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates{
+				font-size: .875em;
+				font-weight: 700;
+				line-height: 1.25em;
+				text-transform: none;
+				letter-spacing: 0em;
+				padding-top:10px;
+			}
+				.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates ~ p.dates{
+					padding-bottom:22px;
+				}
+
+
 			.lb-overlay > div.detail-container div.detail-content div.detail-column ul li{
 				position: relative;
 				z-index: 15;
@@ -288,36 +359,9 @@ div.title{
 				position: relative;
 				z-index: 999;}
 			.lb-overlay > div.detail-container div.detail-content div.detail-column a:hover{background:#ff504b;}
-			
-			.lb-overlay > div.detail-container div.detail-content div.detail-column p.synopsis,
-			.lb-overlay > div.detail-container div.detail-content div.detail-column p.special{
-				font-size: .75em;
-				font-weight: 400;
-				text-transform: none;
-				letter-spacing: 0em;
-				margin-bottom: 20px;
-			}
-			.lb-overlay > div.detail-container div.detail-content div.detail-column p.quote{
-				font-size: .875em;
-				font-weight: 400;
-				text-transform: none;
-				letter-spacing: -.01em;
-				margin-bottom: 20px;
-			}
-				.lb-overlay > div.detail-container div.detail-content div.detail-column i{
-					border-bottom:1px solid #ff504b;
-					padding-bottom: 3px;
-				}
-			.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates{
-				font-size: .875em;
-				font-weight: 700;
-				text-transform: none;
-				letter-spacing: 0em;
-				padding-bottom: 20px;
-				margin-bottom: 10px;
-				border-bottom: 1px solid #003b23;
-			}
-				.lb-overlay > div.detail-container div.detail-content div.detail-column p.dates span.month{color:#ff504b;}
+
+
+
 			.lb-overlay > div.detail-container div.detail-content div.detail-column p.viewer_discretion{
 				font-size: .75em;
 				font-weight: 400;
@@ -325,22 +369,25 @@ div.title{
 				font-style: italic;
 				letter-spacing: 0em;
 				line-height: 1.5em;
+				padding: 0 0 0 7px;
+				text-indent: -7px;
 			}
-			.lb-overlay > div.detail-container div.detail-content div.detail-column p.viewer_discretion em{color:#ff504b;}
-
-			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul{margin: 10px 0;}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul{margin:10px 0;}
+			
 			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul li{
 				font-size: .875em;
-				padding: 0;
+				padding: 0 0 0 13px;
+				text-indent: -13px;
 				font-weight: 700;
 				color:#003b23;
 				border-bottom: 0px;
 			}
 
+
 			.lb-overlay > div.detail-container div.detail-content div.detail-column + div.detail-column h4 ~ h4 {
 				border-bottom: 0px;
 				border-top:2px solid #003b23;
-				padding-top: 10px;
+				padding-top: 28px;
 			}
 
 			.lb-overlay > div.detail-container div.detail-content div.detail-column a.learn-more{
@@ -360,18 +407,18 @@ div.title{
 			}
 			.lb-overlay > div.detail-container div.detail-content a.buy_tickets{
 				display: block;
-				height: 122px;
-				width: 244px;
-				padding-top:30px;
-				border-radius: 244px 244px 0 0;
-			    -moz-border-radius: 244px 244px 0 0;
-			    -webkit-border-radius: 244px 244px 0 0;
+				height: 100px;
+				width: 200px;
+				padding-top:26px;
+				border-radius: 200px 200px 0 0;
+			    -moz-border-radius: 200px 200px 0 0;
+			    -webkit-border-radius: 200px 200px 0 0;
 			    background: #003b23;
 			    color: #ff504b;
 			    position: absolute;
 			    bottom: 12px;
-			    left: 50%;
-			    font-size: 2.5em;
+			    left: 52%;
+			    font-size: 2em;
 			    line-height: 1em;
 			    font-weight: 700;
 			    letter-spacing: .1em;
@@ -475,36 +522,66 @@ div.title{
 	}
 	.lb-title > p{padding: 35px 0;font-weight: 400;}
 
-.break-text{
-	width: 92%;
-	max-width:630px;
-	margin: auto;
-}
-div.copy-container{
-	padding: 30px 30px;
-	text-align: center;
-	border-left: 1px solid #ff504b;
-	border-right: 1px solid #ff504b;
-	background:  
-	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
-	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
-	url(../img/topleft-bottomright-corner.svg) no-repeat right bottom,
-	url(../img/topright-bottomleft-corner.svg) no-repeat left bottom;
-}
-div.top-border{
-	height:47px;
-	background:url(../img/top_border.svg) repeat-x center top;
-	position: relative;
-	z-index: 2;}
-div.bottom-border{
-	height:47px;
-	background:url(../img/bottom_border.svg) repeat-x center bottom;
-	position: relative;
-	z-index: 2;
-}
 
 
 
+/* 320 x 480 */
+@media screen and (max-width: 321px){
+
+	.lb-overlay > div.detail-container{
+		width: 100%;
+		height: auto;
+		margin: 40px auto 0px auto;
+	}
+
+		.lb-title{
+			width:70%;
+			height: 40px;
+			padding: 0;
+		}
+		.lb-title > p{padding: 15px 0;}
+
+		.lb-overlay > div.detail-container div.detail-content{
+			padding: 0;
+			height: 1250px;
+		}
+			.lb-overlay > div.detail-container div.detail-content div.detail-column{
+				width: 100%;
+				float: none;
+			}
+
+			.lb-overlay > div.detail-container div.detail-content div.detail-column a.learn-more{
+				height: 40px;
+				font-size: .875em;
+				padding: 10px 16px;
+				width: 150px;
+			}
+
+
+			.lb-overlay > div.detail-container div.detail-content a.buy_tickets{
+			    position: absolute;
+			    bottom: 0px;
+			    left: 50%;
+			    margin-left:-100px;
+			}
+
+	.lb-overlay a.lb-close{
+		width: 40px;
+		height: 40px;
+		background-position: 9px 7px;
+		background-size: 25px 25px;
+	}
+	.lb-overlay a.lb-close:hover{
+		background-position: 9px 7px;
+		background-size: 25px 25px;
+	}
+
+	.lb-overlay:target {
+		padding-top: 0;
+		overflow: hidden;
+	}
+
+}
 
 	
 
@@ -574,7 +651,7 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 
 
 /* Mobile Navigation */
-@media screen and (max-width: 899px){
+@media screen and (max-width: 959px){
 	.desktop{display: none;}
 	.mobile{display: block;}
 
@@ -605,17 +682,28 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		nav ul li.menu a.toggle{
 			height: 40px;
 			width:100%;
-			background-position: 98% center;
+			background-position: 97% center;
+			background-size:25px 25px;
 		}
 		nav ul li.menu:hover a.toggle{
-			background-position: 98% center}
+			background-position: 97% center;
+			background-size:25px 25px;
+		}
 
 		/* When Menu is expanded */
-		nav ul li.menu a.toggle.active{background-position: 98% center}
-		nav ul li.menu:hover a.toggle.active{background-position: 98% center}
+		nav ul li.menu a.toggle.active{background-position: 97% center;background-size:25px 25px;}
+		nav ul li.menu:hover a.toggle.active{background-position: 97% center;background-size:25px 25px;}
 
 
 		nav ul li, nav ul li ul.nav-collapse li a{ width: 100%;}
+
+		/* When Menu is expanded */
+		nav ul li ul.nav-collapse li a{
+			height: 40px;
+			padding: 8px;
+			font-size: 1.25em;
+		}
+
 		nav ul li a.opened { max-height: 9999px;}
 }
 
