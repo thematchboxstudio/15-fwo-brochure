@@ -32,7 +32,10 @@
 	    
 
 		}); // Ending Smooth Scrolling function
-	
+
+
+		// Stop Youtube videos when switching frames
+		
 		
 		
 	
