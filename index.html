@@ -68,6 +68,7 @@
 	<!-- Responsive Navigation -->
 	<script src="js/responsive-nav.js"></script>
 
+
 	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
 	<script src="js/prefixfree.min.js"></script>
 	
@@ -150,7 +151,7 @@
 						<a href="#" class="buy_tickets">BUY TICKETS</a>
 					</div>
 
-					<a href="#dogdays" class="lb-close">Close</a>
+					<a href="#dogdays" class="lb-close"><< Back</a>
 				</div>
 				
 	</div> <!-- div.lb-overlay#dogdays-info -->
@@ -209,7 +210,7 @@
 						<a href="#" class="buy_tickets">BUY TICKETS</a>
 					</div>
 
-					<a href="#traviata" class="lb-close">Close</a>
+					<a href="#traviata" class="lb-close"><< Back</a>
 				</div>
 				
 	</div> <!-- div.lb-overlay#traviata-info -->
@@ -271,7 +272,7 @@
 
 
 
-					<a href="#hamlet" class="lb-close">Close</a>
+					<a href="#hamlet" class="lb-close"><< Back</a>
 				</div>
 				
 	</div> <!-- div.lb-overlay#hamlet-info -->
@@ -307,7 +308,7 @@
 
 
 
-				<a href="#festival_trailers" class="lb-close" id="trailer-close">Close</a>
+				<a href="#festival_trailers" class="lb-close" id="trailer-close"><< Back</a>
 			</div>
 			
 	</div>
@@ -341,7 +342,7 @@
 
 
 
-				<a href="#festival_trailers" class="lb-close" id="trailer-close">Close</a>
+				<a href="#festival_trailers" class="lb-close" id="trailer-close"><< Back</a>
 			</div>
 				
 	</div>
@@ -359,7 +360,7 @@
 		<ul>
 			<li class="menu">
 				<h1><a class="mobile" href="http://fwopera.org">Fort Worth Opera</a></h1>
-				<a class="toggle" href="#">Menu</a>
+				<a class="toggle" href="#menu">Menu</a>
 			</li>
 			<li>
 				<ul class="nav-collapse">
@@ -393,7 +394,7 @@
 			<p class="line2">FORT WORTH OPERA 2015</p>
 
 			<div class="scroll_down">
-				<a href="#dogdays">
+				<a href="#break1">
 					<p class="left">Scroll Down To</p>
 					<img class="left" src="img/scroll_down.svg" height="84" width="34" />
 					<p class="left">Experience More</p>
@@ -442,6 +443,9 @@
 		<div class="container">
 			<div class="top-border image-container"></div>
 			<div class="image-container image-content">
+
+				<a href="#dogdays-info" id="dogdays-info" class="mobile image_sub">
+				</a>
 				
 				<!-- Image Content for Parallax -->
 
@@ -485,6 +489,9 @@
 		<div class="container">
 			<div class="top-border image-container"></div>
 			<div class="image-container image-content">
+
+				<a href="#traviata-info" id="traviata-info" class="mobile image_sub">
+				</a>
 				
 				<!-- Image Content for Parallax -->
 
@@ -529,6 +536,9 @@
 		<div class="container">
 			<div class="top-border image-container"></div>
 			<div class="image-container image-content">
+
+				<a href="#hamlet-info" id="hamlet-info" class="mobile image_sub">
+				</a>
 				
 				<!-- Image Content for Parallax -->
 
@@ -744,8 +754,10 @@ THE OPERA</a></li>
 <script>
       var navigation = responsiveNav(".nav-collapse", {
         animate: true,
-        customToggle: ".toggle"
+        customToggle: ".toggle",
+        closeOnNavClick: true
       });
     </script>
+
 </body>
 </html>
