@@ -156,6 +156,16 @@
 			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
 			    } 
 
+
+
+
+			// Parallax
+			//Dog Days
+				if (scrolled >= 1000 && scrolled <= 1521) {
+					$('div.px-container #px-dogdays-landscape').css('height',((scrolled*45.867)*.0015) + '%');
+				}
+			
+
 		 	
 		 	
 		    

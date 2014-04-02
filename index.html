@@ -68,6 +68,10 @@
 	<!-- Responsive Navigation -->
 	<script src="js/responsive-nav.js"></script>
 
+	<!-- Parallax -->
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/jquery.superscrollorama.js"></script>
+
 
 	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
 	<script src="js/prefixfree.min.js"></script>
@@ -434,12 +438,17 @@
 			<br class="clear" />
 
 			
-			<a href="#dogdays-info" id="dogdays-info">
+			<a href="#dogdays-info">
 				<p>DETAILS</p>
 			</a>
 		</div>
 
-		
+		<!-- Content for Parallax -->
+		<div class="px-container" id="px-dogdays">
+			<img class="px-dogdays_img" id="px-dogdays-landscape" src="img/px-dogdays_landscape.png" />
+
+		</div>
+
 		<div class="container">
 			<div class="top-border image-container"></div>
 			<div class="image-container image-content">
@@ -447,12 +456,10 @@
 				<a href="#dogdays-info" id="dogdays-info" class="mobile image_sub">
 				</a>
 				
-				<!-- Image Content for Parallax -->
-
 			</div>
 			<div class="bottom-border image-container"></div>
 		</div>
-		
+
 	
 	</article>
 

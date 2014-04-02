@@ -1036,16 +1036,47 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 .responsive-br{display: none;}
 
+/* Parallax 
+-------------------------------------------------------------------------------*/
+@media screen and (min-width: 960px){
+	div.px-container{
+		height:708px;
+		width:100%;
+		position:absolute;
+		display: block;
+		top:0;left:0;
+		overflow: hidden;
+	}
+
+
+	/* Dog Days */
+	article#dogdays > div#px-dogdays{
+		background:url(../img/px-dogdays_sky_background.jpg) no-repeat top center,#fff;
+		background-size: 100% 110%;
+	}
+
+	div.px-container #px-dogdays-landscape{
+		height: 95%;
+		max-width: 100%;
+		position: absolute;
+		margin: 0 auto;
+		left: 0;right: 0;
+	}
+
+}
+
+
 /* Media queries
 -------------------------------------------------------------------------------*/
 
 /* Less than 960 */
 @media screen and (max-width: 959px){
+	div.px-container{display: none;}
 	.desktop{display: none;}
 	.mobile{display: block;}
 
 	.nav-up {
-    	display: none;
+    	top: -80px;
 	}
 
 	nav {
@@ -1113,7 +1144,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 /* Less than 768 x 1024 */
 
 @media screen and (max-width: 767px){
-	.lb-overlay:target ~ div#wrapper{display: none;}
+	.lb-overlay:target ~ div#wrapper{height: 0px;overflow:hidden;position: absolute;top:0;}
 	/* Lightbox */
 
 	.lb-overlay{position: fixed;}
