@@ -3,7 +3,7 @@ body {font: 1em 'raleway', sans-serif;}
 *{
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
+	-moz-transition: 0.5s; 
 	-o-transition: 0.5s;
 }
 
@@ -40,16 +40,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /* Beige Gray 
  * #e3e2da	
 */
-
-/* Print styles
--------------------------------------------------------------------------------*/
-@media print {
-
-
-
-}
-
-
 
 /* Typography
 -------------------------------------------------------------------------------*/
@@ -428,9 +418,9 @@ div.bottom-border{
 				height: 100px;
 				width: 200px;
 				padding-top:26px;
-				border-radius: 200px 200px 0 0;
 			    -moz-border-radius: 200px 200px 0 0;
 			    -webkit-border-radius: 200px 200px 0 0;
+			    border-radius: 200px 200px 0 0;
 			    background: #003b23;
 			    color: #ff504b;
 			    position: absolute;
@@ -511,28 +501,6 @@ div.bottom-border{
 	}
 	.lb-overlay:target > div div.detail-content div.detail-column ul li a{z-index: 999;}
 
-
-	@-webkit-keyframes translateRight {
-	  0% { -webkit-transform: translateX(-150%); opacity: 0; }
-	  100% { -webkit-transform: translateX(0px); opacity: 1; }
-	}
-	@-moz-keyframes translateRight {
-	  0% { -moz-transform: translateX(-150%); opacity: 0; }
-	  100% { -moz-transform: translateX(0px); opacity: 1; }
-	}
-	@-o-keyframes translateRight {
-	  0% { -o-transform: translateX(-150%); opacity: 0; }
-	  100% { -o-transform: translateX(0px); opacity: 1; }
-	}
-	@-ms-keyframes translateRight {
-	  0% { -ms-transform: translateX(-150%); opacity: 0; }
-	  100% { -ms-transform: translateX(0px); opacity: 1; }
-	}
-	@keyframes translateRight {
-	  0% { transform: translateX(-150%); opacity: 0; }
-	  100% { transform: translateX(0px); opacity: 1; }
-	}
-
 	
 
 
@@ -559,10 +527,11 @@ nav ul li.menu{
 	height: 30px;
 	background: url(../img/menu-bg.svg) no-repeat;
 	font-size: 1.25em;
-	transition: 0.5s;
+	
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
 	-o-transition: 0.5s;
+	transition: 0.5s;
 }
 nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 
@@ -574,10 +543,11 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		letter-spacing: .1em;
 		text-align: left;
 		background: url(../img/menu-open.svg) no-repeat 90% center;
-		transition: 0.5s;
+		
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
+		transition: 0.5s;
 	}
 	nav ul li.menu:hover a.toggle{color:#ff504b;background: url(../img/menu-open-hover.svg) no-repeat 90% center;}
 	/* When Menu is expanded */
@@ -597,10 +567,11 @@ nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
 		font-size: .75em;
 		font-weight: 700;
 		letter-spacing: .1em;
-		transition: 0.5s;
+		
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
+		transition: 0.5s;
 	}
 	nav ul li ul.nav-collapse li a.navlink7{height: 40px;}
 		/* When hovering over listed Menu items */
@@ -712,7 +683,7 @@ h1.deep{
 -------------------------------------------------------------------------------*/
 article#dogdays{
 	background: url(../img/dogdays-1094x708.jpg) no-repeat center center;
-background-size:cover;}
+	background-size:cover;}
 
 
 /* La Traviata
@@ -773,10 +744,10 @@ article#frontiers a.frontiers_learn{
 		background: #ff504b;
 		color: #003b23;
 
-		transition: 0.5s;
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
+		transition: 0.5s;
 	}
 	article#frontiers a.frontiers_learn:hover p{
 		background:#003b23; color:#ff504b;}
@@ -802,7 +773,43 @@ article#tickets div.container p.line1{
 
 article#tickets div.container h1.deep{
 	color: #e3e2da;
-	text-shadow: 0px 0px 0 #ff504b, -1px 1px 0 #ff504b, -2px 2px 0 #ff504b, -3px 3px 0 #ff504b, -4px 4px 0 #ff504b, -5px 5px 0 #ff504b, -6px 6px 0 #ff504b, -7px 7px 0 #ff504b, -8px 8px 0 #ff504b, -9px 9px 0 #ff504b, -10px 10px 0 #ff504b, -11px 11px 0 #ff504b, -12px 12px 0 #ff504b, -13px 13px 0 #ff504b, -14px 14px 0 #ff504b, -15px 15px 0 #ff504b, -15px 15px 0 #16261f, -14px 16px 0 #16261f, -13px 17px 0 #16261f, -12px 18px 0 #16261f, -11px 19px 0 #16261f, -10px 20px 0 #16261f, -9px 21px 0 #16261f, -8px 22px 0 #16261f, -7px 23px 0 #16261f, -6px 24px 0 #16261f, -5px 25px 0 #16261f, -4px 26px 0 #16261f, -3px 27px 0 #16261f, -2px 28px 0 #16261f, -1px 29px 0 #16261f, 0px 30px 0 #16261f, 1px 31px 0 #16261f, 2px 32px 0 #16261f, 3px 33px 0 #16261f;
+	text-shadow: 
+	0px 0px 0 #ff504b, 
+	-1px 1px 0 #ff504b, 
+	-2px 2px 0 #ff504b, 
+	-3px 3px 0 #ff504b, 
+	-4px 4px 0 #ff504b, 
+	-5px 5px 0 #ff504b, 
+	-6px 6px 0 #ff504b, 
+	-7px 7px 0 #ff504b, 
+	-8px 8px 0 #ff504b, 
+	-9px 9px 0 #ff504b, 
+	-10px 10px 0 #ff504b, 
+	-11px 11px 0 #ff504b, 
+	-12px 12px 0 #ff504b, 
+	-13px 13px 0 #ff504b, 
+	-14px 14px 0 #ff504b, 
+	-15px 15px 0 #ff504b, 
+
+	-15px 15px 0 #16261f, 
+	-14px 16px 0 #16261f, 
+	-13px 17px 0 #16261f, 
+	-12px 18px 0 #16261f, 
+	-11px 19px 0 #16261f, 
+	-10px 20px 0 #16261f, 
+	-9px 21px 0 #16261f, 
+	-8px 22px 0 #16261f, 
+	-7px 23px 0 #16261f, 
+	-6px 24px 0 #16261f, 
+	-5px 25px 0 #16261f, 
+	-4px 26px 0 #16261f, 
+	-3px 27px 0 #16261f, 
+	-2px 28px 0 #16261f, 
+	-1px 29px 0 #16261f, 
+	0px 30px 0 #16261f, 
+	1px 31px 0 #16261f, 
+	2px 32px 0 #16261f, 
+	3px 33px 0 #16261f;
 }
 
 
@@ -813,6 +820,8 @@ article#tickets div.container a#go_button{
 	display: inline-block;
 	border-radius: 52px;
 	background: #e3e2da;
+
+
 }
 	article#tickets div.container a#go_button h3{
 		margin-top: 18px;
@@ -1049,10 +1058,11 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			width: 100%;
 			background: #ff504b;
 			text-indent: -9999px;
-			transition: none;
+			
 			-webkit-transition: none;
 			-moz-transition: none;
 			-o-transition: none;
+			transition: none;
 		}
 		nav ul li.menu:hover{background: #003b23;}
 
@@ -1066,15 +1076,16 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		nav ul li.menu a.toggle{
 			height: 40px;
 			width:100%;
-			background-position: 97% center;
+			background: url(../img/menu-open-mobile.svg) no-repeat 97% center;
 			background-size:25px 25px;
-			transition: none;
+			
 			-webkit-transition: none;
 			-moz-transition: none;
 			-o-transition: none;
+			transition: none;
 		}
 		nav ul li.menu:hover a.toggle{
-			background-position: 97% center;
+			background: url(../img/menu-open-hover-mobile.svg) no-repeat 97% center;
 			background-size:25px 25px;
 		}
 
@@ -1160,45 +1171,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		margin-left: .03em; /* Center text */
 		font-size: 220px;
 		line-height: .8em;
-		text-shadow: 
-	0px 0px 0 #ff504b,
-	 -1px 1px 0 #ff504b,
-	  -2px 2px 0 #ff504b,
-	   -3px 3px 0 #ff504b,
-	    -4px 4px 0 #ff504b,
-	     -5px 5px 0 #ff504b,
-	      -6px 6px 0 #ff504b,
-	       -7px 7px 0 #ff504b,
-	        -8px 8px 0 #ff504b,
-	         -9px 9px 0 #ff504b,
-	          -10px 10px 0 #ff504b,
-	           -11px 11px 0 #ff504b,
-	            -12px 12px 0 #ff504b,
-	             -13px 13px 0 #ff504b,
-	              -14px 14px 0 #ff504b,
-	               -15px 15px 0 #ff504b,
+		text-shadow: 0px 0px 0 #ff504b,-1px 1px 0 #ff504b,-2px 2px 0 #ff504b,-3px 3px 0 #ff504b,-4px 4px 0 #ff504b,-5px 5px 0 #ff504b,-6px 6px 0 #ff504b,-7px 7px 0 #ff504b,-8px 8px 0 #ff504b,-9px 9px 0 #ff504b,-10px 10px 0 #ff504b,-11px 11px 0 #ff504b,-12px 12px 0 #ff504b,-13px 13px 0 #ff504b,-14px 14px 0 #ff504b,-15px 15px 0 #ff504b,
 
-	 -15px 15px 0 #c3c3b5,
-	  -14px 16px 0 #c3c3b5,
-	   -13px 17px 0 #c3c3b5,
-		-12px 18px 0 #c3c3b5,
-		 -11px 19px 0 #c3c3b5,
-		  -10px 20px 0 #c3c3b5,
-		   -9px 21px 0 #c3c3b5,
-		    -8px 22px 0 #c3c3b5,
-		     -7px 23px 0 #c3c3b5,
-		      -6px 24px 0 #c3c3b5,
-		      -5px 25px 0 #c3c3b5,
-		       -4px 26px 0 #c3c3b5,
-		        -3px 27px 0 #c3c3b5,
-		         -2px 28px 0 #c3c3b5,
-		          -1px 29px 0 #c3c3b5,
-		           0px 30px 0 #c3c3b5,
-		            1px 31px 0 #c3c3b5,
-		             2px 32px 0 #c3c3b5,
-		              3px 33px 0 #c3c3b5,
-		               4px 34px 0 #c3c3b5,
-		                5px 35px 0 #c3c3b5;
+			-15px 15px 0 #c3c3b5,-14px 16px 0 #c3c3b5,-13px 17px 0 #c3c3b5,-12px 18px 0 #c3c3b5, -11px 19px 0 #c3c3b5,-10px 20px 0 #c3c3b5,-9px 21px 0 #c3c3b5,-8px 22px 0 #c3c3b5,-7px 23px 0 #c3c3b5,-6px 24px 0 #c3c3b5,-5px 25px 0 #c3c3b5,-4px 26px 0 #c3c3b5,-3px 27px 0 #c3c3b5,-2px 28px 0 #c3c3b5,-1px 29px 0 #c3c3b5,0px 30px 0 #c3c3b5,1px 31px 0 #c3c3b5,2px 32px 0 #c3c3b5,3px 33px 0 #c3c3b5,4px 34px 0 #c3c3b5,5px 35px 0 #c3c3b5;
 	}
 
 	/* Frontiers */
@@ -1503,11 +1478,6 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		position: fixed;
 		background-position: 97% center;
 		background-size:25px 25px;
-		-webkit-animation: none;
-		-moz-animation: none;
-		-o-animation: none;
-		-ms-animation: none;
-		animation: none;
 	}
 	.lb-overlay a.lb-close:hover,
 	.lb-overlay.trailer-previews:target a.lb-close:hover{
@@ -1520,11 +1490,6 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 	.lb-overlay.trailer-previews:target a.lb-close:hover{color:#e3e2da;}
 	.lb-overlay:target div {
-		-webkit-animation: none;
-		-moz-animation: none;
-		-o-animation: none;
-		-ms-animation: none;
-		animation: none;
 	}
 
 	div.lb-overlay.trailer-previews div.detail-container .trailer-info{padding:8px 10px;}
@@ -1584,30 +1549,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		font-size: 100px;
 		margin-left: .175em; 
 		letter-spacing: .075em;
-		text-shadow: 0px 0px 0 #ff504b,
-		 -1px 1px 0 #ff504b,
-		  -2px 2px 0 #ff504b,
-		   -3px 3px 0 #ff504b,
-		    -4px 4px 0 #ff504b,
-		     -5px 5px 0 #ff504b,
-		      -6px 6px 0 #ff504b,
-		       -7px 7px 0 #ff504b,
-		        -8px 8px 0 #ff504b,
-		         -9px 9px 0 #ff504b,
-		          -10px 10px 0 #16261f,
-		           -9px 11px 0 #16261f,
-		            -8px 12px 0 #16261f,
-		             -7px 13px 0 #16261f,
-		              -6px 14px 0 #16261f,
-		               -5px 15px 0 #16261f,
-		                -4px 16px 0 #16261f,
-		                 -3px 17px 0 #16261f,
-		                  -2px 18px 0 #16261f,
-		                   -1px 19px 0 #16261f,
-		                    0px 20px 0 #16261f,
-		                     1px 21px 0 #16261f,
-		                      2px 22px 0 #16261f,
-		                       3px 23px 0 #16261f;
+		text-shadow: 0px 0px 0 #ff504b,-1px 1px 0 #ff504b,-2px 2px 0 #ff504b,-3px 3px 0 #ff504b,-4px 4px 0 #ff504b,-5px 5px 0 #ff504b,-6px 6px 0 #ff504b,-7px 7px 0 #ff504b,-8px 8px 0 #ff504b,-9px 9px 0 #ff504b,
+
+		    -10px 10px 0 #16261f,-9px 11px 0 #16261f,-8px 12px 0 #16261f,-7px 13px 0 #16261f,-6px 14px 0 #16261f,-5px 15px 0 #16261f,-4px 16px 0 #16261f,-3px 17px 0 #16261f,-2px 18px 0 #16261f,-1px 19px 0 #16261f,0px 20px 0 #16261f,1px 21px 0 #16261f,2px 22px 0 #16261f,3px 23px 0 #16261f;
 	}
 
 	article#tickets div.container p.line2{
