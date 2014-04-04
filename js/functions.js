@@ -78,6 +78,18 @@
 
 
 		// Stop Youtube videos when switching frames
+		$('a#trailer-close').click(function(){
+
+			// Remove src of iframe to stop videos
+			document.getElementById( 'trailer-video1' ).setAttribute( 'src', '' );
+			document.getElementById( 'trailer-video2' ).setAttribute( 'src', '' );
+
+			// resets the src of videos so they run again
+			document.getElementById( 'trailer-video1' ).setAttribute( 'src', '//www.youtube.com/embed/_POGKOhwKkk' );
+			document.getElementById( 'trailer-video2' ).setAttribute( 'src', '//www.youtube.com/embed/MPv2AC_2czs' );
+
+		});
+		
 		
 		
 		
@@ -161,8 +173,9 @@
 
 			// Parallax
 			//Dog Days
-				if (scrolled >= 1000 && scrolled <= 1521) {
-					$('div.px-container #px-dogdays-landscape').css('height',((scrolled*45.867)*.0015) + '%');
+				if (scrolled >= 1000 && scrolled <= 1706) {
+					$('div.px-container #px-dogdays-landscape').css('height',((scrolled+1752)*.25) + 'px');
+					$('div.px-container #px-dogdays-helicopter').css('left',((scrolled*.063)+.25) + '%');
 				}
 			
 

@@ -522,51 +522,60 @@ nav {
 }
 
 /* Menu */
-nav ul li.menu{
-	width: 120px;
-	height: 30px;
-	background: url(../img/menu-bg.svg) no-repeat;
-	font-size: 1.25em;
-	
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-}
-nav ul li.menu:hover{background: url(../img/menu-bg-hover.svg) no-repeat;}
+nav ul li{}
 
 	nav ul li.menu a.toggle{
 		display: block;
+		width: 120px;
+		height: 30px;
 		padding: 4px 17px;
-		color: #003b23;
+
+		font-size: 1.25em;
 		font-weight: 700;
 		letter-spacing: .1em;
 		text-align: left;
-		background: url(../img/menu-open.svg) no-repeat 90% center;
+		color: #003b23;
+
+		background: 
+			url(../img/menu-open.svg) no-repeat 90% center,
+			url(../img/menu-bg.svg) no-repeat;
 		
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-o-transition: 0.5s;
-		transition: 0.5s;
+		-webkit-transition: color 0.5s;
+		-moz-transition: color 0.5s;
+		-o-transition: color 0.5s;
+		transition: color 0.5s;
 	}
-	nav ul li.menu:hover a.toggle{color:#ff504b;background: url(../img/menu-open-hover.svg) no-repeat 90% center;}
+	nav ul li.menu a.toggle:hover{
+		color:#ff504b;
+		background: 
+			url(../img/menu-open-hover.svg) no-repeat 90% center,
+			url(../img/menu-bg-hover.svg) no-repeat;
+		}
 	/* When Menu is expanded */
-	nav ul li.menu a.toggle.active{background: url(../img/menu-close.svg) no-repeat 90% center;}
-	nav ul li.menu:hover a.toggle.active{background: url(../img/menu-close-hover.svg) no-repeat 90% center;}
+	nav ul li.menu a.toggle.active{
+		background:
+			url(../img/menu-close.svg) no-repeat 90% center,
+			url(../img/menu-bg.svg) no-repeat;}
+	nav ul li.menu a.toggle.active:hover{
+		background:
+			url(../img/menu-close-hover.svg) no-repeat 90% center,
+			url(../img/menu-bg-hover.svg) no-repeat;;}
 
 
 	/* When Menu is expanded */
 	nav ul li ul.nav-collapse li a{
 		width: 120px;
-		height: 24px;
+		height: auto;
 		padding: 5px;
-		display: inline-block;
-		background: #ff504b;
-		color: #003b23;
-		border-top: 1px solid #003b23;
+		display: block;
+		
 		font-size: .75em;
 		font-weight: 700;
 		letter-spacing: .1em;
+		color: #003b23;
+
+		background: #ff504b;
+		border-top: 1px solid #003b23;
 		
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
@@ -934,7 +943,10 @@ div.lb-overlay.trailer-previews div.detail-container{
     max-width: 177.78vh; /* 16/9 = 1.778 */
     margin-top: 8%;
 }
-div.lb-overlay.trailer-previews div.detail-container iframe{padding-bottom:60px;}
+div.lb-overlay.trailer-previews div.detail-container iframe{
+	width: 100%; 
+    height: 100%;
+	padding-bottom:60px;}
 div.lb-overlay.trailer-previews div.detail-container .trailer-info{
 	height: 60px;
 	width: 100%;
@@ -1056,11 +1068,16 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 
 	div.px-container #px-dogdays-landscape{
-		height: 95%;
-		max-width: 100%;
+		height: 688px;
 		position: absolute;
 		margin: 0 auto;
 		left: 0;right: 0;
+	}
+	div.px-container #px-dogdays-helicopter{
+		height: 144px;
+		position: absolute;
+		left: 63%;
+		top:160px; 
 	}
 
 }
@@ -1075,6 +1092,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.desktop{display: none;}
 	.mobile{display: block;}
 
+	.nav-down {
+    	top: 0px;
+	}
 	.nav-up {
     	top: -80px;
 	}
@@ -1082,20 +1102,11 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	nav {
 	    top: 0;
 	    width: 100%;
-	    position: fixed;
 	  }
 		nav ul li.menu{
 			height: 40px;
 			width: 100%;
-			background: #ff504b;
-			text-indent: -9999px;
-			
-			-webkit-transition: none;
-			-moz-transition: none;
-			-o-transition: none;
-			transition: none;
 		}
-		nav ul li.menu:hover{background: #003b23;}
 
 		/* FW Opera Logo */
 		nav ul li.menu h1 a{height: 40px;width: 43px;
@@ -1104,37 +1115,42 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			float: left;
 		}
 
-		nav ul li.menu a.toggle{
+		nav ul li.menu a.toggle:link,
+		nav ul li.menu a.toggle:visited,
+		nav ul li.menu a.toggle:hover,
+		nav ul li.menu a.toggle:active{
 			height: 40px;
 			width:100%;
-			background: url(../img/menu-open-mobile.svg) no-repeat 97% center;
+			background: 
+				url(../img/menu-open-mobile.svg) no-repeat 97% center,#ff504b;
 			background-size:25px 25px;
+			color: #ff504b;
 			
 			-webkit-transition: none;
 			-moz-transition: none;
 			-o-transition: none;
 			transition: none;
 		}
-		nav ul li.menu:hover a.toggle{
-			background: url(../img/menu-open-hover-mobile.svg) no-repeat 97% center;
-			background-size:25px 25px;
-		}
 
 		/* When Menu is expanded */
-		nav ul li.menu a.toggle.active{background-position: 97% center;background-size:25px 25px;}
-		nav ul li.menu:hover a.toggle.active{background-position: 97% center;background-size:25px 25px;}
-
-
+		nav ul li.menu a.toggle.active:link,
+		nav ul li.menu a.toggle.active:visited,
+		nav ul li.menu a.toggle.active:hover,
+		nav ul li.menu a.toggle.active:active{
+			background: 
+				url(../img/menu-close.svg) no-repeat 97% center,#ff504b;
+				background-size:25px 25px;
+			}
 		nav ul li, nav ul li ul.nav-collapse li a{ width: 100%;}
 
 		/* When Menu is expanded */
-		nav ul li ul.nav-collapse li a{
+		nav ul li ul.nav-collapse li a,nav ul li ul.nav-collapse li a:hover{
 			height: 40px;
 			padding: 8px;
 			font-size: 1.25em;
+			background: #ff504b;
+			color: #003b23;
 		}
-
-		nav ul li a.opened { max-height: 9999px;}
 		
 		header .container{overflow: hidden;}
 		header{padding-top:46px;}

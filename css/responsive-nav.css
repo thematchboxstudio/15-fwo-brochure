@@ -15,15 +15,12 @@
 
 .js .nav-collapse {
   clip: rect(0 0 0 0);
-  max-height: 0;
   position: absolute;
   display: block;
-  overflow: hidden;
   zoom: 1;
 }
 
 .nav-collapse.opened {
-  max-height: 9999px;
 }
 
 .disable-pointer-events {
