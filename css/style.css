@@ -1053,10 +1053,11 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 @media screen and (min-width: 960px){
 	div.px-container{
 		height:708px;
-		width:100%;
+		width: 100%;
 		position:absolute;
 		display: block;
-		top:0;left:0;
+		margin: 0 auto;
+		top:0;left:0;right: 0;
 		overflow: hidden;
 	}
 
@@ -1067,18 +1068,30 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background-size: 100% 110%;
 	}
 
-	div.px-container #px-dogdays-landscape{
-		height: 688px;
+	div.px-container img#px-dogdays-landscape{
+		width: 90%;
+		max-height: 732px;
 		position: absolute;
 		margin: 0 auto;
+		top:60px;
 		left: 0;right: 0;
 	}
-	div.px-container #px-dogdays-helicopter{
+	div.px-container img#px-dogdays-helicopter{
 		height: 144px;
 		position: absolute;
 		left: 63%;
 		top:160px; 
 	}
+
+	div.px-container img#px-dogdays-man{
+		height: 708px;
+		position: absolute;
+		left: 15%;
+		top:100px; 
+	}
+
+	/* La Traviata */
+	
 
 }
 

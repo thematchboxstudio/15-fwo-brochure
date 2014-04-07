@@ -173,12 +173,12 @@
 
 			// Parallax
 			//Dog Days
-				if (scrolled >= 1000 && scrolled <= 1706) {
-					$('div.px-container #px-dogdays-landscape').css('height',((scrolled+1752)*.25) + 'px');
-					$('div.px-container #px-dogdays-helicopter').css('left',((scrolled*.063)+.25) + '%');
+				if (scrolled >= 900 && scrolled <= 1700) {
+					$('div.px-container #px-dogdays-landscape').css('width',(((scrolled-799)*.0125)+90) + '%');
+					$('div.px-container #px-dogdays-helicopter').css('left',(63+(-(scrolled-799)*.0125)) + '%');
+					$('div.px-container #px-dogdays-man').css('height',(((scrolled-799)*.125)+708) + 'px');
+					$('div.px-container #px-dogdays-man').css('top',(100+(-(scrolled-799)*.075)) + 'px');
 				}
-			
-
 		 	
 		 	
 		    
