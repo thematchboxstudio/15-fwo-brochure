@@ -1079,7 +1079,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	div.px-container img#px-dogdays-helicopter{
 		height: 144px;
 		position: absolute;
-		left: 63%;
+		left: 70%;
 		top:160px; 
 	}
 
@@ -1091,7 +1091,46 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 
 	/* La Traviata */
-	
+	div.px-container img#px-traviata-background{
+		width: 100%;
+		min-height:708px;
+		position: absolute;
+		top: 0px;
+	}
+
+	div.px-container img#px-traviata-lefthand{
+		height: 360px;
+		position: absolute;
+		left: -30px;
+		top:120px;
+	}
+	div.px-container img#px-traviata-righthand{
+		height: 400px;
+		position: absolute;
+		right: -60px;
+		top:120px;
+	}
+
+	div.px-container img#px-traviata-leftcurtain{
+		height: 708px;
+		position: absolute;
+		left: 0px;
+		top:0px;
+	}
+	div.px-container img#px-traviata-rightcurtain{
+		height: 708px;
+		position: absolute;
+		right: 0px;
+		top:0px;
+	}
+
+	div.px-container img#px-traviata-girl{
+		height: 628px;
+		position: absolute;
+		left: 32%;
+		bottom:0px; 
+	}
+
 
 }
 

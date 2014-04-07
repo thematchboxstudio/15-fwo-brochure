@@ -175,9 +175,15 @@
 			//Dog Days
 				if (scrolled >= 900 && scrolled <= 1700) {
 					$('div.px-container #px-dogdays-landscape').css('width',(((scrolled-799)*.0125)+90) + '%');
-					$('div.px-container #px-dogdays-helicopter').css('left',(63+(-(scrolled-799)*.0125)) + '%');
+					$('div.px-container #px-dogdays-landscape').css('top',(60+(-(scrolled-799)*.025)) + 'px');
+					$('div.px-container #px-dogdays-helicopter').css('left',(70+(-(scrolled-799)*.0125)) + '%');
 					$('div.px-container #px-dogdays-man').css('height',(((scrolled-799)*.125)+708) + 'px');
 					$('div.px-container #px-dogdays-man').css('top',(100+(-(scrolled-799)*.075)) + 'px');
+				}
+
+			// La Traviata
+				if (scrolled >= 2100 && scrolled <= 2900) {
+					$('div.px-container #px-traviata-girl').css('left',(32+(-(scrolled-2099)*.025)) + '%');
 				}
 		 	
 		 	
