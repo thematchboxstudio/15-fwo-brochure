@@ -174,8 +174,8 @@
 			// Parallax
 			//Dog Days
 				if (scrolled >= 900 && scrolled <= 1700) {
-					$('div.px-container #px-dogdays-landscape').css('width',(((scrolled-799)*.0125)+90) + '%');
-					$('div.px-container #px-dogdays-landscape').css('top',(60+(-(scrolled-799)*.025)) + 'px');
+					$('div.px-container #px-dogdays-leftlandscape,div.px-container #px-dogdays-rightlandscape').css('height',(708+((scrolled-799)*.05)) + 'px');
+
 					$('div.px-container #px-dogdays-helicopter').css('left',(70+(-(scrolled-799)*.0125)) + '%');
 					$('div.px-container #px-dogdays-man').css('height',(((scrolled-799)*.125)+708) + 'px');
 					$('div.px-container #px-dogdays-man').css('top',(100+(-(scrolled-799)*.075)) + 'px');
@@ -183,7 +183,22 @@
 
 			// La Traviata
 				if (scrolled >= 2100 && scrolled <= 2900) {
-					$('div.px-container #px-traviata-girl').css('left',(32+(-(scrolled-2099)*.025)) + '%');
+					$('div.px-container #px-traviata-girl').css('left',(32+(-(scrolled-2099)*.0125)) + '%');
+					$('div.px-container #px-traviata-horns').css('left',(34+(-(scrolled-2099)*.005)) + '%');
+
+					$('div.px-container #px-traviata-middle').css('left',(8+((scrolled-2099)*.005)) + '%');
+					$('div.px-container #px-traviata-musician').css('left',(8+(-(scrolled-2099)*.003)) + '%');
+
+					$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('height',(1050+(-(scrolled-2099)*.6)) + 'px');
+					$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('top',((-(scrolled-2099)*.0025)) + 'px');
+
+					$('div.px-container #px-traviata-butterfly').css('left',(30+((scrolled-2099)*.005)) + '%');
+					$('div.px-container #px-traviata-butterfly').css('top',(-16+(-(scrolled-2099)*.125)) + 'px');
+
+					$('div.px-container #px-traviata-lefthand').css('transform', 'rotate(' + (45+(-(scrolled-2099)*.05)) + 'deg)');
+					$('div.px-container #px-traviata-lefthand').css('left',(-30+((scrolled-2099)*.1)) + 'px');
+					$('div.px-container #px-traviata-righthand').css('transform', 'rotate(' + (-45+((scrolled-2099)*.05)) + 'deg)');
+					$('div.px-container #px-traviata-righthand').css('right',(-60+((scrolled-2099)*.1)) + 'px');
 				}
 		 	
 		 	

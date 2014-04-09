@@ -539,6 +539,7 @@ nav ul li{}
 		background: 
 			url(../img/menu-open.svg) no-repeat 90% center,
 			url(../img/menu-bg.svg) no-repeat;
+		background-size: 15px 15px, 120px 30px;
 		
 		-webkit-transition: color 0.5s;
 		-moz-transition: color 0.5s;
@@ -550,6 +551,7 @@ nav ul li{}
 		background: 
 			url(../img/menu-open-hover.svg) no-repeat 90% center,
 			url(../img/menu-bg-hover.svg) no-repeat;
+			background-size: 15px 15px, 120px 30px;
 		}
 	/* When Menu is expanded */
 	nav ul li.menu a.toggle.active{
@@ -1068,14 +1070,26 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background-size: 100% 110%;
 	}
 
-	div.px-container img#px-dogdays-landscape{
-		width: 90%;
-		max-height: 732px;
+	div.px-container img#px-dogdays-sky-background{
+		width: 100%;
+		min-height:708px;
 		position: absolute;
-		margin: 0 auto;
-		top:60px;
-		left: 0;right: 0;
+		top: 0px;
 	}
+
+	div.px-container img#px-dogdays-leftlandscape{
+		height: 708px;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	div.px-container img#px-dogdays-rightlandscape{
+		height: 708px;
+		position: absolute;
+		top:0;
+		right: 0;
+	}
+
 	div.px-container img#px-dogdays-helicopter{
 		height: 144px;
 		position: absolute;
@@ -1102,28 +1116,77 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		height: 360px;
 		position: absolute;
 		left: -30px;
-		top:120px;
+		top:110px;
+
+		-ms-transform: rotate(30deg); /* IE 9 */
+		-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+		transform: rotate(30deg);
 	}
 	div.px-container img#px-traviata-righthand{
 		height: 400px;
 		position: absolute;
-		right: -60px;
-		top:120px;
+		right: -30px;
+		top:110px;
+
+
+		-ms-transform: rotate(-30deg); /* IE 9 */
+		-webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+		transform: rotate(-30deg);
 	}
 
 	div.px-container img#px-traviata-leftcurtain{
-		height: 708px;
+		height: 1050px;
+		min-height: 720px;
 		position: absolute;
 		left: 0px;
-		top:0px;
+		top:0;
 	}
 	div.px-container img#px-traviata-rightcurtain{
-		height: 708px;
+		height: 1050px;
+		min-height: 720px;
 		position: absolute;
 		right: 0px;
-		top:0px;
+		top:0;
 	}
 
+	div.px-container img#px-traviata-musician{
+		height: 240px;
+		position: absolute;
+		left: 5%;
+		bottom:0px; 
+	}
+	div.px-container img#px-traviata-horns{
+		height: 380px;
+		position: absolute;
+		left: 34%;
+		bottom:0px; 
+	}
+	div.px-container img#px-traviata-middle{
+		height: 340px;
+		position: absolute;
+		left:8%;
+		bottom:0px; 
+	}
+
+	div.px-container img#px-traviata-butterfly{
+		height: 180px;
+		position: absolute;
+		left:30%;
+		top:-16px; 
+	}
+
+	div.px-container img#px-traviata-leftcurtain2{
+		height: 160px;
+		position: absolute;
+		left: 0px;
+		bottom:0px;
+	}
+	div.px-container img#px-traviata-rightcurtain2{
+		height: 160px;
+		position: absolute;
+		right: 0px;
+		bottom:0px;
+	}
 	div.px-container img#px-traviata-girl{
 		height: 628px;
 		position: absolute;
@@ -1174,7 +1237,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			height: 40px;
 			width:100%;
 			background: 
-				url(../img/menu-open-mobile.svg) no-repeat 97% center,#ff504b;
+				url(../img/menu-open.svg) no-repeat 97% center,#ff504b;
 			background-size:25px 25px;
 			color: #ff504b;
 			
