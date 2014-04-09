@@ -15,8 +15,6 @@
 	$(document).ready(function (){
 
 
-
-	
 		// Smooth Scrolling
 		$('.nav-collapse a[href*=#]:not([href=#]), #go-to-top a[href*=#]:not([href=#]), .scroll_down a[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -27,7 +25,7 @@
 	           if (target.length) {
 	             $('html,body').animate({
 	                 scrollTop: target.offset().top
-	            }, 750);
+	            }, 5000);
 	            return false;
 	        }
 	    }
@@ -36,44 +34,7 @@
 
 		}); // Ending Smooth Scrolling function
 
-		// Hide Header on on scroll down
-		var didScroll;
-		var lastScrollTop = 0;
-		var delta = 5;
-		var navbarHeight = $('nav').outerHeight();
-
-		$(window).scroll(function(event){
-		    didScroll = true;
-		});
-
-		setInterval(function() {
-		    if (didScroll) {
-		        hasScrolled();
-		        didScroll = false;
-		    }
-		}, 250);
-
-		function hasScrolled() {
-		    var st = $(this).scrollTop();
-		    
-		    // Make sure they scroll more than delta
-		    if(Math.abs(lastScrollTop - st) <= delta)
-		        return;
-		    
-		    // If they scrolled down and are past the navbar, add class .nav-up.
-		    // This is necessary so you never see what is "behind" the navbar.
-		    if (st > lastScrollTop && st > navbarHeight){
-		        // Scroll Down
-		        $('nav').removeClass('nav-down').addClass('nav-up');
-		    } else {
-		        // Scroll Up
-		        if(st + $(window).height() < $(document).height()) {
-		            $('nav').removeClass('nav-up').addClass('nav-down');
-		        }
-		    }
-		    
-		    lastScrollTop = st;
-		}
+		
 
 
 
@@ -173,7 +134,7 @@
 
 			// Parallax
 			//Dog Days
-				if (scrolled >= 900 && scrolled <= 1700) {
+				if (scrolled >= 800 && scrolled <= 1700) {
 					$('div.px-container #px-dogdays-leftlandscape,div.px-container #px-dogdays-rightlandscape').css('height',(708+((scrolled-799)*.05)) + 'px');
 
 					$('div.px-container #px-dogdays-helicopter').css('left',(70+(-(scrolled-799)*.0125)) + '%');
@@ -182,23 +143,38 @@
 				}
 
 			// La Traviata
-				if (scrolled >= 2100 && scrolled <= 2900) {
-					$('div.px-container #px-traviata-girl').css('left',(32+(-(scrolled-2099)*.0125)) + '%');
-					$('div.px-container #px-traviata-horns').css('left',(34+(-(scrolled-2099)*.005)) + '%');
+				if (scrolled >= 2000 && scrolled <= 2900) {
+					//$('div.px-container #px-traviata-girl').css('transform','translateX(' + (-(scrolled-2099)*.125) + 'px)');
+					//$('div.px-container #px-traviata-girl').css('transform','translateY(' + (-(scrolled-2099)*.175) + 'px)');
 
-					$('div.px-container #px-traviata-middle').css('left',(8+((scrolled-2099)*.005)) + '%');
-					$('div.px-container #px-traviata-musician').css('left',(8+(-(scrolled-2099)*.003)) + '%');
+					$('div.px-container #px-traviata-girl').css('bottom',(-240+((scrolled-1999)*.25)) + 'px');
+					$('div.px-container #px-traviata-girl').css('height',(((scrolled-1999)*.125)+700) + 'px');
+					//$('div.px-container #px-traviata-horns').css('transform','translateX(' + (-(scrolled-2099)*.05) + 'px)');
 
-					$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('height',(1050+(-(scrolled-2099)*.6)) + 'px');
-					$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('top',((-(scrolled-2099)*.0025)) + 'px');
+					//$('div.px-container #px-traviata-middle').css('transform','translateX(' + ((scrolled-2099)*.05) + 'px)');
+					//$('div.px-container #px-traviata-musician').css('transform','translateX(' + (-(scrolled-2099)*.03) + 'px)');
 
-					$('div.px-container #px-traviata-butterfly').css('left',(30+((scrolled-2099)*.005)) + '%');
-					$('div.px-container #px-traviata-butterfly').css('top',(-16+(-(scrolled-2099)*.125)) + 'px');
+					//$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('transform','scale(' + ((scrolled-2099)*.5) + ',' + ((scrolled-2099)*.5) + ')');
+					//$('div.px-container #px-traviata-leftcurtain,div.px-container #px-traviata-rightcurtain').css('transform','translateY(' + (-(scrolled-2099)*.05) + 'px)');
 
-					$('div.px-container #px-traviata-lefthand').css('transform', 'rotate(' + (45+(-(scrolled-2099)*.05)) + 'deg)');
-					$('div.px-container #px-traviata-lefthand').css('left',(-30+((scrolled-2099)*.1)) + 'px');
-					$('div.px-container #px-traviata-righthand').css('transform', 'rotate(' + (-45+((scrolled-2099)*.05)) + 'deg)');
-					$('div.px-container #px-traviata-righthand').css('right',(-60+((scrolled-2099)*.1)) + 'px');
+					//$('div.px-container #px-traviata-butterfly').css('transform','translate(' + ((scrolled-2099)*.5) + 'px,' + (-(scrolled-2099)*.25) + 'px)');
+
+					//$('div.px-container #px-traviata-lefthand').css('transform', 'rotate(' + (25+(-(scrolled-2099)*.05)) + 'deg)');
+					//$('div.px-container #px-traviata-righthand').css('transform', 'rotate(' + (-25+((scrolled-2099)*.05)) + 'deg)');
+
+					//$('div.px-container #px-traviata-lefthand').css('transform', 'translateX(' + ((scrolled-2099)*.25) + 'px)');
+					//$('div.px-container #px-traviata-righthand').css('transform', 'translateX(' + (-(scrolled-2099)*.25) + 'px)');
+
+					$('div.px-container #px-traviata-lefthand').css('left',(-160+((scrolled-1999)*.25)) + 'px');
+					$('div.px-container #px-traviata-righthand').css('right',(-160+((scrolled-1999)*.25)) + 'px');
+				}
+
+			//Dog Days
+				if (scrolled >= 3200 && scrolled <= 4100) {
+					$('div.px-container #px-hamlet-main').css('bottom',(-80+((scrolled-3199)*.125)) + 'px');
+
+					//$('div.px-container #px-hamlet-main-bottom').css('transform', 'rotate(' + (-155+((scrolled-3299)*.025)) + 'deg)');
+					//$('div.px-container #px-hamlet-main-top').css('transform', 'rotate(' + ((scrolled-3299)*.05) + 'deg)');
 				}
 		 	
 		 	

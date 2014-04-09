@@ -109,6 +109,8 @@ font-style: normal;
 	.coral-bg{background:#ff504b;color:#003b23;}
 	.green-bg{background:#003b23;color:#ff504b;}
 
+	.nobuy{display: none !important;}
+
 
 
 h1 a{
@@ -1113,36 +1115,36 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 
 	div.px-container img#px-traviata-lefthand{
-		height: 360px;
+		height: 440px;
 		position: absolute;
-		left: -30px;
+		left: -160px;
 		top:110px;
 
-		-ms-transform: rotate(30deg); /* IE 9 */
-		-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
-		transform: rotate(30deg);
+		/*-ms-transform: rotate(25deg); /* IE 9 */
+		/*-webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
+		/*transform: rotate(25deg);*/
 	}
 	div.px-container img#px-traviata-righthand{
-		height: 400px;
+		height: 480px;
 		position: absolute;
-		right: -30px;
+		right: -160px;
 		top:110px;
 
 
-		-ms-transform: rotate(-30deg); /* IE 9 */
-		-webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
-		transform: rotate(-30deg);
+		/*-ms-transform: rotate(-25deg); /* IE 9 */
+		/*-webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+		/*transform: rotate(-25deg);*/
 	}
 
 	div.px-container img#px-traviata-leftcurtain{
-		height: 1050px;
+		height: 720px;
 		min-height: 720px;
 		position: absolute;
 		left: 0px;
 		top:0;
 	}
 	div.px-container img#px-traviata-rightcurtain{
-		height: 1050px;
+		height: 720px;
 		min-height: 720px;
 		position: absolute;
 		right: 0px;
@@ -1156,15 +1158,17 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		bottom:0px; 
 	}
 	div.px-container img#px-traviata-horns{
-		height: 380px;
+		height: 420px;
 		position: absolute;
-		left: 34%;
-		bottom:0px; 
+		margin:auto;
+		left: 0;right:0;
+		bottom:-10px; 
 	}
 	div.px-container img#px-traviata-middle{
-		height: 340px;
+		height: 380px;
 		position: absolute;
-		left:8%;
+		margin: auto;
+		left:0;right:0;
 		bottom:0px; 
 	}
 
@@ -1188,10 +1192,43 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		bottom:0px;
 	}
 	div.px-container img#px-traviata-girl{
-		height: 628px;
+		height: 700px;
 		position: absolute;
-		left: 32%;
-		bottom:0px; 
+		margin:auto;
+		left:0;right:0;
+		bottom:-240px; 
+	}
+
+	/* Hamlet */
+	article#hamlet > div#px-hamlet{
+		background: url(../img/px-hamlet_background.jpg) repeat top center;
+		background-size: 100% auto;
+	}
+
+	div.px-container img#px-hamlet-main-bottom{
+		height: 708px;
+		position: absolute;
+		left: -500px;
+		bottom:-500px;
+
+		-ms-transform: rotate(-155deg); /* IE 9 */
+		-webkit-transform: rotate(-155deg); /* Chrome, Safari, Opera */
+		transform: rotate(-155deg);
+	}
+
+	div.px-container img#px-hamlet-main-top{
+		height: 708px;
+		position: absolute;
+		right: -300px;
+		top:-500px;
+	}
+
+	div.px-container img#px-hamlet-main{
+		height: 708px;
+		position: absolute;
+		bottom:-80px;
+		right:0;left:0;
+		margin: auto;
 	}
 
 
