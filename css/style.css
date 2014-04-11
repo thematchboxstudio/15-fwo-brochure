@@ -540,8 +540,9 @@ nav ul li{}
 
 		background: 
 			url(../img/menu-open.svg) no-repeat 90% center,
-			url(../img/menu-bg.svg) no-repeat;
+			url(../img/menu-bg.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
+		/* BUG: Chrome adds a some kind of padding on top and bottom of background  */
 		
 		-webkit-transition: color 0.5s;
 		-moz-transition: color 0.5s;
@@ -552,18 +553,24 @@ nav ul li{}
 		color:#ff504b;
 		background: 
 			url(../img/menu-open-hover.svg) no-repeat 90% center,
-			url(../img/menu-bg-hover.svg) no-repeat;
+			url(../img/menu-bg-hover.svg) no-repeat center center;
 			background-size: 15px 15px, 120px 30px;
 		}
 	/* When Menu is expanded */
 	nav ul li.menu a.toggle.active{
+		width: 120px;
+		height: 30px;
 		background:
 			url(../img/menu-close.svg) no-repeat 90% center,
-			url(../img/menu-bg.svg) no-repeat;}
+			url(../img/menu-bg.svg) no-repeat center center;
+		background-size: 15px 15px, 120px 30px;
+	}
+
 	nav ul li.menu a.toggle.active:hover{
 		background:
 			url(../img/menu-close-hover.svg) no-repeat 90% center,
-			url(../img/menu-bg-hover.svg) no-repeat;;}
+			url(../img/menu-bg-hover.svg) no-repeat center center;
+		background-size: 15px 15px, 120px 30px;}
 
 
 	/* When Menu is expanded */
@@ -1101,8 +1108,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	div.px-container img#px-dogdays-man{
 		height: 708px;
+		margin-left: -360px;
 		position: absolute;
-		left: 15%;
+		left: 50%;
 		top:100px; 
 	}
 
@@ -1158,14 +1166,14 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		bottom:0px; 
 	}
 	div.px-container img#px-traviata-horns{
-		height: 420px;
+		height: 380px;
 		position: absolute;
-		margin:auto;
-		left: 0;right:0;
-		bottom:-10px; 
+		margin-left:-240px;
+		left: 50%;
+		bottom:-40px; 
 	}
 	div.px-container img#px-traviata-middle{
-		height: 380px;
+		height: 360px;
 		position: absolute;
 		margin: auto;
 		left:0;right:0;
@@ -1194,9 +1202,12 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	div.px-container img#px-traviata-girl{
 		height: 700px;
 		position: absolute;
-		margin:auto;
-		left:0;right:0;
-		bottom:-240px; 
+		margin-left:-350px;
+		left:50%; 
+		bottom:-220px; 
+
+		background: url(../img/px-traviata_horns.png) no-repeat center 250px;
+		background-size: 580px;
 	}
 
 	/* Hamlet */
@@ -1225,10 +1236,15 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	div.px-container img#px-hamlet-main{
 		height: 708px;
+		width: 1094px;
 		position: absolute;
-		bottom:-80px;
+		top:60px;
 		right:0;left:0;
 		margin: auto;
+
+		background: url(../img/px-hamlet_main_bg.png) no-repeat;
+		background-position:  0px 0px;
+		background-size: 1094px 708px;
 	}
 
 
