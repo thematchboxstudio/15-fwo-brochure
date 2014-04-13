@@ -27,7 +27,7 @@ body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing}
     /* Reset your font families here!
      ----------------------------------- */
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'raleway', sans-serif;
     }
 
     /* Queries for supported browsers.
@@ -169,7 +169,7 @@ font-style: normal;
 	.coral-bg{background:#ff504b;color:#003b23;}
 	.green-bg{background:#003b23;color:#ff504b;}
 
-	.nobuy #go_button { display: none!important; }
+	.nobuy #go_button, .nobuy .buy_tickets { display: none!important; }
 
 	article#tickets div.container.nobuy p.line2 { margin: 58px auto; }
 
@@ -1418,8 +1418,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			transition: none;
 		}
 		nav ul li.menu a.toggle:active {
-			background: transparent;
-						outline: none;
+			/*background: transparent;*/
+			outline: none;
 		}
 		/* When Menu is expanded */
 		nav ul li.menu a.toggle.active:link,
@@ -1792,6 +1792,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 	/* Lightbox */
+
 		.lb-overlay:target{
 			padding-top: 40px;
 		}
@@ -1827,7 +1828,14 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.lb-overlay.trailer-previews:target a.lb-close:hover{color:#e3e2da;}
 	.lb-overlay:target div {
 	}
-
+	.lb-overlay a.lb-close{
+		-webkit-transition: none;
+		transition: none;
+		background:
+			url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+			#003b23;
+		color: #ff504b;
+	}
 	div.lb-overlay.trailer-previews div.detail-container .trailer-info{padding:8px 10px;}
 
 	div.lb-overlay.trailer-previews div.detail-container .trailer-info p+p+p{

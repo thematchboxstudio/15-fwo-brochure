@@ -15,31 +15,39 @@
 
 		// Smooth Scrolling
 		$('.nav-collapse a[href*=#]:not([href=#]), #go-to-top a[href*=#]:not([href=#]), .scroll_down a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-	        || location.hostname == this.hostname) {
 
-	        var target = $(this.hash);
-	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		        || location.hostname == this.hostname) {
 
-	        if ($('body').hasClass('large')) {
-	        	$('html,body').animate({
-	            	scrollTop: target.offset().top
-	            }, 1500);
-	            return false;
-	        }
-	        else if ($('body').hasClass('small')) {
-				var target_pos = (target.length > 0) ? target.offset().top : 0;
-				var fhdr = $('.toggle');
-				var fhdr_height = (fhdr.length > 0) ? fhdr.outerHeight() : 0;
-				target_pos -= fhdr_height;
-				if (target_pos > 0) {
-				   $('html,body').animate({
-				      scrollTop: target_pos
-				   }, 1000);
-				   return false;
-				}
-	        }
-	    }
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+		        if ($('body').hasClass('large')) {
+		        	$('html,body').animate({
+		            	scrollTop: target.offset().top
+		            }, 1500);
+		            return false;
+		        } // end if
+
+
+		        // Right now this breaks the 'go to top' smooth scrolling on mobile
+		        else if ($('body').hasClass('small')) {
+
+					var target_pos = (target.length > 0) ? target.offset().top : 0;
+					var fhdr = $('.toggle');
+					var fhdr_height = (fhdr.length > 0) ? fhdr.outerHeight() : 0;
+
+					target_pos -= fhdr_height;
+					if (target_pos > 0) {
+					   $('html,body').animate({
+					      scrollTop: target_pos
+					   }, 1000);
+					   return false;
+					} // end if
+
+		        } // end else if
+
+		    } // end if
 
 
 		}); // Ending Smooth Scrolling function
@@ -66,13 +74,92 @@
 
 
 		// Functions relative to scroll position
-		$(window).scroll($.throttle(100,function() {
+		$(window).scroll($.throttle(50,function() {
 
 			// Variables to make things easier
 				var $win = $(window); // Simple shortcut
 				var windowHeight = $win.height(); // Detects height of browser window
 			    var scrolled = $(this).scrollTop(); // Detect position of scroll
 
+			// I'm sure there's a better way to do this, but I don't know it
+		   if ($('body').hasClass('small')) {
+		    // Entering Header
+			    if (scrolled >= 0 && scrolled <= 1033) {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').removeClass("active");
+			    }
+
+			// Entering #dogdays
+			    if (scrolled >= 1034 && scrolled <= 2013) {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').removeClass("active");
+			    }
+
+			// Entering #traviata
+			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').removeClass("active");
+			    }
+
+			// Entering #hamlet
+			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').removeClass("active");
+			    }
+
+			// Entering #frontiers
+			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').removeClass("active");
+			    }
+
+			// Entering #tickets
+			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+			    }
+
+			// Entering #festival_trailers
+			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    }
+
+			// Entering #festival_info
+			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			    }
+
+			// // Entering #festival_info
+			//     if ($win.height() + $win.scrollTop()
+			//         == $(document).height()){
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+			//     	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+
+			//     } else {
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			//     }
+
+			}// IF SMALL
+
+		   else if ($('body').hasClass('large')) {
 		    // Entering Header
 			    if (scrolled >= 0 && scrolled <= 713) {
 			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
@@ -139,7 +226,7 @@
 			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
 			    }
 
-
+			}// IF LARGE
 
 
 			// Parallax
