@@ -153,7 +153,7 @@ font-style: normal;
 	.desktop{
 		display: block;
 		}
-	.mobile{
+	.mobile,.mobile.image_sub{
 		display: none;
 	}
 	br.clear{clear:both;}
@@ -276,6 +276,7 @@ div.title{
 		div.title a:hover p{color: #ff504b;}
 
 
+
 .break-text{
 	width: 92%;
 	max-width:630px;
@@ -346,7 +347,10 @@ div.bottom-border{
 		text-align: left;
 	}
 	.lb-title > h2{padding-right:10px;}
-	.lb-title > p{padding: 25px 0;font-weight: 400;font-style:italic;line-height: 1.5em;}
+	.lb-title > p{font-size:.75em;padding: 20px 0;font-weight: 400;font-style:italic;line-height: 1em;}
+	#dogdays-info .lb-title > p{padding: 13px 0;}
+
+	.lb-title > p strong{line-height:.6em;display:block;}
 
 		.lb-overlay > div.detail-container div.detail-content{
 			padding: 20px 20px 30px;
@@ -604,8 +608,6 @@ nav ul li{}
 			url(../img/menu-bg.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
 
-		/* BUG: Chrome adds a some kind of padding on top and bottom of background  */
-
 		-webkit-transition: none;
 		-moz-transition: none;
 		-o-transition: none;
@@ -690,8 +692,10 @@ header p.line2{
 
 header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
-	header div.container div.scroll_down a:hover p{color: #003b23;}
+	
 	header div.container div.scroll_down a img{margin: 0 10px;}
+	
+	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down:hover img{margin: 35px 10px;}
 
 header div.container div.center_line{
@@ -709,57 +713,10 @@ h1.deep{
 	font-size: 250px;
 	line-height: 1em;
 	text-align: center;
-	color: #003b23;
-	text-shadow:
-	0px 0px 0 #ff504b,
-	 -1px 1px 0 #ff504b,
-	  -2px 2px 0 #ff504b,
-	   -3px 3px 0 #ff504b,
-	    -4px 4px 0 #ff504b,
-	     -5px 5px 0 #ff504b,
-	      -6px 6px 0 #ff504b,
-	       -7px 7px 0 #ff504b,
-	        -8px 8px 0 #ff504b,
-	         -9px 9px 0 #ff504b,
-	          -10px 10px 0 #ff504b,
-	           -11px 11px 0 #ff504b,
-	            -12px 12px 0 #ff504b,
-	             -13px 13px 0 #ff504b,
-	              -14px 14px 0 #ff504b,
-	               -15px 15px 0 #ff504b,
+	color: #003b23;}
+	
 
-	 -15px 15px 0 #c3c3b5,
-	  -14px 16px 0 #c3c3b5,
-	   -13px 17px 0 #c3c3b5,
-		-12px 18px 0 #c3c3b5,
-		 -11px 19px 0 #c3c3b5,
-		  -10px 20px 0 #c3c3b5,
-		   -9px 21px 0 #c3c3b5,
-		    -8px 22px 0 #c3c3b5,
-		     -7px 23px 0 #c3c3b5,
-		      -6px 24px 0 #c3c3b5,
-		      -5px 25px 0 #c3c3b5,
-		       -4px 26px 0 #c3c3b5,
-		        -3px 27px 0 #c3c3b5,
-		         -2px 28px 0 #c3c3b5,
-		          -1px 29px 0 #c3c3b5,
-		           0px 30px 0 #c3c3b5,
-		            1px 31px 0 #c3c3b5,
-		             2px 32px 0 #c3c3b5,
-		              3px 33px 0 #c3c3b5,
-		               4px 34px 0 #c3c3b5,
-		                5px 35px 0 #c3c3b5,
-		                 6px 36px 0 #c3c3b5,
-		                  7px 37px 0 #c3c3b5,
-		                   8px 38px 0 #c3c3b5,
-		                    9px 39px 0 #c3c3b5,
-		                     10px 40px 0 #c3c3b5,
-		                      11px 41px 0 #c3c3b5,
-		                       12px 42px 0 #c3c3b5,
-		                        13px 43px 0 #c3c3b5,
-		                         14px 44px 0 #c3c3b5,
-		                          15px 45px 0 #c3c3b5;
-}
+
 
 /* Dog Days
 -------------------------------------------------------------------------------*/
@@ -865,44 +822,7 @@ article#tickets div.container p.line1{
 	width:200px;padding:4px;margin:150px auto 20px;}
 
 article#tickets div.container h1.deep{
-	color: #e3e2da;
-	text-shadow:
-	0px 0px 0 #ff504b,
-	-1px 1px 0 #ff504b,
-	-2px 2px 0 #ff504b,
-	-3px 3px 0 #ff504b,
-	-4px 4px 0 #ff504b,
-	-5px 5px 0 #ff504b,
-	-6px 6px 0 #ff504b,
-	-7px 7px 0 #ff504b,
-	-8px 8px 0 #ff504b,
-	-9px 9px 0 #ff504b,
-	-10px 10px 0 #ff504b,
-	-11px 11px 0 #ff504b,
-	-12px 12px 0 #ff504b,
-	-13px 13px 0 #ff504b,
-	-14px 14px 0 #ff504b,
-	-15px 15px 0 #ff504b,
-
-	-15px 15px 0 #16261f,
-	-14px 16px 0 #16261f,
-	-13px 17px 0 #16261f,
-	-12px 18px 0 #16261f,
-	-11px 19px 0 #16261f,
-	-10px 20px 0 #16261f,
-	-9px 21px 0 #16261f,
-	-8px 22px 0 #16261f,
-	-7px 23px 0 #16261f,
-	-6px 24px 0 #16261f,
-	-5px 25px 0 #16261f,
-	-4px 26px 0 #16261f,
-	-3px 27px 0 #16261f,
-	-2px 28px 0 #16261f,
-	-1px 29px 0 #16261f,
-	0px 30px 0 #16261f,
-	1px 31px 0 #16261f,
-	2px 32px 0 #16261f,
-	3px 33px 0 #16261f;
+	color: #e3e2da !important;
 }
 
 
@@ -1079,8 +999,9 @@ div.lb-overlay.trailer-previews div.detail-container .trailer-info p~p{color:#ff
 footer{
 	background:
 		url(../img/festival_info-bg.svg) fixed,
-		url(../img/center-line.svg) no-repeat center -610px,
+		url(../img/center-line.svg) no-repeat,
 		#e3e2da;
+		background-position: center center, center -610px;
 	position: relative;
 }
 
@@ -1148,6 +1069,124 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 /* Parallax
 -------------------------------------------------------------------------------*/
 @media screen and (min-width: 960px){
+
+	/* Header */
+	h1.deep{
+		text-shadow:
+		0px 0px 0 #ff504b,
+		 -1px 1px 0 #ff504b,
+		  -2px 2px 0 #ff504b,
+		   -3px 3px 0 #ff504b,
+		    -4px 4px 0 #ff504b,
+		     -5px 5px 0 #ff504b,
+		      -6px 6px 0 #ff504b,
+		       -7px 7px 0 #ff504b,
+		        -8px 8px 0 #ff504b,
+		         -9px 9px 0 #ff504b,
+		          -10px 10px 0 #ff504b,
+		           -11px 11px 0 #ff504b,
+		            -12px 12px 0 #ff504b,
+		             -13px 13px 0 #ff504b,
+		              -14px 14px 0 #ff504b,
+		               -15px 15px 0 #ff504b,
+
+		 -15px 15px 0 #c3c3b5,
+		  -16px 16px 0 #c3c3b5,
+		   -17px 17px 0 #c3c3b5,
+			-18px 18px 0 #c3c3b5,
+			 -19px 19px 0 #c3c3b5,
+			  -20px 20px 0 #c3c3b5,
+			   -21px 21px 0 #c3c3b5,
+			    -22px 22px 0 #c3c3b5,
+			     -23px 23px 0 #c3c3b5,
+			      -24px 24px 0 #c3c3b5,
+			      -25px 25px 0 #c3c3b5,
+			       -26px 26px 0 #c3c3b5,
+			        -27px 27px 0 #c3c3b5,
+			         -28px 28px 0 #c3c3b5,
+			          -29px 29px 0 #c3c3b5,
+			           -30px 30px 0 #c3c3b5,
+			            -31px 31px 0 #c3c3b5,
+			             -32px 32px 0 #c3c3b5,
+			              -33px 33px 0 #c3c3b5,
+			               -34px 34px 0 #c3c3b5,
+			                -35px 35px 0 #c3c3b5,
+			                 -36px 36px 0 #c3c3b5,
+			                  -37px 37px 0 #c3c3b5,
+			                   -38px 38px 0 #c3c3b5,
+			                    -39px 39px 0 #c3c3b5,
+			                     -40px 40px 0 #c3c3b5,
+			                      -41px 41px 0 #c3c3b5,
+			                       -41px 42px 0 #c3c3b5,
+			                        -42px 43px 0 #c3c3b5,
+			                         -43px 44px 0 #c3c3b5,
+			                          -44px 45px 0 #c3c3b5;
+
+
+		-webkit-transition:text-shadow 0.5s ease-in-out;
+		-moz-transition:text-shadow 0.5s ease-in-out;
+		-o-transition:text-shadow 0.5s ease-in-out;
+		-ms-transition:text-shadow 0.5s ease-in-out;
+		transition:text-shadow 0.5s ease-in-out;
+		}
+
+	header div.container div.scroll_down a:hover p,
+	header div.container div.scroll_down.active a p{color: #003b23;}
+	header div.container div.scroll_down:hover img,
+	header div.container div.scroll_down.active img{margin: 35px 10px;}
+
+	h1.deep.active{
+	text-shadow:
+		0px 0px 0 #ff504b,
+		 -1px 1px 0 #ff504b,
+		  -2px 2px 0 #ff504b,
+		   -3px 3px 0 #ff504b,
+		    -4px 4px 0 #ff504b,
+		     -5px 5px 0 #ff504b,
+		      -6px 6px 0 #ff504b,
+		       -7px 7px 0 #ff504b,
+		        -8px 8px 0 #ff504b,
+		         -9px 9px 0 #ff504b,
+		          -10px 10px 0 #ff504b,
+		           -11px 11px 0 #ff504b,
+		            -12px 12px 0 #ff504b,
+		             -13px 13px 0 #ff504b,
+		              -14px 14px 0 #ff504b,
+		               -15px 15px 0 #ff504b,
+
+		 -15px 15px 0 #c3c3b5,
+		  -14px 16px 0 #c3c3b5,
+		   -13px 17px 0 #c3c3b5,
+			-12px 18px 0 #c3c3b5,
+			 -11px 19px 0 #c3c3b5,
+			  -10px 20px 0 #c3c3b5,
+			   -9px 21px 0 #c3c3b5,
+			    -8px 22px 0 #c3c3b5,
+			     -7px 23px 0 #c3c3b5,
+			      -6px 24px 0 #c3c3b5,
+			      -5px 25px 0 #c3c3b5,
+			       -4px 26px 0 #c3c3b5,
+			        -3px 27px 0 #c3c3b5,
+			         -2px 28px 0 #c3c3b5,
+			          -1px 29px 0 #c3c3b5,
+			           0px 30px 0 #c3c3b5,
+			            1px 31px 0 #c3c3b5,
+			             2px 32px 0 #c3c3b5,
+			              3px 33px 0 #c3c3b5,
+			               4px 34px 0 #c3c3b5,
+			                5px 35px 0 #c3c3b5,
+			                 6px 36px 0 #c3c3b5,
+			                  7px 37px 0 #c3c3b5,
+			                   8px 38px 0 #c3c3b5,
+			                    9px 39px 0 #c3c3b5,
+			                     10px 40px 0 #c3c3b5,
+			                      11px 41px 0 #c3c3b5,
+			                       12px 42px 0 #c3c3b5,
+			                        13px 43px 0 #c3c3b5,
+			                         14px 44px 0 #c3c3b5,
+			                          15px 45px 0 #c3c3b5;}
+
+
 	div.px-container{
 		height:708px;
 		width: 100%;
@@ -1187,15 +1226,15 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	div.px-container img#px-dogdays-leftlandscape{
 		/*height: 708px;*/
-		-webkit-transform: scale(.75);
-		transform: scale(.75);
+		-webkit-transform: scale(1);
+		transform: scale(1);
 		position: absolute;
 		top:0;
 		left: 0;
 	}
 	div.px-container img#px-dogdays-rightlandscape{
-		-webkit-transform: scale(.75);
-		transform: scale(.75);
+		-webkit-transform: scale(1);
+		transform: scale(1);
 		/*height: 708px;*/
 		position: absolute;
 		top:0;
@@ -1207,6 +1246,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		position: absolute;
 		left: 70%;
 		top:160px;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	div.px-container img#px-dogdays-man{
@@ -1215,8 +1256,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		position: absolute;
 		left: 50%;
 		top:100px;
-		-webkit-transform: translate3d(0, 339.7px, 0);
-		transform: translate3d(0, 339.7px, 0);
+		-webkit-transform: translate3d(0, 200px, 0);
+		transform: translate3d(0, 200px, 0);
 	}
 
 	/* La Traviata */
@@ -1346,10 +1387,110 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		top:60px;
 		right:0;left:0;
 		margin: auto;
+	}
+	div.px-container img#px-hamlet-splatter{
+		height: 111px;
+		position: absolute;
+		top:350px;
+		right:0;left:0;
+		margin: auto;
+	}
+	div.px-container img#px-hamlet-drips{
+		height: 708px;
+		width: 1094px;
+		position: absolute;
+		top:60px;
+		right:0;left:0;
+		margin: auto;
+	}
 
-		background: url(../img/px-hamlet_main_bg.png) no-repeat;
-		background-position:  0px 0px;
-		background-size: 1094px 708px;
+	/* Tickets */
+	article#tickets div.container h1.deep{
+		color: #e3e2da;
+		text-shadow:
+		0px 0px 0 #ff504b,
+		-1px 1px 0 #ff504b,
+		-2px 2px 0 #ff504b,
+		-3px 3px 0 #ff504b,
+		-4px 4px 0 #ff504b,
+		-5px 5px 0 #ff504b,
+		-6px 6px 0 #ff504b,
+		-7px 7px 0 #ff504b,
+		-8px 8px 0 #ff504b,
+		-9px 9px 0 #ff504b,
+		-10px 10px 0 #ff504b,
+		-11px 11px 0 #ff504b,
+		-12px 12px 0 #ff504b,
+		-13px 13px 0 #ff504b,
+		-14px 14px 0 #ff504b,
+		-15px 15px 0 #ff504b,
+
+		-15px 15px 0 #16261f,
+		-16px 16px 0 #16261f,
+		-17px 17px 0 #16261f,
+		-18px 18px 0 #16261f,
+		-19px 19px 0 #16261f,
+		-20px 20px 0 #16261f,
+		-21px 21px 0 #16261f,
+		-22px 22px 0 #16261f,
+		-23px 23px 0 #16261f,
+		-24px 24px 0 #16261f,
+		-25px 25px 0 #16261f,
+		-26px 26px 0 #16261f,
+		-27px 27px 0 #16261f,
+		-28px 28px 0 #16261f,
+		-29px 29px 0 #16261f,
+		-30px 30px 0 #16261f,
+		-31px 31px 0 #16261f,
+		-32px 32px 0 #16261f,
+		-33px 33px 0 #16261f;
+
+		-webkit-transition:text-shadow 0.5s ease-in-out;
+	    -moz-transition:text-shadow 0.5s ease-in-out;
+	    -o-transition:text-shadow 0.5s ease-in-out;
+	    -ms-transition:text-shadow 0.5s ease-in-out;
+	    transition:text-shadow 0.5s ease-in-out;
+	}
+
+	article#tickets div.container h1.deep.active{
+		color: #e3e2da;
+		text-shadow:
+		0px 0px 0 #ff504b,
+		-1px 1px 0 #ff504b,
+		-2px 2px 0 #ff504b,
+		-3px 3px 0 #ff504b,
+		-4px 4px 0 #ff504b,
+		-5px 5px 0 #ff504b,
+		-6px 6px 0 #ff504b,
+		-7px 7px 0 #ff504b,
+		-8px 8px 0 #ff504b,
+		-9px 9px 0 #ff504b,
+		-10px 10px 0 #ff504b,
+		-11px 11px 0 #ff504b,
+		-12px 12px 0 #ff504b,
+		-13px 13px 0 #ff504b,
+		-14px 14px 0 #ff504b,
+		-15px 15px 0 #ff504b,
+
+		-15px 15px 0 #16261f,
+		-14px 16px 0 #16261f,
+		-13px 17px 0 #16261f,
+		-12px 18px 0 #16261f,
+		-11px 19px 0 #16261f,
+		-10px 20px 0 #16261f,
+		-9px 21px 0 #16261f,
+		-8px 22px 0 #16261f,
+		-7px 23px 0 #16261f,
+		-6px 24px 0 #16261f,
+		-5px 25px 0 #16261f,
+		-4px 26px 0 #16261f,
+		-3px 27px 0 #16261f,
+		-2px 28px 0 #16261f,
+		-1px 29px 0 #16261f,
+		0px 30px 0 #16261f,
+		1px 31px 0 #16261f,
+		2px 32px 0 #16261f,
+		3px 33px 0 #16261f;
 	}
 
 
@@ -1364,6 +1505,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	div.px-container{display: none;}
 	.desktop{display: none;}
 	.mobile{display: block;}
+	.mobile.image_sub{display: none;}
 
 	.nav-down {
     	top: 0px;
@@ -1443,7 +1585,95 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 		header .container{overflow: hidden;}
 		header{padding-top:46px;}
-		h1.deep{letter-spacing: .065em;white-space: nowrap;}
+		h1.deep{letter-spacing: .065em;white-space: nowrap;
+		text-shadow:
+		0px 0px 0 #ff504b,
+		 -1px 1px 0 #ff504b,
+		  -2px 2px 0 #ff504b,
+		   -3px 3px 0 #ff504b,
+		    -4px 4px 0 #ff504b,
+		     -5px 5px 0 #ff504b,
+		      -6px 6px 0 #ff504b,
+		       -7px 7px 0 #ff504b,
+		        -8px 8px 0 #ff504b,
+		         -9px 9px 0 #ff504b,
+		          -10px 10px 0 #ff504b,
+		           -11px 11px 0 #ff504b,
+		            -12px 12px 0 #ff504b,
+		             -13px 13px 0 #ff504b,
+		              -14px 14px 0 #ff504b,
+		               -15px 15px 0 #ff504b,
+
+		 -15px 15px 0 #c3c3b5,
+		  -14px 16px 0 #c3c3b5,
+		   -13px 17px 0 #c3c3b5,
+			-12px 18px 0 #c3c3b5,
+			 -11px 19px 0 #c3c3b5,
+			  -10px 20px 0 #c3c3b5,
+			   -9px 21px 0 #c3c3b5,
+			    -8px 22px 0 #c3c3b5,
+			     -7px 23px 0 #c3c3b5,
+			      -6px 24px 0 #c3c3b5,
+			      -5px 25px 0 #c3c3b5,
+			       -4px 26px 0 #c3c3b5,
+			        -3px 27px 0 #c3c3b5,
+			         -2px 28px 0 #c3c3b5,
+			          -1px 29px 0 #c3c3b5,
+			           0px 30px 0 #c3c3b5,
+			            1px 31px 0 #c3c3b5,
+			             2px 32px 0 #c3c3b5,
+			              3px 33px 0 #c3c3b5,
+			               4px 34px 0 #c3c3b5,
+			                5px 35px 0 #c3c3b5,
+			                 6px 36px 0 #c3c3b5,
+			                  7px 37px 0 #c3c3b5,
+			                   8px 38px 0 #c3c3b5,
+			                    9px 39px 0 #c3c3b5,
+			                     10px 40px 0 #c3c3b5,
+			                      11px 41px 0 #c3c3b5,
+			                       12px 42px 0 #c3c3b5,
+			                        13px 43px 0 #c3c3b5,
+			                         14px 44px 0 #c3c3b5,
+			                          15px 45px 0 #c3c3b5;}
+		article#tickets div.container h1.deep{
+			text-shadow:
+			0px 0px 0 #ff504b,
+			-1px 1px 0 #ff504b,
+			-2px 2px 0 #ff504b,
+			-3px 3px 0 #ff504b,
+			-4px 4px 0 #ff504b,
+			-5px 5px 0 #ff504b,
+			-6px 6px 0 #ff504b,
+			-7px 7px 0 #ff504b,
+			-8px 8px 0 #ff504b,
+			-9px 9px 0 #ff504b,
+			-10px 10px 0 #ff504b,
+			-11px 11px 0 #ff504b,
+			-12px 12px 0 #ff504b,
+			-13px 13px 0 #ff504b,
+			-14px 14px 0 #ff504b,
+			-15px 15px 0 #ff504b,
+
+			-15px 15px 0 #16261f,
+			-14px 16px 0 #16261f,
+			-13px 17px 0 #16261f,
+			-12px 18px 0 #16261f,
+			-11px 19px 0 #16261f,
+			-10px 20px 0 #16261f,
+			-9px 21px 0 #16261f,
+			-8px 22px 0 #16261f,
+			-7px 23px 0 #16261f,
+			-6px 24px 0 #16261f,
+			-5px 25px 0 #16261f,
+			-4px 26px 0 #16261f,
+			-3px 27px 0 #16261f,
+			-2px 28px 0 #16261f,
+			-1px 29px 0 #16261f,
+			0px 30px 0 #16261f,
+			1px 31px 0 #16261f,
+			2px 32px 0 #16261f,
+			3px 33px 0 #16261f;
+		}
 }
 
 /* Less than 768 x 1024 */
@@ -1630,8 +1860,6 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.desktop{display: none;}
 	.mobile{display: block;}
 
-	.image_sub{height:100%;width:100%;}
-
 
 	h2{	font-size: 3.5em;}
 	p{	font-size: .75em;}
@@ -1695,7 +1923,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			padding: 0 20px;
 		}
 		.lb-title > h2{padding-right:5px;}
-		.lb-title > p{padding: 16px 0;}
+		.lb-title > p{font-size:.6em;padding: 14px 0;font-weight: bold;}
+		#dogdays-info .lb-title > p{padding: 10px 0;}
 
 
 
@@ -1776,7 +2005,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 /* Less than 480px */
 @media screen and (max-width: 479px){
-	h2{	font-size: 2.125em;}
+	h2{	font-size: 2.5em;}
 
 	.responsive-br{display: inline-block;}
 
@@ -1797,11 +2026,15 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			padding-top: 40px;
 		}
 		.lb-title{
-			height: 40px;
+			height: 44px;
 			padding: 0 10px;
 		}
 		.lb-title > h2{padding-right:3px;}
-		.lb-title > p{padding-top:6px;line-height: 1em;}
+		.lb-title > p{margin:5px 10px;line-height: 1.125em;clear: both;}
+
+		div.detail-container div.detail-content{
+			margin-top:50px;
+		}
 
 
 
@@ -1875,18 +2108,46 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	/* Article divs*/
 	div.title{
-		height: 78px;
+		height: 100%;
+		width: 100%;
 	}
-	div.title h2{height:40px;padding:3px 6px;}
-	div.title img{height:12px;width:70px;}
+	div.title h2{height:46px;padding:3px 6px;float:left;}
+	div.title img{display:none;float: left;}
+	br.clear{float: left;}
 
 	div.title > a{
-		height: 20px;
-		width:70px;
-		padding: 4px;
-		margin-top:-8px;
+		height: 30px;
+		width:90%;
+		padding: 6px;
+		display: block;
+		float: left;
+
+		position: absolute;
+		bottom:4%;
+		left:0;
+		right:0;
+		margin: auto;
+
 	}
-	div.title > a p{font-size: .75em;}
+	article#dogdays div.title > img + br + a{
+		width: 45%;
+		left:5%;right:inherit;
+	}
+	article#dogdays div.title > img + br + a#two{
+		right:5%;left:inherit;
+		border-left:1px solid #003b23;
+	}
+	div.title > a p{font-size: 1.125em;}
+
+	.mobile.image_sub{
+		display: block;
+		height:100%;width:100%;
+		top:0;
+		background: none;
+	}
+	.mobile.image_sub:hover{
+		background: none;
+	}
 
 	/* Tickets */
 	article#tickets div.container h1.deep{

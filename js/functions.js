@@ -62,10 +62,12 @@
 			// Remove src of iframe to stop videos
 			document.getElementById( 'trailer-video1' ).setAttribute( 'src', '' );
 			document.getElementById( 'trailer-video2' ).setAttribute( 'src', '' );
+			document.getElementById( 'trailer-video3' ).setAttribute( 'src', '' );
 
 			// resets the src of videos so they run again
 			document.getElementById( 'trailer-video1' ).setAttribute( 'src', '//www.youtube.com/embed/_POGKOhwKkk' );
 			document.getElementById( 'trailer-video2' ).setAttribute( 'src', '//www.youtube.com/embed/MPv2AC_2czs' );
+			document.getElementById( 'trailer-video3' ).setAttribute( 'src', '//player.vimeo.com/video/53783631' );
 
 		});
 
@@ -226,6 +228,26 @@
 			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
 			    }
 
+
+
+			    if (scrolled >= 3){
+					$('header h1.deep').addClass("active");
+				} else {
+					$('header h1.deep').removeClass("active");
+				}
+
+				if (scrolled >= 370){
+					$('header div.container div.scroll_down').addClass("active");
+				} else {
+					$('header div.container div.scroll_down').removeClass("active");
+				}
+
+				if (scrolled >= 5048){
+					$('article#tickets div.container h1.deep').addClass("active");
+				} else {
+					$('article#tickets div.container h1.deep').removeClass("active");
+				}
+
 			}// IF LARGE
 
 
@@ -233,15 +255,17 @@
 			//Dog Days
 
 				var copter = -((scrolled-799)*.1) + '%';
-				var dogman = (100+(-(scrolled-799)*.3)) + 'px';
+				var dogman = ((-(scrolled-799)*.2)) + 'px';
 				var leftlandscape = ((scrolled)*.00015) + .85;
+
+
 
 				if (scrolled <= 1214) {
 
-					$('div.px-container #px-dogdays-leftlandscape,div.px-container #px-dogdays-rightlandscape').css('transform', 'scale(' + leftlandscape +')');
+					//$('div.px-container #px-dogdays-leftlandscape,div.px-container #px-dogdays-rightlandscape').css('transform', 'scale(' + leftlandscape +')');
 					//('height',(708+((scrolled-799)*.05)) + 'px');
 
-					$('div.px-container #px-dogdays-helicopter').css('transform', 'translate3d(' + copter +'%, 0, 0)');
+					$('div.px-container #px-dogdays-helicopter').css('transform', 'translate3d(' + copter +', 0, 0)');
 					//.css('left',(70+(-(scrolled-799)*.0125)) + '%');
 
 					$('div.px-container #px-dogdays-man').css('height',(((scrolled-799)*.125)+708) + 'px');
@@ -287,15 +311,21 @@
 
 			//Hamlet
 				var skull = -(scrolled-3199) * .2 + 'px';
+				var splatter = (((scrolled-3199)*.125)+111) + 'px';
 
 				if (scrolled <= 3630) {
-					$('div.px-container #px-hamlet-main').css('transform', 'translate3d( 0, '+ skull +', 0)');
-						//('top',(60+(-(scrolled-3199)*.2)) + 'px');
-					$('div.px-container #px-hamlet-main').css('background-position','0px ' + (-((scrolled-3199)*.65)) + 'px');
-					$('div.px-container #px-hamlet-main').css('background-size','1094px ' + (708+((scrolled-3199)*.8)) + 'px');
+					$('div.px-container #px-hamlet-main, div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ skull +', 0)');
+					$('div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .35 + 'px' +', 0) rotate(' + (scrolled-3199) * .05 + 'deg)');
+					$('div.px-container #px-hamlet-drips').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .05 + 'px' +', 0)');
 
-					//$('div.px-container #px-hamlet-main-bottom').css('transform', 'rotate(' + (-155+((scrolled-3299)*.025)) + 'deg)');
-					//$('div.px-container #px-hamlet-main-top').css('transform', 'rotate(' + ((scrolled-3299)*.05) + 'deg)');
+					$('div.px-container #px-hamlet-splatter').css('height', splatter );
+						//('top',(60+(-(scrolled-3199)*.2)) + 'px');
+					//$('div.px-container #px-hamlet-main').css('background-position','0px ' + (-((scrolled-3199)*.65)) + 'px');
+					
+					//$('div.px-container #px-hamlet-main').css('background-size', (708+((scrolled-3199)*.7)) + 'px ' + (708+((scrolled-3199)*.7)) + 'px');
+
+					$('div.px-container #px-hamlet-main-bottom').css('transform', 'rotate(' + (-155+((scrolled-3299)*.0125)) + 'deg)');
+					$('div.px-container #px-hamlet-main-top').css('transform', 'rotate(' + ((scrolled-3299)*.0125) + 'deg)');
 				}
 
 
