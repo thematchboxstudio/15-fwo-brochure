@@ -70,8 +70,8 @@ a {
 a:hover {color: #003b23;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-/*::-moz-selection{background:rgba(255,80,75,.8); color: #003b23; text-shadow: none;}
-::selection {background: rgba(255,80,75,.8); color: #003b23; text-shadow: none;}*/
+::-moz-selection{background:rgba(255,80,75,.8); color: #003b23; text-shadow: none;}
+::selection {background: rgba(255,80,75,.8); color: #003b23; text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #ff504b;}
