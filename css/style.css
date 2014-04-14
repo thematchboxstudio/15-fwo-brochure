@@ -1,26 +1,80 @@
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 1em 'raleway', sans-serif;}
+body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing}
 *{
-	transition: 0.5s;
+/*	transition: 0.5s;
 	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s; 
-	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;*/
 }
+ html {
+        font-family: 'mobile';
+    }
 
+    * html { /* IE6 */
+        font-family: 'desktop'
+    }
+
+    *+html { /* IE7 */
+        font-family: 'desktop'
+    }
+
+    @media \0screen {
+        html {  /* IE8 */
+            font-family: 'desktop'
+        }
+    }
+
+    /* Reset your font families here!
+     ----------------------------------- */
+    body {
+        font-family: 'raleway', sans-serif;
+    }
+
+    /* Queries for supported browsers.
+     ----------------------------------- */
+    body:after {
+        display: none;
+    }
+
+    @media screen and (min-width: 35em) {
+        html {
+            font-family: "skinny";
+        }
+        body:after {
+            content: "skinny";
+        }
+    }
+
+    @media screen and (min-width: 56em) {
+        html {
+            font-family: "desktop";
+        }
+        body:after {
+            content: "desktop";
+        }
+    }
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 
 /* We like off-black for text. */
 body, select, input, textarea {color: #333;}
 
-a {color: #03f;text-decoration: none;}
-a:hover {color: #69f;}
+a {
+	color: #ff504b;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+
+}
+a:hover {color: #003b23;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background:rgba(255,80,75,.8); color: #003b23; text-shadow: none;}
-::selection {background: rgba(255,80,75,.8); color: #003b23; text-shadow: none;} 
+::selection {background: rgba(255,80,75,.8); color: #003b23; text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #ff504b;} 
+a:link {-webkit-tap-highlight-color: #ff504b;}
 
 ins {background-color: #ff504b; color: #000; text-decoration: none;}
 mark {background-color: #ff504b; color: #000; font-style: italic; font-weight: bold;}
@@ -29,16 +83,16 @@ mark {background-color: #ff504b; color: #000; font-style: italic; font-weight: b
 input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
-/* Forest Green 
- * #003b23	
+/* Forest Green
+ * #003b23
 */
 
-/* Coral 
- * #ff504b	
+/* Coral
+ * #ff504b
 */
 
-/* Beige Gray 
- * #e3e2da	
+/* Beige Gray
+ * #e3e2da
 */
 
 /* Typography
@@ -103,13 +157,21 @@ font-style: normal;
 		display: none;
 	}
 	br.clear{clear:both;}
-	.left{float: left;}
+	.left{
+		float: left;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+	}
 	.right{float: right;}
 
 	.coral-bg{background:#ff504b;color:#003b23;}
 	.green-bg{background:#003b23;color:#ff504b;}
 
-	.nobuy{display: none !important;}
+	.nobuy #go_button, .nobuy .buy_tickets { display: none!important; }
+
+	article#tickets div.container.nobuy p.line2 { margin: 58px auto; }
 
 
 
@@ -138,13 +200,12 @@ article.break{
 	height: 500px;
 	padding: 16px;
 	background: url(../img/break-lines-bg.svg) repeat center center, #003b23;
-	background-attachment: fixed;
 	color: #e3e2da;
 	position: relative;
 	z-index: 1;
 }
 	article#break1{background:url(../img/bottom_border.svg) no-repeat center -1px,
-		url(../img/break-lines-bg.svg) repeat fixed center center, #003b23
+		url(../img/break-lines-bg.svg) repeat center center, #003b23
 		;}
 
 div.center_line{
@@ -212,7 +273,7 @@ div.title{
 		font-size: 1.25em;
 		line-height: 1em;
 		letter-spacing: .1em;}
-		div.title a:hover p{color: #ff504b;} 
+		div.title a:hover p{color: #ff504b;}
 
 
 .break-text{
@@ -225,7 +286,7 @@ div.copy-container{
 	text-align: center;
 	border-left: 1px solid #ff504b;
 	border-right: 1px solid #ff504b;
-	background:  
+	background:
 	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
 	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
 	url(../img/topleft-bottomright-corner.svg) no-repeat right bottom,
@@ -244,7 +305,7 @@ div.bottom-border{
 }
 
 
-/* Lightbox 
+/* Lightbox
 	-------------------------------------------------------------------------------*/
 	.lb-overlay{
 		width: 0px;
@@ -311,8 +372,8 @@ div.bottom-border{
 				padding-bottom: 5px;
 				margin-bottom: 5px;
 			}
-			
-			
+
+
 			.lb-overlay > div.detail-container div.detail-content div.detail-column p.synopsis,
 			.lb-overlay > div.detail-container div.detail-content div.detail-column p.special{
 				font-size: .75em;
@@ -383,7 +444,7 @@ div.bottom-border{
 				text-indent: -7px;
 			}
 			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul{margin:10px 0;}
-			
+
 			.lb-overlay > div.detail-container div.detail-content div.detail-column ~ div.detail-column ul li{
 				font-size: .875em;
 				padding: 0 0 0 13px;
@@ -450,12 +511,12 @@ div.bottom-border{
 		background:
 			url(../img/lb-close.svg) no-repeat 15px 12px,
 			#ff504b;
-		
-		
+
+
 
 		text-indent: -9999px;
 		font-family: "raleway";
-		
+
 		font-size: 1.5em;
 		font-weight: 500;
 		color: #003b23;
@@ -503,14 +564,14 @@ div.bottom-border{
 	}
 	.lb-overlay:target > div div.detail-content div.detail-column ul li a{z-index: 999;}
 
-	
 
 
 
 
 
 
-	
+
+
 
 /* Nav
 -------------------------------------------------------------------------------*/
@@ -538,23 +599,24 @@ nav ul li{}
 		text-align: left;
 		color: #003b23;
 
-		background: 
+		background:
 			url(../img/menu-open.svg) no-repeat 90% center,
 			url(../img/menu-bg.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
+
 		/* BUG: Chrome adds a some kind of padding on top and bottom of background  */
-		
-		-webkit-transition: color 0.5s;
-		-moz-transition: color 0.5s;
-		-o-transition: color 0.5s;
-		transition: color 0.5s;
+
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		transition: none;
 	}
 	nav ul li.menu a.toggle:hover{
 		color:#ff504b;
-		background: 
+		background:
 			url(../img/menu-open-hover.svg) no-repeat 90% center,
 			url(../img/menu-bg-hover.svg) no-repeat center center;
-			background-size: 15px 15px, 120px 30px;
+		background-size: 15px 15px, 120px 30px;
 		}
 	/* When Menu is expanded */
 	nav ul li.menu a.toggle.active{
@@ -579,7 +641,7 @@ nav ul li{}
 		height: auto;
 		padding: 5px;
 		display: block;
-		
+
 		font-size: .75em;
 		font-weight: 700;
 		letter-spacing: .1em;
@@ -587,7 +649,7 @@ nav ul li{}
 
 		background: #ff504b;
 		border-top: 1px solid #003b23;
-		
+
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
 		-o-transition: 0.5s;
@@ -621,7 +683,7 @@ header p.line2{
 	font-weight: 400;
 	letter-spacing: .25em;
 	margin: 50px auto;
-	background: 
+	background:
 		url(../img/header-line2-left.svg) no-repeat left center,
 		url(../img/header-line2-right.svg) no-repeat right center;
 }
@@ -630,7 +692,7 @@ header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
 	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down a img{margin: 0 10px;}
-	header div.container div.scroll_down a:hover img{margin: 35px 10px;}
+	header div.container div.scroll_down:hover img{margin: 35px 10px;}
 
 header div.container div.center_line{
 	height: 37px;
@@ -648,7 +710,7 @@ h1.deep{
 	line-height: 1em;
 	text-align: center;
 	color: #003b23;
-	text-shadow: 
+	text-shadow:
 	0px 0px 0 #ff504b,
 	 -1px 1px 0 #ff504b,
 	  -2px 2px 0 #ff504b,
@@ -698,7 +760,7 @@ h1.deep{
 		                         14px 44px 0 #c3c3b5,
 		                          15px 45px 0 #c3c3b5;
 }
-	
+
 /* Dog Days
 -------------------------------------------------------------------------------*/
 article#dogdays{
@@ -725,9 +787,20 @@ article#hamlet{
 -------------------------------------------------------------------------------*/
 article#frontiers{
 	height: 810px;
-	background: url(../img/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;
+	background: transparent;
+	/*background: url(../img/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;*/
 	padding: 16px;
 }
+	.background-circles {
+		background: url("../img/frontiers-bg.jpg") no-repeat fixed center center, #e3e2da;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		height: 100%;
+		z-index: -1;
+	}
 
 article#frontiers div.center_line{
 	height: 126px;
@@ -778,9 +851,9 @@ article#frontiers a.frontiers_learn{
 
 article#tickets{
 	height: 708px;
-	background: 
-		url(../img/tickets-lines.svg) no-repeat top center, 
-		url(../img/tickets-bg.svg) repeat fixed center center, 
+	background:
+		url(../img/tickets-lines.svg) no-repeat top center,
+		url(../img/tickets-bg.svg) repeat center center,
 		#003b23;
 }
 
@@ -793,42 +866,42 @@ article#tickets div.container p.line1{
 
 article#tickets div.container h1.deep{
 	color: #e3e2da;
-	text-shadow: 
-	0px 0px 0 #ff504b, 
-	-1px 1px 0 #ff504b, 
-	-2px 2px 0 #ff504b, 
-	-3px 3px 0 #ff504b, 
-	-4px 4px 0 #ff504b, 
-	-5px 5px 0 #ff504b, 
-	-6px 6px 0 #ff504b, 
-	-7px 7px 0 #ff504b, 
-	-8px 8px 0 #ff504b, 
-	-9px 9px 0 #ff504b, 
-	-10px 10px 0 #ff504b, 
-	-11px 11px 0 #ff504b, 
-	-12px 12px 0 #ff504b, 
-	-13px 13px 0 #ff504b, 
-	-14px 14px 0 #ff504b, 
-	-15px 15px 0 #ff504b, 
+	text-shadow:
+	0px 0px 0 #ff504b,
+	-1px 1px 0 #ff504b,
+	-2px 2px 0 #ff504b,
+	-3px 3px 0 #ff504b,
+	-4px 4px 0 #ff504b,
+	-5px 5px 0 #ff504b,
+	-6px 6px 0 #ff504b,
+	-7px 7px 0 #ff504b,
+	-8px 8px 0 #ff504b,
+	-9px 9px 0 #ff504b,
+	-10px 10px 0 #ff504b,
+	-11px 11px 0 #ff504b,
+	-12px 12px 0 #ff504b,
+	-13px 13px 0 #ff504b,
+	-14px 14px 0 #ff504b,
+	-15px 15px 0 #ff504b,
 
-	-15px 15px 0 #16261f, 
-	-14px 16px 0 #16261f, 
-	-13px 17px 0 #16261f, 
-	-12px 18px 0 #16261f, 
-	-11px 19px 0 #16261f, 
-	-10px 20px 0 #16261f, 
-	-9px 21px 0 #16261f, 
-	-8px 22px 0 #16261f, 
-	-7px 23px 0 #16261f, 
-	-6px 24px 0 #16261f, 
-	-5px 25px 0 #16261f, 
-	-4px 26px 0 #16261f, 
-	-3px 27px 0 #16261f, 
-	-2px 28px 0 #16261f, 
-	-1px 29px 0 #16261f, 
-	0px 30px 0 #16261f, 
-	1px 31px 0 #16261f, 
-	2px 32px 0 #16261f, 
+	-15px 15px 0 #16261f,
+	-14px 16px 0 #16261f,
+	-13px 17px 0 #16261f,
+	-12px 18px 0 #16261f,
+	-11px 19px 0 #16261f,
+	-10px 20px 0 #16261f,
+	-9px 21px 0 #16261f,
+	-8px 22px 0 #16261f,
+	-7px 23px 0 #16261f,
+	-6px 24px 0 #16261f,
+	-5px 25px 0 #16261f,
+	-4px 26px 0 #16261f,
+	-3px 27px 0 #16261f,
+	-2px 28px 0 #16261f,
+	-1px 29px 0 #16261f,
+	0px 30px 0 #16261f,
+	1px 31px 0 #16261f,
+	2px 32px 0 #16261f,
 	3px 33px 0 #16261f;
 }
 
@@ -847,12 +920,16 @@ article#tickets div.container a#go_button{
 		margin-top: 18px;
 		font-size: 3.75em;
 		color: #ff504b;
+		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out
 	}
 
 
 
 article#tickets div.container a#go_button:hover{
-	border: 20px solid rgba(227, 226, 218, .5);
+	/*border: 20px solid rgba(227, 226, 218, .5);*/
 	border-radius: 52px;
 	background: #ff504b;
 	-moz-background-clip: content;     /* Firefox 3.6 */
@@ -860,9 +937,10 @@ article#tickets div.container a#go_button:hover{
 	background-clip: content-box;
 }
 	article#tickets div.container a#go_button:hover h3{
-		margin-top: 12px;
+		/*margin-top: 12px;
 		font-size: 2.5em;
-		color: #003b23;
+		color: #003b23;*/
+		color: #e3e2da;
 	}
 
 
@@ -905,12 +983,20 @@ article#festival_trailers div.trailer a.play_video{
 	-moz-background-clip: content;     /* Firefox 3.6 */
 	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
 	background-clip: content-box;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 article#festival_trailers div.trailer a.play_video svg{
 	height: 29px;
 	width: 30px;
 	margin: 17px 0 0 20px;
 	fill:#003b23;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 
 article#festival_trailers div.trailer a.play_video:hover{
@@ -948,14 +1034,14 @@ article#festival_trailers div.festival_trailers{
 
 
 div.lb-overlay.trailer-previews div.detail-container{
-	width: 90vw; 
+	width: 90vw;
     height: 50.625vw; /* 100/56.25 = 1.778 */
 	max-height: 90vh;
     max-width: 177.78vh; /* 16/9 = 1.778 */
     margin-top: 8%;
 }
 div.lb-overlay.trailer-previews div.detail-container iframe{
-	width: 100%; 
+	width: 100%;
     height: 100%;
 	padding-bottom:60px;}
 div.lb-overlay.trailer-previews div.detail-container .trailer-info{
@@ -991,7 +1077,7 @@ div.lb-overlay.trailer-previews div.detail-container .trailer-info p~p{color:#ff
 -------------------------------------------------------------------------------*/
 
 footer{
-	background: 
+	background:
 		url(../img/festival_info-bg.svg) fixed,
 		url(../img/center-line.svg) no-repeat center -610px,
 		#e3e2da;
@@ -1059,7 +1145,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 .responsive-br{display: none;}
 
-/* Parallax 
+/* Parallax
 -------------------------------------------------------------------------------*/
 @media screen and (min-width: 960px){
 	div.px-container{
@@ -1078,7 +1164,20 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background:url(../img/px-dogdays_sky_background.jpg) no-repeat top center,#fff;
 		background-size: 100% 110%;
 	}
+	div.px-container img {
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
 
+		transition: 1.5s ease-out;
+		-webkit-transition: 1.5s ease-out;
+		-moz-transition: 1.5s ease-out;
+		-o-transition: 1.5s ease-out;
+
+	}
 	div.px-container img#px-dogdays-sky-background{
 		width: 100%;
 		min-height:708px;
@@ -1087,13 +1186,17 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 
 	div.px-container img#px-dogdays-leftlandscape{
-		height: 708px;
+		/*height: 708px;*/
+		-webkit-transform: scale(.75);
+		transform: scale(.75);
 		position: absolute;
 		top:0;
 		left: 0;
 	}
 	div.px-container img#px-dogdays-rightlandscape{
-		height: 708px;
+		-webkit-transform: scale(.75);
+		transform: scale(.75);
+		/*height: 708px;*/
 		position: absolute;
 		top:0;
 		right: 0;
@@ -1103,7 +1206,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		height: 144px;
 		position: absolute;
 		left: 70%;
-		top:160px; 
+		top:160px;
 	}
 
 	div.px-container img#px-dogdays-man{
@@ -1111,7 +1214,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		margin-left: -360px;
 		position: absolute;
 		left: 50%;
-		top:100px; 
+		top:100px;
+		-webkit-transform: translate3d(0, 339.7px, 0);
+		transform: translate3d(0, 339.7px, 0);
 	}
 
 	/* La Traviata */
@@ -1163,28 +1268,28 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		height: 240px;
 		position: absolute;
 		left: 5%;
-		bottom:0px; 
+		bottom:0px;
 	}
 	div.px-container img#px-traviata-horns{
 		height: 380px;
 		position: absolute;
 		margin-left:-240px;
 		left: 50%;
-		bottom:-40px; 
+		bottom:-40px;
 	}
 	div.px-container img#px-traviata-middle{
 		height: 360px;
 		position: absolute;
 		margin: auto;
 		left:0;right:0;
-		bottom:0px; 
+		bottom:0px;
 	}
 
 	div.px-container img#px-traviata-butterfly{
 		height: 180px;
 		position: absolute;
 		left:30%;
-		top:-16px; 
+		top:-16px;
 	}
 
 	div.px-container img#px-traviata-leftcurtain2{
@@ -1203,8 +1308,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		height: 700px;
 		position: absolute;
 		margin-left:-350px;
-		left:50%; 
-		bottom:-220px; 
+		left:50%;
+		bottom:-220px;
 
 		background: url(../img/px-traviata_horns.png) no-repeat center 250px;
 		background-size: 580px;
@@ -1277,35 +1382,51 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		}
 
 		/* FW Opera Logo */
-		nav ul li.menu h1 a{height: 40px;width: 43px;
+		.menu h1 {
+			display: block;
+			float: left;
+			position: relative;
+			z-index: 99999999;
+		}
+		nav ul li.menu h1 a{
+			height: 40px;
+			width: 43px;
 			background: url(../img/fwopera_logo_42x42.svg) no-repeat, #e3e2da;
 			background-size: contain;
+			background-size: 40px;
 			float: left;
 		}
 
 		nav ul li.menu a.toggle:link,
 		nav ul li.menu a.toggle:visited,
-		nav ul li.menu a.toggle:hover,
-		nav ul li.menu a.toggle:active{
+		nav ul li.menu a.toggle:focus,
+		nav ul li.menu a.toggle:hover{
 			height: 40px;
-			width:100%;
-			background: 
+			width: calc(100% - 43px);
+			float: right;
+			/*width:100%;*/
+			background:
 				url(../img/menu-open.svg) no-repeat 97% center,#ff504b;
 			background-size:25px 25px;
 			color: #ff504b;
-			
+			outline: none;
+			text-indent: -999em;
+			overflow: hidden;
 			-webkit-transition: none;
 			-moz-transition: none;
 			-o-transition: none;
 			transition: none;
 		}
-
+		nav ul li.menu a.toggle:active {
+			/*background: transparent;*/
+			outline: none;
+		}
 		/* When Menu is expanded */
 		nav ul li.menu a.toggle.active:link,
 		nav ul li.menu a.toggle.active:visited,
 		nav ul li.menu a.toggle.active:hover,
 		nav ul li.menu a.toggle.active:active{
-			background: 
+			background:
 				url(../img/menu-close.svg) no-repeat 97% center,#ff504b;
 				background-size:25px 25px;
 			}
@@ -1319,7 +1440,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			background: #ff504b;
 			color: #003b23;
 		}
-		
+
 		header .container{overflow: hidden;}
 		header{padding-top:46px;}
 		h1.deep{letter-spacing: .065em;white-space: nowrap;}
@@ -1370,7 +1491,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	/* Header */
 	header{
 		height: 568px;
-		padding-top:0; 
+		padding-top:0;
 		background-position: center 230px;
 	}
 
@@ -1398,7 +1519,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background-size: 960px 960px;
 	}
 
-	
+
 
 	/* Festival Trailers */
 
@@ -1461,7 +1582,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	/* Festival Info */
 	footer{
-		background: 
+		background:
 			url(../img/festival_info-bg.svg) fixed,
 			#e3e2da;
 	}
@@ -1518,7 +1639,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	article.image{height: 400px;}
 
 	article.image div.container{height: 437px;}
-	
+
 	div.image-content{height: 340px;}
 
 	/* Article divs*/
@@ -1535,7 +1656,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		margin-top:-4px;
 	}
 	div.title > a p{font-size: 1em;}
-	
+
 	div.container{padding: 0;}
 
 	div.image-container{
@@ -1604,7 +1725,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		margin-top: 10px;}
 	header div.container div.scroll_down a img{
 		margin: 0 5px; width:24px;height: 54px;}
-	header div.container div.scroll_down a:hover img{
+	header div.container div.scroll_down:hover img{
 		margin: 6px 5px 7px;}
 
 	header div.container div.center_line{
@@ -1662,7 +1783,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	article.image{height: 480px;}
 
 	article.image div.container{height: 514px;}
-	
+
 	div.image-content{height: 440px;}
 
 	div.top-border,div.bottom-border{
@@ -1671,6 +1792,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 	/* Lightbox */
+
 		.lb-overlay:target{
 			padding-top: 40px;
 		}
@@ -1681,7 +1803,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		.lb-title > h2{padding-right:3px;}
 		.lb-title > p{padding-top:6px;line-height: 1em;}
 
-		
+
 
 	.lb-overlay:target a.lb-close,
 	.trailer-previews:target a.lb-close{
@@ -1706,7 +1828,14 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.lb-overlay.trailer-previews:target a.lb-close:hover{color:#e3e2da;}
 	.lb-overlay:target div {
 	}
-
+	.lb-overlay a.lb-close{
+		-webkit-transition: none;
+		transition: none;
+		background:
+			url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+			#003b23;
+		color: #ff504b;
+	}
 	div.lb-overlay.trailer-previews div.detail-container .trailer-info{padding:8px 10px;}
 
 	div.lb-overlay.trailer-previews div.detail-container .trailer-info p+p+p{
@@ -1739,10 +1868,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 	/* Breaks */
-		article#break1 div.center_line{height: 92px;}
-		article#break2 div.center_line{height: 106px;}
-		article#break3 div.center_line{height: 106px;}
-		article#frontiers div.center_line{height: 96px;}
+		article#break1 div.center_line{height: 118px; width: 15px;}
+		article#break2 div.center_line{height: 116px; width: 15px;}
+		article#break3 div.center_line{height: 116px; width: 15px;}
+		article#frontiers div.center_line{height: 108px; width: 16px;}
 
 	/* Article divs*/
 	div.title{
@@ -1750,7 +1879,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	}
 	div.title h2{height:40px;padding:3px 6px;}
 	div.title img{height:12px;width:70px;}
-	
+
 	div.title > a{
 		height: 20px;
 		width:70px;
@@ -1762,7 +1891,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	/* Tickets */
 	article#tickets div.container h1.deep{
 		font-size: 100px;
-		margin-left: .175em; 
+		margin-left: .175em;
 		letter-spacing: .075em;
 		text-shadow: 0px 0px 0 #ff504b,-1px 1px 0 #ff504b,-2px 2px 0 #ff504b,-3px 3px 0 #ff504b,-4px 4px 0 #ff504b,-5px 5px 0 #ff504b,-6px 6px 0 #ff504b,-7px 7px 0 #ff504b,-8px 8px 0 #ff504b,-9px 9px 0 #ff504b,
 
@@ -1779,8 +1908,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	/* Festival Info */
 	footer#festival_info div.container{padding-top: 80px;}
-	
-		
+
+
 	footer#festival_info div.container > div{
 			margin-top: 60px;
 		}
@@ -1808,13 +1937,13 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 /* 320 x 480 */
 @media screen and (max-width: 320px){
-	
+
 	h1.deep{
 		margin-left: .03em; /* Center text */
 		letter-spacing: .07em;
 	}
 	span#tracking{display:block;letter-spacing: .115em;}
-	
+
 	/* Breaks */
 	div.copy-container{padding: 16px;}
 
