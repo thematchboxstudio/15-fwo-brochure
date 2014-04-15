@@ -947,7 +947,7 @@ article#tickets div.container{
 }
 
 article#tickets div.container p.line1{
-	width:200px;padding:4px;margin:150px auto 20px;}
+	width:200px;padding:4px;margin:130px auto 20px;}
 
 article#tickets div.container h1.deep{
 	color: #e3e2da !important;
@@ -993,7 +993,7 @@ article#tickets div.container a#go_button:hover{
 
 
 article#tickets div.container p.line2{
-	width:340px;margin:10px auto;}
+	width:380px;padding:4px 10px;margin:10px auto;line-height: 1.5em;}
 
 
 /* Festival Trailers
