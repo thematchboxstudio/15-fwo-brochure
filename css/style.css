@@ -1,5 +1,185 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll; -webkit-font-smoothing: antialiased;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+
+/*! responsive-nav.js 1.0.32 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  position: absolute;
+  display: block;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing}
+body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing: antialiased;}
 *{
 /*	transition: 0.5s;
 	-webkit-transition: 0.5s;
@@ -178,7 +358,7 @@ font-style: normal;
 h1 a{
 	height: 51px; width:51px;
 	display: block;
-	background: url(../img/fwopera_logo_42x42.svg) no-repeat;
+	background: url(../i/fwopera_logo_42x42.svg) no-repeat;
 	background-size: contain;
 	text-indent: -9999px;
 	margin: 0 auto;
@@ -199,20 +379,20 @@ article.image, header,footer{
 article.break{
 	height: 500px;
 	padding: 16px;
-	background: url(../img/break-lines-bg.svg) repeat center center, #003b23;
+	background: url(../i/break-lines-bg.svg) repeat center center, #003b23;
 	color: #e3e2da;
 	position: relative;
 	z-index: 1;
 }
-	article#break1{background:url(../img/bottom_border.svg) no-repeat center -1px,
-		url(../img/break-lines-bg.svg) repeat center center, #003b23
+	article#break1{background:url(../i/bottom_border.svg) no-repeat center -1px,
+		url(../i/break-lines-bg.svg) repeat center center, #003b23
 		;}
 
 div.center_line{
 	width:16px;
 	height: 124px; /* adjust in mobile and #frontiers*/
 	margin: 0 auto;
-	background: url(../img/center-line.svg) no-repeat center center;
+	background: url(../i/center-line.svg) no-repeat center center;
 }
 
 div.container{
@@ -288,19 +468,19 @@ div.copy-container{
 	border-left: 1px solid #ff504b;
 	border-right: 1px solid #ff504b;
 	background:
-	url(../img/topleft-bottomright-corner.svg) no-repeat left top,
-	url(../img/topright-bottomleft-corner.svg) no-repeat right top,
-	url(../img/topleft-bottomright-corner.svg) no-repeat right bottom,
-	url(../img/topright-bottomleft-corner.svg) no-repeat left bottom;
+	url(../i/topleft-bottomright-corner.svg) no-repeat left top,
+	url(../i/topright-bottomleft-corner.svg) no-repeat right top,
+	url(../i/topleft-bottomright-corner.svg) no-repeat right bottom,
+	url(../i/topright-bottomleft-corner.svg) no-repeat left bottom;
 }
 div.top-border{
 	height:47px;
-	background:url(../img/top_border.svg) repeat-x center top;
+	background:url(../i/top_border.svg) repeat-x center top;
 	position: relative;
 	z-index: 2;}
 div.bottom-border{
 	height:47px;
-	background:url(../img/bottom_border.svg) repeat-x center bottom;
+	background:url(../i/bottom_border.svg) repeat-x center bottom;
 	position: relative;
 	z-index: 2;
 }
@@ -513,7 +693,7 @@ div.bottom-border{
 		height: 75px;
 		padding-top: 7px;
 		background:
-			url(../img/lb-close.svg) no-repeat 15px 12px,
+			url(../i/lb-close.svg) no-repeat 15px 12px,
 			#ff504b;
 
 
@@ -535,19 +715,19 @@ div.bottom-border{
 		margin-left: -25px;
 	}
 	.trailer-previews a.lb-close{
-		background: url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+		background: url(../i/lb-close-hover.svg) no-repeat 15px 12px,
 			#e3e2da;
 			color: #ff504b;
 	}
 	.lb-overlay.trailer-previews a.lb-close:hover{
-		background: url(../img/lb-close-hover-trailers.svg) no-repeat 15px 12px,
+		background: url(../i/lb-close-hover-trailers.svg) no-repeat 15px 12px,
 			#ff504b;
 			color: #e3e2da;
 	}
 
 	.lb-overlay a.lb-close:hover{
 		background:
-			url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+			url(../i/lb-close-hover.svg) no-repeat 15px 12px,
 			#003b23;
 	}
 
@@ -604,8 +784,8 @@ nav ul li{}
 		color: #003b23;
 
 		background:
-			url(../img/menu-open.svg) no-repeat 90% center,
-			url(../img/menu-bg.svg) no-repeat center center;
+			url(../i/menu-open.svg) no-repeat 90% center,
+			url(../i/menu-bg.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
 
 		-webkit-transition: none;
@@ -616,8 +796,8 @@ nav ul li{}
 	nav ul li.menu a.toggle:hover{
 		color:#ff504b;
 		background:
-			url(../img/menu-open-hover.svg) no-repeat 90% center,
-			url(../img/menu-bg-hover.svg) no-repeat center center;
+			url(../i/menu-open-hover.svg) no-repeat 90% center,
+			url(../i/menu-bg-hover.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
 		}
 	/* When Menu is expanded */
@@ -625,15 +805,15 @@ nav ul li{}
 		width: 120px;
 		height: 30px;
 		background:
-			url(../img/menu-close.svg) no-repeat 90% center,
-			url(../img/menu-bg.svg) no-repeat center center;
+			url(../i/menu-close.svg) no-repeat 90% center,
+			url(../i/menu-bg.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;
 	}
 
 	nav ul li.menu a.toggle.active:hover{
 		background:
-			url(../img/menu-close-hover.svg) no-repeat 90% center,
-			url(../img/menu-bg-hover.svg) no-repeat center center;
+			url(../i/menu-close-hover.svg) no-repeat 90% center,
+			url(../i/menu-bg-hover.svg) no-repeat center center;
 		background-size: 15px 15px, 120px 30px;}
 
 
@@ -667,7 +847,7 @@ nav ul li{}
 -------------------------------------------------------------------------------*/
 
 header{
-	background: url(../img/green-dot-pattern_10x65.png) repeat-x center 300px, #e3e2da;
+	background: url(../i/green-dot-pattern_10x65.png) repeat-x center 300px, #e3e2da;
 	padding: 0;
 }
 
@@ -686,15 +866,15 @@ header p.line2{
 	letter-spacing: .25em;
 	margin: 50px auto;
 	background:
-		url(../img/header-line2-left.svg) no-repeat left center,
-		url(../img/header-line2-right.svg) no-repeat right center;
+		url(../i/header-line2-left.svg) no-repeat left center,
+		url(../i/header-line2-right.svg) no-repeat right center;
 }
 
 header div.container div.scroll_down{display: inline-block;}
 	header div.container div.scroll_down a p{margin-top: 20px;color: #ff504b;}
-	
+
 	header div.container div.scroll_down a img{margin: 0 10px;}
-	
+
 	header div.container div.scroll_down a:hover p{color: #003b23;}
 	header div.container div.scroll_down:hover img{margin: 35px 10px;}
 
@@ -714,28 +894,28 @@ h1.deep{
 	line-height: 1em;
 	text-align: center;
 	color: #003b23;}
-	
+
 
 
 
 /* Dog Days
 -------------------------------------------------------------------------------*/
 article#dogdays{
-	background: url(../img/dogdays-1094x708.jpg) no-repeat center center;
+	background: url(../i/dogdays-1094x708.jpg) no-repeat center center;
 	background-size:cover;}
 
 
 /* La Traviata
 -------------------------------------------------------------------------------*/
 article#traviata{
-	background: url(../img/traviata-1094x708.jpg) no-repeat center center;
+	background: url(../i/traviata-1094x708.jpg) no-repeat center center;
 	background-size:cover;
 }
 
 /* Hamlet
 -------------------------------------------------------------------------------*/
 article#hamlet{
-	background: url(../img/hamlet-1094x708.jpg) no-repeat center center;
+	background: url(../i/hamlet-1094x708.jpg) no-repeat center center;
 	background-size:cover;
 }
 
@@ -745,11 +925,11 @@ article#hamlet{
 article#frontiers{
 	height: 810px;
 	background: transparent;
-	/*background: url(../img/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;*/
+	/*background: url(../i/frontiers-bg.jpg) no-repeat fixed center center, #e3e2da;*/
 	padding: 16px;
 }
 	.background-circles {
-		background: url("../img/frontiers-bg.jpg") no-repeat fixed center center, #e3e2da;
+		background: url("../i/frontiers-bg.jpg") no-repeat fixed center center, #e3e2da;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -779,7 +959,7 @@ article#frontiers a.frontiers_learn{
 	height: 68px;
 	margin: -34px auto 0;
 	display: block;
-	background: url(../img/center-line.svg) no-repeat center 50px;
+	background: url(../i/center-line.svg) no-repeat center 50px;
 }
 
 	article#frontiers a.frontiers_learn svg{fill:#003b23;}
@@ -809,8 +989,8 @@ article#frontiers a.frontiers_learn{
 article#tickets{
 	height: 708px;
 	background:
-		url(../img/tickets-lines.svg) no-repeat top center,
-		url(../img/tickets-bg.svg) repeat center center,
+		url(../i/tickets-lines.svg) no-repeat top center,
+		url(../i/tickets-bg.svg) repeat center center,
 		#003b23;
 }
 
@@ -884,11 +1064,11 @@ article#festival_trailers div.trailer{
 }
 
 article#festival_trailers div#trailer-1{
-	background: url(../img/trailer_1.jpg) no-repeat center center, #e3e2da;
+	background: url(../i/trailer_1.jpg) no-repeat center center, #e3e2da;
 	background-size: cover;
 }
 article#festival_trailers div#trailer-2{
-	background: url(../img/trailer_2.jpg) no-repeat center center, #e3e2da;
+	background: url(../i/trailer_2.jpg) no-repeat center center, #e3e2da;
 	background-size: cover;
 }
 
@@ -998,8 +1178,8 @@ div.lb-overlay.trailer-previews div.detail-container .trailer-info p~p{color:#ff
 
 footer{
 	background:
-		url(../img/festival_info-bg.svg) fixed,
-		url(../img/center-line.svg) no-repeat,
+		url(../i/festival_info-bg.svg) fixed,
+		url(../i/center-line.svg) no-repeat,
 		#e3e2da;
 		background-position: center center, center -610px;
 	position: relative;
@@ -1046,7 +1226,7 @@ footer#festival_info div#go-to-top{
 	padding-top: 55px;
 	margin: 0px auto;
 	display: block;
-	background: url(../img/go-to-top-bg.svg) no-repeat center bottom;
+	background: url(../i/go-to-top-bg.svg) no-repeat center bottom;
 	background-size: contain;
 	text-align: center;
 	font-size: 1.3125em;
@@ -1200,7 +1380,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 	/* Dog Days */
 	article#dogdays > div#px-dogdays{
-		background:url(../img/px-dogdays_sky_background.jpg) no-repeat top center,#fff;
+		background:url(../i/px-dogdays_sky_background.jpg) no-repeat top center,#fff;
 		background-size: 100% 110%;
 	}
 	div.px-container img {
@@ -1352,13 +1532,13 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		left:50%;
 		bottom:-220px;
 
-		background: url(../img/px-traviata_horns.png) no-repeat center 250px;
+		background: url(../i/px-traviata_horns.png) no-repeat center 250px;
 		background-size: 580px;
 	}
 
 	/* Hamlet */
 	article#hamlet > div#px-hamlet{
-		background: url(../img/px-hamlet_background.jpg) repeat top center;
+		background: url(../i/px-hamlet_background.jpg) repeat top center;
 		background-size: 100% auto;
 	}
 
@@ -1533,7 +1713,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		nav ul li.menu h1 a{
 			height: 40px;
 			width: 43px;
-			background: url(../img/fwopera_logo_42x42.svg) no-repeat, #e3e2da;
+			background: url(../i/fwopera_logo_42x42.svg) no-repeat, #e3e2da;
 			background-size: contain;
 			background-size: 40px;
 			float: left;
@@ -1548,7 +1728,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			float: right;
 			/*width:100%;*/
 			background:
-				url(../img/menu-open.svg) no-repeat 97% center,#ff504b;
+				url(../i/menu-open.svg) no-repeat 97% center,#ff504b;
 			background-size:25px 25px;
 			color: #ff504b;
 			outline: none;
@@ -1569,7 +1749,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		nav ul li.menu a.toggle.active:hover,
 		nav ul li.menu a.toggle.active:active{
 			background:
-				url(../img/menu-close.svg) no-repeat 97% center,#ff504b;
+				url(../i/menu-close.svg) no-repeat 97% center,#ff504b;
 				background-size:25px 25px;
 			}
 		nav ul li, nav ul li ul.nav-collapse li a{ width: 100%;}
@@ -1795,7 +1975,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.trailer-previews a.lb-close{
 		height: 60px;
 		width: 60px;
-		background: url(../img/lb-close-hover.svg) no-repeat 11px 10px,
+		background: url(../i/lb-close-hover.svg) no-repeat 11px 10px,
 			#e3e2da;
 		background-size: 40px 40px;
 	}
@@ -1803,7 +1983,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.lb-overlay.trailer-previews a.lb-close:hover{
 		height: 60px;
 		width: 60px;
-		background: url(../img/lb-close-hover-trailers.svg) no-repeat 11px 10px,
+		background: url(../i/lb-close-hover-trailers.svg) no-repeat 11px 10px,
 			#ff504b;
 		background-size: 40px 40px;
 		color: #e3e2da;
@@ -1813,7 +1993,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	/* Festival Info */
 	footer{
 		background:
-			url(../img/festival_info-bg.svg) fixed,
+			url(../i/festival_info-bg.svg) fixed,
 			#e3e2da;
 	}
 	footer#festival_info div.container{
@@ -2065,7 +2245,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		-webkit-transition: none;
 		transition: none;
 		background:
-			url(../img/lb-close-hover.svg) no-repeat 15px 12px,
+			url(../i/lb-close-hover.svg) no-repeat 15px 12px,
 			#003b23;
 		color: #ff504b;
 	}
