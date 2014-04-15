@@ -686,7 +686,7 @@ div.bottom-border{
 		bottom: 0px;
 		right: 0px;
 		padding-top: 2%;
-		overflow: scroll;
+		/*overflow: scroll;*/
 		outline: none;
 	}
 	.lb-overlay:target > div{
@@ -1083,11 +1083,14 @@ article#festival_trailers div.festival_trailers{
 
 div.lb-overlay.trailer-previews div.detail-container{
 	width: 90vw;
-    height: 50.625vw; /* 100/56.25 = 1.778 */
+	height: 65%;
+
+	/* height: 50.625vw; */ /* 100/56.25 = 1.778 */
 	max-height: 90vh;
     max-width: 177.78vh; /* 16/9 = 1.778 */
     margin-top: 8%;
 }
+
 div.lb-overlay.trailer-previews div.detail-container iframe{
 	width: 100%;
     height: 100%;
@@ -1812,7 +1815,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	.lb-overlay:target {
 		padding-top: 0;
 		position: relative;
-		overflow: scroll;
+		/*overflow: scroll;*/
 		top:0;
 		height: auto;
 	}

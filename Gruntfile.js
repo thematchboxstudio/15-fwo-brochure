@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		uglify: { /// UGLIFY - minimizes and combines js files. all {src} files into {dest}.
 			build: {
 				files: {
-	        		'js/scripts.js': ['js/functions.js', 'js/responsive-nav.js'],
+	        		'js/scripts.js': ['js/modernizr-2.7.1.min.js','js/functions.js', 'js/responsive-nav.js'],
 	      		}
 			}
 		},
