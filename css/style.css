@@ -1438,11 +1438,11 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		bottom:0px;
 	}
 	div.px-container img#px-traviata-horns{
-		height: 380px;
+		height: 708px;
 		position: absolute;
-		margin-left:-240px;
+		margin-left:-345px;
 		left: 50%;
-		bottom:-40px;
+		bottom:-100px;
 	}
 	div.px-container img#px-traviata-middle{
 		height: 360px;
@@ -1478,8 +1478,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		left:50%;
 		bottom:-220px;
 
-		background: url(../i/px-traviata_horns.png) no-repeat center 250px;
-		background-size: 580px;
+		background: url(../i/px-traviata_horns.png) no-repeat center 20px;
+		background-size: 590px 708px;
 	}
 
 	/* Hamlet */
@@ -1504,6 +1504,13 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		position: absolute;
 		right: -300px;
 		top:-500px;
+	}
+	div.px-container img#px-hamlet-drips-top{
+		height: 708px;
+		width: 1094px;
+		position: absolute;
+		top:-500px;
+		right:-300px;
 	}
 
 	div.px-container img#px-hamlet-main{

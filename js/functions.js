@@ -311,21 +311,27 @@
 
 			//Hamlet
 				var skull = -(scrolled-3199) * .2 + 'px';
+				var skulltop = -(scrolled-3199) * .0625 + 'px';
+				var driptop = -(scrolled-3199) * .125 + 'px';
 				var splatter = (((scrolled-3199)*.125)+111) + 'px';
 
 				if (scrolled <= 3630) {
-					$('div.px-container #px-hamlet-main, div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ skull +', 0)');
-					$('div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .35 + 'px' +', 0) rotate(' + (scrolled-3199) * .05 + 'deg)');
-					$('div.px-container #px-hamlet-drips').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .05 + 'px' +', 0)');
+					$('div.px-container #px-hamlet-main').css('transform', 'translate3d( 0, '+ skull +', 0)');
+					//$('div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .35 + 'px' +', 0) rotate(' + (scrolled-3199) * .05 + 'deg)');
+					$('div.px-container #px-hamlet-drips').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .075 + 'px' +', 0)');
 
-					$('div.px-container #px-hamlet-splatter').css('height', splatter );
+
+					$('div.px-container #px-hamlet-main-top').css('transform', 'translate3d( 0, '+ skulltop +', 0)');
+					$('div.px-container #px-hamlet-drips-top').css('transform', 'translate3d( 0, '+ (scrolled-3199) * .1 + 'px' +', 0)');
+
+					//$('div.px-container #px-hamlet-splatter').css('height', splatter );
 						//('top',(60+(-(scrolled-3199)*.2)) + 'px');
 					//$('div.px-container #px-hamlet-main').css('background-position','0px ' + (-((scrolled-3199)*.65)) + 'px');
 					
 					//$('div.px-container #px-hamlet-main').css('background-size', (708+((scrolled-3199)*.7)) + 'px ' + (708+((scrolled-3199)*.7)) + 'px');
 
 					$('div.px-container #px-hamlet-main-bottom').css('transform', 'rotate(' + (-155+((scrolled-3299)*.0125)) + 'deg)');
-					$('div.px-container #px-hamlet-main-top').css('transform', 'rotate(' + ((scrolled-3299)*.0125) + 'deg)');
+					//$('div.px-container #px-hamlet-main-top').css('transform', 'rotate(' + ((scrolled-3299)*.0125) + 'deg)');
 				}
 
 
