@@ -1443,11 +1443,17 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		left: 50%;
 		bottom:-40px;
 	}
-	div.px-container img#px-traviata-middle{
-		height: 360px;
+
+	div.px-container img#px-traviata-middleleft{
+		height: 380px;
 		position: absolute;
-		margin: auto;
-		left:0;right:0;
+		right:58%;
+		bottom:0px;
+	}
+	div.px-container img#px-traviata-middleright{
+		height: 380px;
+		position: absolute;
+		left:63%;
 		bottom:0px;
 	}
 
