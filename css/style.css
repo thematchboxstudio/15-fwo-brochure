@@ -1384,18 +1384,16 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background-size: 100% 110%;
 	}
 	div.px-container img {
-		-webkit-transform: translate3d(0, 0, 0);
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		-webkit-perspective: 1000;
 		perspective: 1000;
+		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0,0,0);
-
-		transition: 1.5s ease-out;
-		-webkit-transition: 1.5s ease-out;
-		-moz-transition: 1.5s ease-out;
-		-o-transition: 1.5s ease-out;
-
+		-webkit-transition: 1s ease;
+		-moz-transition: 1s ease;
+		-o-transition: 1s ease;
+		transition: 1s ease;
 	}
 	div.px-container img#px-dogdays-sky-background{
 		width: 100%;
