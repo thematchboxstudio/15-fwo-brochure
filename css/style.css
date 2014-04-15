@@ -126,58 +126,6 @@ input[type=button] {width: auto; overflow: visible;}
 
 
 
-/*! responsive-nav.js 1.0.32 by @viljamis */
-
-.nav-collapse ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
-}
-
-.nav-collapse li {
-  width: 100%;
-  display: block;
-}
-
-.js .nav-collapse {
-  clip: rect(0 0 0 0);
-  position: absolute;
-  display: block;
-  zoom: 1;
-}
-
-.nav-collapse.opened {
-}
-
-.disable-pointer-events {
-  pointer-events: none !important;
-}
-
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-@media screen and (min-width: 40em) {
-  .js .nav-collapse {
-    position: relative;
-  }
-  .js .nav-collapse.closed {
-    max-height: none;
-  }
-  .nav-toggle {
-    display: none;
-  }
-}
-
-
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing: antialiased;}
 *{
@@ -2398,7 +2346,56 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 
 
+/*! responsive-nav.js 1.0.32 by @viljamis */
 
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  position: absolute;
+  display: block;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
 
 
 

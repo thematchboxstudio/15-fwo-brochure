@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		uglify: { /// UGLIFY - minimizes and combines js files. all {src} files into {dest}.
 			build: {
 				files: {
-	        		'build/js/functions.js': ['js/functions.js', 'js/responsive-nav.js'],
+	        		'js/scripts.js': ['js/functions.js', 'js/responsive-nav.js'],
 	      		}
 			}
 		},
@@ -68,6 +68,7 @@ module.exports = function(grunt) {
  		      {expand: true, flatten: true, src: ['i/**'], dest: 'build/i/', filter: 'isFile'},
  		      {expand: true, flatten: true, src: ['css/style.css'], dest: 'build/css/', filter: 'isFile'},
  		      {expand: true, flatten: true, src: ['js/jquery-1.10.2.min.js'], dest: 'build/js/', filter: 'isFile'},
+ 		      {expand: true, flatten: true, src: ['js/scripts.js'], dest: 'build/js/', filter: 'isFile'},
  		      {expand: true, cwd: 'i/', src: ['**'], dest: 'build/i/'},
 
 		    ]
