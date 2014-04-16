@@ -164,7 +164,7 @@ body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing: antialiased;}
         display: none;
     }
 
-    @media screen and (min-width: 35em) {
+    @media screen and (min-width: 480px) {
         html {
             font-family: "skinny";
         }
@@ -1126,6 +1126,11 @@ footer{
 		#e3e2da;
 		background-position: center center, center -610px;
 	position: relative;
+	-webkit-transition:background-position 0.5s ease-in-out;
+	-moz-transition:background-position 0.5s ease-in-out;
+	-o-transition:background-position 0.5s ease-in-out;
+	-ms-transition:background-position 0.5s ease-in-out;
+	transition:background-position 0.5s ease-in-out;
 }
 
 footer#festival_info div.container{
@@ -1192,6 +1197,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 /* Parallax
 -------------------------------------------------------------------------------*/
 @media screen and (min-width: 960px){
+	/* Festival Info */
+	footer.active{
+		background-position: center center, center 814px;
+	}
 
 	/* Header */
 	h1.deep{
@@ -1502,7 +1511,12 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		right: -300px;
 		top:-500px;
 	}
-
+	div.px-container img#px-hamlet-drips-top{
+		height: 708px;
+		position: absolute;
+		right: -300px;
+		top:-500px;
+	}
 	div.px-container img#px-hamlet-main{
 		height: 708px;
 		width: 1094px;
