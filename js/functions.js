@@ -223,9 +223,11 @@
 			        == $(document).height()){
 			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
 			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    	$('footer#festival_info').addClass("active");
 
 			    } else {
 			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			    	$('footer#festival_info').removeClass("active");
 			    }
 
 
@@ -249,7 +251,6 @@
 				}
 
 			}// IF LARGE
-
 
 			// Parallax
 			//Dog Days
@@ -315,7 +316,7 @@
 				var driptop = -(scrolled-3199) * .125 + 'px';
 				var splatter = (((scrolled-3199)*.125)+111) + 'px';
 
-				if (scrolled <= 3630) {
+				if (scrolled <= 4338) {
 					$('div.px-container #px-hamlet-main').css('transform', 'translate3d( 0, '+ skull +', 0)');
 					//$('div.px-container #px-hamlet-splatter').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .35 + 'px' +', 0) rotate(' + (scrolled-3199) * .05 + 'deg)');
 					$('div.px-container #px-hamlet-drips').css('transform', 'translate3d( 0, '+ -(scrolled-3199) * .075 + 'px' +', 0)');

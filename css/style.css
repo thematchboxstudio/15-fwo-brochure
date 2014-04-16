@@ -423,12 +423,14 @@ div.copy-container{
 }
 div.top-border{
 	height:47px;
-	background:url(../i/top_border.svg) repeat-x center top;
+	background:url(../i/top_border.svg) no-repeat center top;
+	border-bottom: 1px solid #ff504b;
 	position: relative;
 	z-index: 2;}
 div.bottom-border{
 	height:47px;
-	background:url(../i/bottom_border.svg) repeat-x center bottom;
+	background:url(../i/bottom_border.svg) no-repeat center bottom;
+	border-top: 1px solid #ff504b;
 	position: relative;
 	z-index: 2;
 }
@@ -869,7 +871,7 @@ article#frontiers{
 	padding: 16px;
 }
 	.background-circles {
-		background: url("../i/frontiers-bg.jpg") no-repeat fixed center center, #e3e2da;
+		background: url("../i/frontiers-bg.png") no-repeat fixed center center, #e3e2da;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -888,7 +890,7 @@ article#frontiers div.copy-container{
 	max-width: 500px;
 	margin: auto;
 	padding-top: 0;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 	border:1px solid #ff504b;
 }
 article#frontiers div.copy-container img{margin-bottom: 20px;}
@@ -1122,10 +1124,16 @@ div.lb-overlay.trailer-previews div.detail-container .trailer-info p~p{color:#ff
 footer{
 	background:
 		url(../i/festival_info-bg.svg) fixed,
-		url(../i/center-line.svg) no-repeat,
+		url(../i/center-line.svg) repeat-y,
 		#e3e2da;
 		background-position: center center, center -610px;
 	position: relative;
+
+	-webkit-transition:background-position 0.5s ease-in-out;
+	    -moz-transition:background-position 0.5s ease-in-out;
+	    -o-transition:background-position 0.5s ease-in-out;
+	    -ms-transition:background-position 0.5s ease-in-out;
+	    transition:background-position 0.5s ease-in-out;
 }
 
 footer#festival_info div.container{
@@ -1502,14 +1510,21 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		right: -300px;
 		top:-500px;
 	}
+	div.px-container img#px-hamlet-drips-top{
+		height: 708px;
+		width: 1094px;
+		position: absolute;
+		right: -300px;
+		top:-500px;
+	}
 
 	div.px-container img#px-hamlet-main{
 		height: 708px;
 		width: 1094px;
 		position: absolute;
 		top:60px;
-		right:0;left:0;
-		margin: auto;
+		left:50%;
+		margin-left:-450px;
 	}
 	div.px-container img#px-hamlet-splatter{
 		height: 111px;
@@ -1521,10 +1536,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	div.px-container img#px-hamlet-drips{
 		height: 708px;
 		width: 1094px;
-		position: absolute;
+		position:absolute;
 		top:60px;
-		right:0;left:0;
-		margin: auto;
+		left:50%;
+		margin-left:-450px;
 	}
 
 	/* Tickets */
@@ -1616,6 +1631,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		3px 33px 0 #16261f;
 	}
 
+	/* Festival Info */
+	footer.active{
+		background-position: center center, center 814px;
+	}
 
 }
 
@@ -2115,7 +2134,7 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 
 }
 
-/* Less than 578px */
+/* Less than 568px */
 @media screen and (max-width: 567px){
 	/* Breaks */
 		article#break1 div.center_line{height: 118px;}
@@ -2272,6 +2291,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		background: none;
 	}
 
+	article#hamlet{
+		background: url("../i/hamlet-1094x708.jpg") no-repeat scroll -80px center / cover  transparent;
+	}
+
 	/* Tickets */
 	article#tickets div.container h1.deep{
 		font-size: 100px;
@@ -2336,6 +2359,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	article#break2 div.center_line{height: 120px;}
 	article#break3 div.center_line{height: 110px;}
 	article#frontiers div.center_line{height: 85px;}
+
+	
 
 
 }
