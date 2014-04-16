@@ -31,7 +31,7 @@
 
 
 		        // Right now this breaks the 'go to top' smooth scrolling on mobile
-		        else if ($('body').hasClass('small')) {
+		        else if ($('body').hasClass('small') || $('body').hasClass('medium')) {
 
 					var target_pos = (target.length > 0) ? target.offset().top : 0;
 					var fhdr = $('.toggle');
@@ -328,7 +328,7 @@
 					//$('div.px-container #px-hamlet-splatter').css('height', splatter );
 						//('top',(60+(-(scrolled-3199)*.2)) + 'px');
 					//$('div.px-container #px-hamlet-main').css('background-position','0px ' + (-((scrolled-3199)*.65)) + 'px');
-					
+
 					//$('div.px-container #px-hamlet-main').css('background-size', (708+((scrolled-3199)*.7)) + 'px ' + (708+((scrolled-3199)*.7)) + 'px');
 
 					$('div.px-container #px-hamlet-main-bottom').css('transform', 'rotate(' + (-155+((scrolled-3299)*.0125)) + 'deg)');
