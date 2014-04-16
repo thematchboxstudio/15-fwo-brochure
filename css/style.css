@@ -631,11 +631,6 @@ div.bottom-border{
 			.lb-overlay > div.detail-container div.detail-content a.buy_tickets:hover{background:#ff504b;color:#003b23;}
 
 
-
-
-
-
-
 	.lb-overlay a.lb-close{
 		width: 75px;
 		height: 75px;
@@ -643,24 +638,21 @@ div.bottom-border{
 		background:
 			url(../i/lb-close.svg) no-repeat 15px 12px,
 			#ff504b;
-
-
-
 		text-indent: -9999px;
 		font-family: "raleway";
-
 		font-size: 1.5em;
 		font-weight: 500;
 		color: #003b23;
 		letter-spacing: .1em;
 		text-transform: uppercase;
-
 		z-index: 99;
 		position: absolute;
 		top: 0;
 		right: 0;
 		overflow: hidden;
 		margin-left: -25px;
+		-webkit-transition: none;
+		transition: none;
 	}
 	.trailer-previews a.lb-close{
 		background: url(../i/lb-close-hover.svg) no-repeat 15px 12px,
@@ -2047,9 +2039,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 			height: 60px;
 			padding: 0 20px;
 		}
-		.lb-title > h2{padding-right:5px;}
+		.lb-title > h2{padding-right:5px; -webkit-transition: none; transition: none;}
 		.lb-title > p{font-size:.6em;padding: 14px 0;font-weight: bold;}
-		#dogdays-info .lb-title > p{padding: 10px 0;}
+		#dogdays-info .lb-title > p{padding: 10px 0;-webkit-transition: none; transition: none;}
 
 
 
