@@ -423,14 +423,18 @@ div.copy-container{
 }
 div.top-border{
 	height:47px;
-	background:url(../i/top_border.svg) repeat-x center top;
-	position: relative;
-	z-index: 2;}
-div.bottom-border{
-	height:47px;
-	background:url(../i/bottom_border.svg) repeat-x center bottom;
+	background:url(../i/top_border.svg) no-repeat center top;
+	border-bottom: 1px solid #ff504b;
 	position: relative;
 	z-index: 2;
+}
+div.bottom-border{
+	height:47px;
+	background:url(../i/bottom_border.svg) no-repeat center bottom;
+	border-top: 1px solid #ff504b;
+	position: relative;
+	z-index: 2;
+
 }
 
 
@@ -869,7 +873,7 @@ article#frontiers{
 	padding: 16px;
 }
 	.background-circles {
-		background: url("../i/frontiers-bg.jpg") no-repeat fixed center center, #e3e2da;
+		background: url("../i/frontiers-bg.png") no-repeat fixed center center, #e3e2da;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -888,7 +892,7 @@ article#frontiers div.copy-container{
 	max-width: 500px;
 	margin: auto;
 	padding-top: 0;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 	border:1px solid #ff504b;
 }
 article#frontiers div.copy-container img{margin-bottom: 20px;}
@@ -1122,7 +1126,7 @@ div.lb-overlay.trailer-previews div.detail-container .trailer-info p~p{color:#ff
 footer{
 	background:
 		url(../i/festival_info-bg.svg) fixed,
-		url(../i/center-line.svg) no-repeat,
+		url(../i/center-line.svg) repeat-y,
 		#e3e2da;
 		background-position: center center, center -610px;
 	position: relative;
@@ -1522,8 +1526,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		width: 1094px;
 		position: absolute;
 		top:60px;
-		right:0;left:0;
-		margin: auto;
+		left:50%;
+		margin-left:-450px;
 	}
 	div.px-container img#px-hamlet-splatter{
 		height: 111px;
@@ -1537,8 +1541,8 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		width: 1094px;
 		position: absolute;
 		top:60px;
-		right:0;left:0;
-		margin: auto;
+		left:50%;
+		margin-left:-450px;
 	}
 
 	/* Tickets */
@@ -2280,6 +2284,10 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		border-left:1px solid #003b23;
 	}
 	div.title > a p{font-size: 1.125em;}
+
+	article#hamlet{
+		background: url("../i/hamlet-1094x708.jpg") no-repeat scroll -80px center / cover transparent;
+	}
 
 	.mobile.image_sub{
 		display: block;
