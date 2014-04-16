@@ -166,13 +166,28 @@ body {font: 1em 'raleway', sans-serif; -webkit-font-smoothing: antialiased;}
 
     @media screen and (min-width: 480px) {
         html {
-            font-family: "skinny";
+            font-family: "skinnyone";
         }
         body:after {
-            content: "skinny";
+            content: "skinnyone";
         }
     }
-
+    @media screen and (min-width: 640px) {
+        html {
+            font-family: "skinnytwo";
+        }
+        body:after {
+            content: "skinnytwo";
+        }
+    }
+    @media screen and (min-width: 768px) {
+        html {
+            font-family: "skinnythree";
+        }
+        body:after {
+            content: "skinnythree";
+        }
+    }
     @media screen and (min-width: 56em) {
         html {
             font-family: "desktop";

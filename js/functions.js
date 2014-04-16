@@ -31,7 +31,7 @@
 
 
 		        // Right now this breaks the 'go to top' smooth scrolling on mobile
-		        else if ($('body').hasClass('small') || $('body').hasClass('medium')) {
+		        else if ($('body').hasClass('small') || $('body').hasClass('mediumone') || $('body').hasClass('mediumtwo') || $('body').hasClass('mediumthree')) {
 
 					var target_pos = (target.length > 0) ? target.offset().top : 0;
 					var fhdr = $('.toggle');
@@ -160,6 +160,243 @@
 			//     }
 
 			}// IF SMALL
+
+			// I'm sure there's a better way to do this, but I don't know it
+		   if ($('body').hasClass('mediumone')) {
+		    // Entering Header
+			    if (scrolled >= 0 && scrolled <= 945) {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').removeClass("active");
+			    }
+
+			// Entering #dogdays
+			    if (scrolled >= 946 && scrolled <= 2013) {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').removeClass("active");
+			    }
+
+			// Entering #traviata
+			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').removeClass("active");
+			    }
+
+			// Entering #hamlet
+			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').removeClass("active");
+			    }
+
+			// Entering #frontiers
+			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').removeClass("active");
+			    }
+
+			// Entering #tickets
+			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+			    }
+
+			// Entering #festival_trailers
+			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    }
+
+			// Entering #festival_info
+			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			    }
+
+			// // Entering #festival_info
+			//     if ($win.height() + $win.scrollTop()
+			//         == $(document).height()){
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+			//     	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+
+			//     } else {
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			//     }
+
+			}// IF MEDIUMONE
+
+			// I'm sure there's a better way to do this, but I don't know it
+		   if ($('body').hasClass('mediumtwo')) {
+		    // Entering Header
+			    if (scrolled >= 0 && scrolled <= 1033) {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').removeClass("active");
+			    }
+
+			// Entering #dogdays
+			    if (scrolled >= 1034 && scrolled <= 2013) {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').removeClass("active");
+			    }
+
+			// Entering #traviata
+			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').removeClass("active");
+			    }
+
+			// Entering #hamlet
+			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').removeClass("active");
+			    }
+
+			// Entering #frontiers
+			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').removeClass("active");
+			    }
+
+			// Entering #tickets
+			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+			    }
+
+			// Entering #festival_trailers
+			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    }
+
+			// Entering #festival_info
+			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			    }
+
+			// // Entering #festival_info
+			//     if ($win.height() + $win.scrollTop()
+			//         == $(document).height()){
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+			//     	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+
+			//     } else {
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			//     }
+
+			}// IF MEDIUMTWO
+
+
+			// I'm sure there's a better way to do this, but I don't know it
+		   if ($('body').hasClass('mediumthree')) {
+		    // Entering Header
+			    if (scrolled >= 0 && scrolled <= 1033) {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink1').removeClass("active");
+			    }
+
+			// Entering #dogdays
+			    if (scrolled >= 1034 && scrolled <= 2013) {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink2').removeClass("active");
+			    }
+
+			// Entering #traviata
+			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink3').removeClass("active");
+			    }
+
+			// Entering #hamlet
+			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink4').removeClass("active");
+			    }
+
+			// Entering #frontiers
+			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink5').removeClass("active");
+			    }
+
+			// Entering #tickets
+			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink6').removeClass("active");
+			    }
+
+			// Entering #festival_trailers
+			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+			    }
+
+			// Entering #festival_info
+			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+
+			    } else {
+			    	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			    }
+
+			// // Entering #festival_info
+			//     if ($win.height() + $win.scrollTop()
+			//         == $(document).height()){
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
+			//     	$('nav ul li ul.nav-collapse li a.navlink7').removeClass("active");
+
+			//     } else {
+			//     	$('nav ul li ul.nav-collapse li a.navlink8').removeClass("active");
+			//     }
+
+			}// IF MEDIUMTHREE
+
+
 
 		   else if ($('body').hasClass('large')) {
 		    // Entering Header
@@ -383,18 +620,45 @@ var queries = [
         }
     },
     {
-        context: 'skinny',
+        context: 'skinnyone',
         match: function() {
-        	jQuery('body').addClass('medium');
+        	jQuery('body').addClass('mediumone');
             //console.log('skinny callback! Swap the class on the body element.');
             // Your tablet specific logic can go here.
         },
         unmatch: function() {
-        	jQuery('body').removeClass('medium');
+        	jQuery('body').removeClass('mediumone');
             //console.log('leaving skinny context!');
         }
 
     },
+    {
+        context: 'skinnytwo',
+        match: function() {
+        	jQuery('body').addClass('mediumtwo');
+            //console.log('skinny callback! Swap the class on the body element.');
+            // Your tablet specific logic can go here.
+        },
+        unmatch: function() {
+        	jQuery('body').removeClass('mediumtwo');
+            //console.log('leaving skinny context!');
+        }
+
+    },
+     {
+        context: 'skinnythree',
+        match: function() {
+        	jQuery('body').addClass('mediumthree');
+            //console.log('skinny callback! Swap the class on the body element.');
+            // Your tablet specific logic can go here.
+        },
+        unmatch: function() {
+        	jQuery('body').removeClass('mediumthree');
+            //console.log('leaving skinny context!');
+        }
+
+    },
+
     {
         context: 'desktop',
         match: function() {
