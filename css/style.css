@@ -1992,6 +1992,9 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 		padding-top: 70px;
 		font-size: 1.125em;
 	}
+	article#hamlet{
+		background: url("../i/hamlet-1094x708.jpg") no-repeat scroll -40px center / cover  transparent;
+	}
 
 }
 
@@ -2006,11 +2009,13 @@ footer#festival_info div#go-to-top a:hover{color:#e3e2da;}
 	h2{	font-size: 3.5em;}
 	p{	font-size: .75em;}
 
-	article.image{height: 400px;}
+	/*article.image{height: 400px;}*/
 
-	article.image div.container{height: 437px;}
+	/*article.image div.container{height: 437px;}*/
 
-	div.image-content{height: 340px;}
+	/*div.image-content{height: 340px;}*/
+
+
 
 	/* Article divs*/
 	div.title{
