@@ -278,6 +278,9 @@ p{
 .copy-container > p,span.highlight{
 	color: #ff504b;
 }
+.copy-container span {
+	white-space: nowrap;
+}
 
 
 /* Knockout Featherweight no.48
