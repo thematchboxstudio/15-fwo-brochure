@@ -164,7 +164,7 @@
 			// I'm sure there's a better way to do this, but I don't know it
 		   if ($('body').hasClass('mediumone')) {
 		    // Entering Header
-			    if (scrolled >= 0 && scrolled <= 945) {
+			    if (scrolled >= 0 && scrolled <= 865) {
 			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
 
 			    } else {
@@ -172,7 +172,7 @@
 			    }
 
 			// Entering #dogdays
-			    if (scrolled >= 946 && scrolled <= 2013) {
+			    if (scrolled >= 866 && scrolled <= 2073) {
 			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
 
 			    } else {
@@ -180,7 +180,7 @@
 			    }
 
 			// Entering #traviata
-			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    if (scrolled >= 2074 && scrolled <= 3281) {
 			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
 
 			    } else {
@@ -188,7 +188,7 @@
 			    }
 
 			// Entering #hamlet
-			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    if (scrolled >= 3282 && scrolled <= 3989) {
 			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
 
 			    } else {
@@ -196,7 +196,7 @@
 			    }
 
 			// Entering #frontiers
-			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    if (scrolled >= 3990 && scrolled <= 4799) {
 			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
 
 			    } else {
@@ -204,7 +204,7 @@
 			    }
 
 			// Entering #tickets
-			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    if (scrolled >= 4800 && scrolled <= 5367) {
 			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
 
 			    } else {
@@ -212,7 +212,7 @@
 			    }
 
 			// Entering #festival_trailers
-			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    if (scrolled >= 5368 && scrolled <= 5866) {
 			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
 
 			    } else {
@@ -220,7 +220,7 @@
 			    }
 
 			// Entering #festival_info
-			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    if (scrolled >= 5867 && scrolled <= 9999 ) {
 			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
 
 			    } else {
@@ -250,7 +250,7 @@
 			    }
 
 			// Entering #dogdays
-			    if (scrolled >= 1034 && scrolled <= 2013) {
+			    if (scrolled >= 1034 && scrolled <= 2241) {
 			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
 
 			    } else {
@@ -258,7 +258,7 @@
 			    }
 
 			// Entering #traviata
-			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    if (scrolled >= 2242 && scrolled <= 3449) {
 			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
 
 			    } else {
@@ -266,7 +266,7 @@
 			    }
 
 			// Entering #hamlet
-			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    if (scrolled >= 3450 && scrolled <= 4157) {
 			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
 
 			    } else {
@@ -274,7 +274,7 @@
 			    }
 
 			// Entering #frontiers
-			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    if (scrolled >= 4158 && scrolled <= 4967) {
 			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
 
 			    } else {
@@ -282,7 +282,7 @@
 			    }
 
 			// Entering #tickets
-			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    if (scrolled >= 4968 && scrolled <= 5675) {
 			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
 
 			    } else {
@@ -290,7 +290,7 @@
 			    }
 
 			// Entering #festival_trailers
-			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    if (scrolled >= 5676 && scrolled <= 6174) {
 			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
 
 			    } else {
@@ -298,7 +298,7 @@
 			    }
 
 			// Entering #festival_info
-			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    if (scrolled >= 6175 && scrolled <= 9999 ) {
 			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
 
 			    } else {
@@ -321,7 +321,7 @@
 			// I'm sure there's a better way to do this, but I don't know it
 		   if ($('body').hasClass('mediumthree')) {
 		    // Entering Header
-			    if (scrolled >= 0 && scrolled <= 1033) {
+			    if (scrolled >= 0 && scrolled <= 1173) {
 			    	$('nav ul li ul.nav-collapse li a.navlink1').addClass("active");
 
 			    } else {
@@ -329,7 +329,7 @@
 			    }
 
 			// Entering #dogdays
-			    if (scrolled >= 1034 && scrolled <= 2013) {
+			    if (scrolled >= 1174 && scrolled <= 2381) {
 			    	$('nav ul li ul.nav-collapse li a.navlink2').addClass("active");
 
 			    } else {
@@ -337,7 +337,7 @@
 			    }
 
 			// Entering #traviata
-			    if (scrolled >= 2014 && scrolled <= 2993) {
+			    if (scrolled >= 2382 && scrolled <= 3589) {
 			    	$('nav ul li ul.nav-collapse li a.navlink3').addClass("active");
 
 			    } else {
@@ -345,7 +345,7 @@
 			    }
 
 			// Entering #hamlet
-			    if (scrolled >= 2994 && scrolled <= 3473) {
+			    if (scrolled >= 3590 && scrolled <= 4297) {
 			    	$('nav ul li ul.nav-collapse li a.navlink4').addClass("active");
 
 			    } else {
@@ -353,7 +353,7 @@
 			    }
 
 			// Entering #frontiers
-			    if (scrolled >= 3474 && scrolled <= 4283) {
+			    if (scrolled >= 4298 && scrolled <= 5107) {
 			    	$('nav ul li ul.nav-collapse li a.navlink5').addClass("active");
 
 			    } else {
@@ -361,7 +361,7 @@
 			    }
 
 			// Entering #tickets
-			    if (scrolled >= 4284 && scrolled <= 4851) {
+			    if (scrolled >= 5108 && scrolled <= 5815) {
 			    	$('nav ul li ul.nav-collapse li a.navlink6').addClass("active");
 
 			    } else {
@@ -369,7 +369,7 @@
 			    }
 
 			// Entering #festival_trailers
-			    if (scrolled >= 4852 && scrolled <= 5351) {
+			    if (scrolled >= 5816 && scrolled <= 6064) {
 			    	$('nav ul li ul.nav-collapse li a.navlink7').addClass("active");
 
 			    } else {
@@ -377,7 +377,7 @@
 			    }
 
 			// Entering #festival_info
-			    if (scrolled >= 5352 && scrolled <= 9999 ) {
+			    if (scrolled >= 6065 && scrolled <= 9999 ) {
 			    	$('nav ul li ul.nav-collapse li a.navlink8').addClass("active");
 
 			    } else {
